@@ -1,0 +1,48 @@
+{
+  "Country": {
+    "id": "01",
+    "name": "China",
+    "Capital": "Beijing",
+    "Divisions": [
+      "01",
+      "02",
+      "03",
+      "04"
+    ],
+    "Districts": [
+      "01",
+      "02",
+      "03"
+    ]
+  },
+  "Divisions": {
+    "id": "01",
+    "name": "Shengdong",
+    "Districts": [
+      "01",
+      "02"
+    ]
+  },
+  "Districts": {
+    "id": "01",
+    "name": "Dongcheng",
+    "Sub-districts": [
+      "01",
+      "02"
+    ],
+    "Post-codes": [
+      100000,
+      610000,
+      404000
+    ]
+  },
+  "Sub-districts": {
+    "id": "01",
+    "name": "Dailang",
+    "Post-codes": [
+      736200,
+      404000,
+      100000
+    ]
+  }
+}

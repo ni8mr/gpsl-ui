@@ -1,1 +1,72 @@
-Hello World, page test !
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Depots</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="box">
+                  <div class="box-body">
+                      <form>
+                          <div class="form-group row">
+                            <label for="" class="col-sm-2 form-control-label">District</label>
+                            <div class="col-sm-10">
+                              <select class="form-control" id="select-district" placeholder="">
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="" class="col-sm-2 form-control-label">Post Code</label>
+                            <div class="col-sm-10">
+                              <select class="form-control" id="select-post-code" placeholder="">
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label for="" class="col-sm-2 form-control-label">Thana</label>
+                            <div class="col-sm-10">
+                              <select class="form-control" id="select-thana" placeholder="">
+                              </select>
+                            </div>
+                          </div>
+                      </form>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </section><!-- /.content -->
+      </div><!-- /.content-wrapper -->
+
+      <script>
+          (function() {
+               var url = "./dummy.json";
+               $.getJSON(url)
+               .done(function( data ) {
+                    $('#select-district').empty();
+                    $.each(data, function(key, value) {
+                      if(key == "Districts"){
+                        $('#select-district').append('<option>' + data["Districts"].name + '</option>');
+                      }
+                    });
+                 });
+             })();
+
+      </script>
+
+</body>
+
