@@ -51,7 +51,7 @@
                     $('#select-district').empty();
                     $.each(data, function(key, value) {
                       if(key == "Districts"){
-                        $('#select-district').append('<option value=' + key + '>' + data["Districts"].name + '</option>');
+                        $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
                           console.log();
 
                           var selected = document.getElementById("select-district");
