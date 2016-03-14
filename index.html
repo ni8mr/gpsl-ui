@@ -52,6 +52,11 @@
                     $.each(data, function(key, value) {
                       if(key == "Districts"){
                         $('#select-district').append('<option value=' + key + '>' + data["Districts"].name + '</option>');
+                          console.log();
+
+                          var selected = document.getElementById("select-district");
+
+                        var selectedanswer = selected.options[selected.selectedIndex].value;
                       }
                     });
                  });
