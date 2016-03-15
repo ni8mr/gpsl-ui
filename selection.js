@@ -22,39 +22,39 @@
                           $("#select-district").change(function() {
                               var selected = $( this ).val();
                               $.each(data, function(key, value) {
-                            if(key == "Districts"){
-                              if(data["Districts"].id == selected){
-                                subDistricts = data["Districts"].Subdistricts;
-                                for(i =0; i<subDistricts.length; i++){
-                                  $.each(data, function(key, value) {
-                                    if(key == "Subdistricts"){
-                                      if(data["Subdistricts"].id == subDistricts[i]){
-                                        $('#select-thana').append('<option value=' + data["Subdistricts"].id + '>' + data["Subdistricts"].name + '</option>');
-
-                                          $("#select-thana").change(function() {
-                                              var selected = $('#select-thana option:selected').key();
-                                          });
-
-                                        // var selected = document.getElementById("select-thana")
-                                        //
-                                        // var selectedThana = selected.options[selected.selectedIndex].value;
-
-                                        $.each(data, function(key, value) {
-                                          if(key == "Districts"){
-                                            if(data["Districts"].id == selected){
-                                              subDistricts = data["Districts"].Subdistricts;
-                                              for(i =0; i<subDistricts.length; i++){
-                                                $.each(data, function(key, value) {
-                                                  if(key == "Subdistricts"){
-                                                    for(i =0; i< data["Subdistricts"].Postcodes.length; i++ ){
-                                                      $('#select-post-code').append('<option value=' + i + '>' + data["Subdistricts"].Postcodes[i] + '</option>');
-                                                    }
+                                if(key == "Districts"){
+                                  if(data["Districts"].id == selected){
+                                    subDistricts = data["Districts"].Subdistricts;
+                                    for(i =0; i<subDistricts.length; i++){
+                                      $.each(data, function(key, value) {
+                                          if(key == "Subdistricts"){
+                                          if(data["Subdistricts"].id == subDistricts[i]){
+                                              $('#select-thana').append('<option value=' + data["Subdistricts"].id + '>' + data["Subdistricts"].name + '</option>');
+                                              $("#select-thana").change(function() {
+                                                var selected = $('#select-thana option:selected').key();
+                                                  $.each(data, function(key, value) {
+                                                  if(key == "Districts"){
+                                                    if(data["Districts"].id == selected){
+                                                      subDistricts = data["Districts"].Subdistricts;
+                                                        for(i =0; i<subDistricts.length; i++){
+                                                          $.each(data, function(key, value) {
+                                                            if(key == "Subdistricts"){
+                                                              for(i =0; i< data["Subdistricts"].Postcodes.length; i++ ){
+                                                              $('#select-post-code').append('<option value=' + i + '>' + data["Subdistricts"].Postcodes[i] + '</option>');
+                                                              }
                                                   }
                                                 });
                                               }
                                             }
                                           }
                                         });
+                                              });
+
+                                        // var selected = document.getElementById("select-thana")
+                                        //
+                                        // var selectedThana = selected.options[selected.selectedIndex].value;
+
+
                                       }
                                     }
                                   });
