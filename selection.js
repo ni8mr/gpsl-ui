@@ -32,6 +32,10 @@
                                       if(data["Subdistricts"].id == subDistricts[i]){
                                         $('#select-thana').append('<option value=' + data["Subdistricts"].id + '>' + data["Subdistricts"].name + '</option>');
 
+                                          $("#select-thana").change(function() {
+                                              var selected = $('#select-thana option:selected').key();
+                                          });
+
                                         // var selected = document.getElementById("select-thana")
                                         //
                                         // var selectedThana = selected.options[selected.selectedIndex].value;
