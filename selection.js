@@ -29,7 +29,7 @@
 
                         $.each(data, function(key, value) {
                             if(key == "Districts"){
-                              if(data["Districts"].id == selectedDistrict){
+                              if(data["Districts"].id == selected){
                                 subDistricts = data["Districts"].Subdistricts;
                                 for(i =0; i<subDistricts.length; i++){
                                   $.each(data, function(key, value) {
@@ -47,7 +47,7 @@
 
                                         $.each(data, function(key, value) {
                                           if(key == "Districts"){
-                                            if(data["Districts"].id == selectedDistrict){
+                                            if(data["Districts"].id == selected){
                                               subDistricts = data["Districts"].Subdistricts;
                                               for(i =0; i<subDistricts.length; i++){
                                                 $.each(data, function(key, value) {
