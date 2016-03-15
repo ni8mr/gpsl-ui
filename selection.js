@@ -28,9 +28,13 @@
                                       if(data["Subdistricts"].id == subDistricts[i]){
                                         $('#select-thana').append('<option value=' + data["Subdistricts"].id + '>' + data["Subdistricts"].name + '</option>');
 
-                                        var selected = document.getElementById("select-thana")
+                                          $("#select-district").change(function() {
+                                              var selected = $('#select-district option:selected').value();
+                                          });
 
-                                        var selectedThana = selected.options[selected.selectedIndex].value;
+                                        // var selected = document.getElementById("select-thana")
+                                        //
+                                        // var selectedThana = selected.options[selected.selectedIndex].value;
 
                                         $.each(data, function(key, value) {
                                           if(key == "Districts"){
