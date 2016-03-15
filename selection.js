@@ -29,7 +29,7 @@
                                         $('#select-thana').append('<option value=' + data["Subdistricts"].id + '>' + data["Subdistricts"].name + '</option>');
 
                                           $("#select-district").change(function() {
-                                              var selected = $('#select-district option:selected').value();
+                                              var selected = $('#select-district option:selected').key();
                                           });
 
                                         // var selected = document.getElementById("select-thana")
