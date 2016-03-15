@@ -21,13 +21,7 @@
 
                           $("#select-district").change(function() {
                               var selected = $( this ).val();
-                          });
-
-                        // var selected = document.getElementById("select-district"); // Use jquery selector
-                        //
-                        // var selectedDistrict = selected.options[selected.selectedIndex].value;
-
-                        $.each(data, function(key, value) {
+                              $.each(data, function(key, value) {
                             if(key == "Districts"){
                               if(data["Districts"].id == selected){
                                 subDistricts = data["Districts"].Subdistricts;
@@ -68,6 +62,13 @@
                               }
                             }
                         });
+                          });
+
+                        // var selected = document.getElementById("select-district"); // Use jquery selector
+                        //
+                        // var selectedDistrict = selected.options[selected.selectedIndex].value;
+
+
                       }
                     });
                 });
