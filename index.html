@@ -57,6 +57,14 @@
                           var selected = document.getElementById("select-district");
 
                         var selectedanswer = selected.options[selected.selectedIndex].value;
+                          $.each(data, function(key, value) {
+                            if(key == "Districts"){
+                              if(data["Districts"].id == selectedanswer){
+                                subDistricts = data["Districts"].Subdistricts;
+                                  console.log(subDistricts);
+                              }
+                            }
+                          });
                       }
                     });
                  });
