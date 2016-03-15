@@ -26,20 +26,20 @@
   "Districts": {
     "id": "01",
     "name": "Dongcheng",
-    "Sub-districts": [
+    "Subdistricts": [
       "01",
       "02"
     ],
-    "Post-codes": [
+    "Postcodes": [
       100000,
       610000,
       404000
     ]
   },
-  "Sub-districts": {
+  "Subdistricts": {
     "id": "01",
     "name": "Dailang",
-    "Post-codes": [
+    "Postcodes": [
       736200,
       404000,
       100000
