@@ -9,7 +9,7 @@
                       JSON.push(data[i]);
                     }
                    console.log(JSON);
-                   for (i=0; i<JSON.length(); i++){
+                   for (i=0; i<JSON.length; i++){
                        $('#select-district').empty();
 
                    }
