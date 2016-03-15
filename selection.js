@@ -14,9 +14,13 @@
 
                         $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
 
-                        var selected = document.getElementById("select-district"); // Use jquery selector
+                          $("#select-district").change(function() {
+                                              var selected = $('#select-district option:selected').key();
+                                          });
 
-                        var selectedDistrict = selected.options[selected.selectedIndex].value;
+                        // var selected = document.getElementById("select-district"); // Use jquery selector
+                        //
+                        // var selectedDistrict = selected.options[selected.selectedIndex].value;
 
                         $.each(data, function(key, value) {
                             if(key == "Districts"){
@@ -27,10 +31,6 @@
                                     if(key == "Subdistricts"){
                                       if(data["Subdistricts"].id == subDistricts[i]){
                                         $('#select-thana').append('<option value=' + data["Subdistricts"].id + '>' + data["Subdistricts"].name + '</option>');
-
-                                          $("#select-district").change(function() {
-                                              var selected = $('#select-district option:selected').key();
-                                          });
 
                                         // var selected = document.getElementById("select-thana")
                                         //
