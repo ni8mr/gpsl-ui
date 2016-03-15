@@ -1,12 +1,9 @@
-<script>
+
     (function() {
-               var url = "./dummy.json";
-               //var $select = $('#myselect')
+               var url = "dummy.json";
+
                $.getJSON(url)
                .done(function( data ) {
-                    // $.each(data.items, function(i, item){
-                    //   $select.append($('<option>').data[name]);
-                    // });
                     $('#select-district').empty();
                     $.each(data, function(key, value) {
                       if(key == "Districts"){
@@ -58,4 +55,3 @@
                     });
                 });
               })();
-</script>
