@@ -8,6 +8,11 @@
                     for (var i in data){
                       JSON.push(data[i]);
                     }
+                   console.log(JSON);
+                   for (i=0; i<JSON.length(); i++){
+                       $('#select-district').empty();
+
+                   }
                     $('#select-district').empty();
                     $.each(data, function(key, value) {
                       if(key == "Districts"){
