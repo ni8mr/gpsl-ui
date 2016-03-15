@@ -42,7 +42,7 @@
                                                               for(i =0; i< data["Subdistricts"].Postcodes.length; i++ ){
                                                               $('#select-post-code').append('<option value=' + i + '>' + data["Subdistricts"].Postcodes[i] + '</option>');
                                                               }
-                                                  }
+                                                   }
                                                 });
                                               }
                                             }
