@@ -8,11 +8,11 @@
                     for (var i in data){
                       JSON.push(data[i]);
                     }
-                   console.log(JSON);
-                   for (i=0; i<JSON.length; i++){
-                       $('#select-district').empty();
-
-                   }
+                   //console.log(JSON);
+                   // for (i=0; i<JSON.length; i++){
+                   //     $('#select-district').empty();
+                   //
+                   // }
                     $('#select-district').empty();
                     $.each(data, function(key, value) {
                       if(key == "Districts"){
@@ -20,8 +20,8 @@
                         $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
 
                           $("#select-district").change(function() {
-                                              var selected = $('#select-district option:selected').key();
-                                          });
+                              var selected = $('#select-district option:selected').key();
+                          });
 
                         // var selected = document.getElementById("select-district"); // Use jquery selector
                         //
