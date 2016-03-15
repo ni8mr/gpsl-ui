@@ -1,4 +1,4 @@
-<script language="JavaScript">
+<script>
     (function() {
                var url = "./dummy.json";
                //var $select = $('#myselect')
