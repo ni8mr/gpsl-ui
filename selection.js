@@ -20,7 +20,7 @@
                         $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
 
                           $("#select-district").change(function() {
-                              var selected = $('#select-district option:selected').key();
+                              var selected = $( this ).key();
                           });
 
                         // var selected = document.getElementById("select-district"); // Use jquery selector
