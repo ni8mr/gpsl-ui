@@ -4,6 +4,10 @@
 
                $.getJSON(url)
                .done(function( data ) {
+                   var JSON = [];
+                    for (var i in data){
+                      JSON.push(data[i]);
+                    }
                     $('#select-district').empty();
                     $.each(data, function(key, value) {
                       if(key == "Districts"){
