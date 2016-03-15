@@ -31,16 +31,16 @@
                                           if(data["Subdistricts"].id == subDistricts[i]){
                                               $('#select-thana').append('<option value=' + data["Subdistricts"].id + '>' + data["Subdistricts"].name + '</option>');
                                               $("#select-thana").change(function() {
-                                                var selected = $('#select-thana option:selected').key();
+                                                var selectedThana = $( this ).val();
                                                   $.each(data, function(key, value) {
-                                                  if(key == "Districts"){
-                                                    if(data["Districts"].id == selected){
-                                                      subDistricts = data["Districts"].Subdistricts;
+                                                    if(key == "Districts"){
+                                                      if(data["Districts"].id == selected){
+                                                        subDistricts = data["Districts"].Subdistricts;
                                                         for(i =0; i<subDistricts.length; i++){
                                                           $.each(data, function(key, value) {
                                                             if(key == "Subdistricts"){
                                                               for(i =0; i< data["Subdistricts"].Postcodes.length; i++ ){
-                                                              $('#select-post-code').append('<option value=' + i + '>' + data["Subdistricts"].Postcodes[i] + '</option>');
+                                                                  $('#select-post-code').append('<option value=' + i + '>' + data["Subdistricts"].Postcodes[i] + '</option>');
                                                               }
                                                    }
                                                 });
