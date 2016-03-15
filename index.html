@@ -51,17 +51,28 @@
                     $('#select-district').empty();
                     $.each(data, function(key, value) {
                       if(key == "Districts"){
-                        $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
-                          console.log();
 
-                          var selected = document.getElementById("select-district");
+                        $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
+
+                        var selected = document.getElementById("select-district");
 
                         var selectedanswer = selected.options[selected.selectedIndex].value;
-                          $.each(data, function(key, value) {
+
+                          $('#select-thana').empty();
+
+                        $.each(data, function(key, value) {
                             if(key == "Districts"){
                               if(data["Districts"].id == selectedanswer){
                                 subDistricts = data["Districts"].Subdistricts;
-                                  console.log(subDistricts);
+                                for(i =0; i<subDistricts.length; i++){
+                                  $.each(data, function(key, value) {
+                                    if(key == "Subdistricts"){
+                                      if(data["Subdistricts"].id == subDistricts[i]){
+                                        $('#select-thana').append('<option value=' + data["Subdistricts"].id + '>' + data["Subdistricts"].name + '</option>');
+                                      }
+                                    }
+                                  });
+                                }
                               }
                             }
                           });
