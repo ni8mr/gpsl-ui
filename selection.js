@@ -11,6 +11,7 @@
       divisions.push(data['Divisions']);
       districts.push(data['Districts']);
       subdistricts.push(data['Subdistricts']);
+        console.log(countries);
       });
 })();
 
