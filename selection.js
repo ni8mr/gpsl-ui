@@ -1,6 +1,8 @@
 
         (function() {
-            $.getJSON("dummy.json").done(function( data ) {
+            $.getJSON("dummy.json", function(){
+                console.log("success");
+            }).done(function( data ) {
                 var json = [];
                 for (var i in data){
                     json.push(data[i]);
