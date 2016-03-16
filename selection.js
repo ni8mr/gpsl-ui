@@ -12,6 +12,10 @@
       districts.push(data['Districts']);
       subdistricts.push(data['Subdistricts']);
         console.log(countries);
+        console.log(subdistricts);
+        console.log(divisions);
+        console.log(districts);
+
       });
 })();
 
