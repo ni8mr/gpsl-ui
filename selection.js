@@ -1,12 +1,8 @@
 
         (function() {
             var url = "dummy.json";
-            $.getJSON( url, function(){
-                console.log('done something');
-            }).done(function( data ) {
+            $.getJSON( url).done(function( data ) {
                 console.log(data);
-            }).fail(function(){
-                console.log('something went wrong');
             });
         });
 
