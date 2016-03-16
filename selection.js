@@ -62,15 +62,15 @@
                           //       }
                           //     }
                             }
-                        });
-                          });
+                        //});
+                          //});
 
                         // var selected = document.getElementById("select-district"); // Use jquery selector
                         //
                         // var selectedDistrict = selected.options[selected.selectedIndex].value;
 
 
-                      }
-                    });
+                      //}
+                    //});
                 });
               })();
