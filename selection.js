@@ -1,6 +1,6 @@
 
     (function() {
-               var url = "dummy.json";
+               var url = "./dummy.json";
 
                $.getJSON(url)
                .done(function( data ) {
