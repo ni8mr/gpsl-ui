@@ -2,8 +2,12 @@
     (function() {
         var url = "dummy.json";
         $.getJSON( url).done(function( data ) {
-                console.log(data);
-            })
+                $.each(data, function(key, value) {
+                    if(key == "Districts"){
+                        $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>')
+                    }
+                }
+        })
     });
 
               //  $.getJSON(url)
