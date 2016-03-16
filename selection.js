@@ -1,12 +1,15 @@
 
     (function() {
         var url = "dummy.json";
-        $.getJSON(url).done(function( data ) {
-                $.each(data, function(key, value) {
-                    if(key == "Districts"){
-                        $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
-                    }
-                }
+        (function() {
+            var url = "dummy.json";
+            $.getJSON( url, function(){
+                console.log('done something');
+            }).done(function( data ) {
+                console.log(data);
+            }).fail(function(){
+                console.log('something went wrong');
+            });
         });
     });
 
