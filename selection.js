@@ -3,9 +3,10 @@
         var url = "dummy.json";
         $.getJSON( url)
             .done(function( data ) {
-                $.each( data, function( key, value ) {
-                    $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
-                    }
+                console.log(data)
+                // $.each( data, function( key, value ) {
+                //     $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
+                //     }
                 });
             });
     })();
