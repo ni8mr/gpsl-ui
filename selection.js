@@ -1,15 +1,14 @@
 
     (function() {
         var url = "dummy.json";
-        $.getJSON(url)
-            .done(fucntion(data){
-            var JSON = [];
-            for (var i in data){
-                JSON.push(data[i]);
-            }
-            console.log(JSON);
-        });
-    });
+        $.getJSON( url,
+            .done(function( data ) {
+                $.each( data, function( key, value ) {
+                    $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
+                    }
+                });
+            });
+    })();
 
               //  $.getJSON(url)
               //  .done(function( data ) {
