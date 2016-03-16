@@ -1,14 +1,13 @@
 
         (function() {
-            $.getJSON("dummy.json", function(){
-                console.log("success");
-            }).done(function( data ) {
-                var json = [];
-                for (var i in data){
-                    json.push(data[i]);
-                }
-                console.log(json);
-            });
+          var url = "dummy.json";
+          $.getJSON( url, function(){
+             console.log('done something');
+          }).done(function( data ) {
+            console.log(data);
+          }).fail(function(){
+            console.log('something went wrong');
+          });
         });
 
               //  $.getJSON(url)
