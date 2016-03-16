@@ -1,7 +1,7 @@
 
     (function() {
         var url = "dummy.json";
-        $.getJSON( url,
+        $.getJSON( url),
             .done(function( data ) {
                 console.log(data);
             })
