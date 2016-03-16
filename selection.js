@@ -2,7 +2,8 @@
         (function() {
             var url = "dummy.json";
             $.getJSON( url).done(function( data ) {
-                console.log(data);
+                var json = [];
+                console.log(json);
             });
         });
 
