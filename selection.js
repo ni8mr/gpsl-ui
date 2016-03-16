@@ -19,47 +19,47 @@
 
                         $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
 
-                          $("#select-district").change(function() {
-                              var selected = $( this ).val();
-                              $.each(data, function(key, value) {
-                                if(key == "Districts"){
-                                  if(data["Districts"].id == selected){
-                                    subDistricts = data["Districts"].Subdistricts;
-                                    for(i =0; i<subDistricts.length; i++){
-                                      $.each(data, function(key, value) {
-                                          if(key == "Subdistricts"){
-                                          if(data["Subdistricts"].id == subDistricts[i]){
-                                              $('#select-thana').append('<option value=' + data["Subdistricts"].id + '>' + data["Subdistricts"].name + '</option>');
-                                              $("#select-thana").change(function() {
-                                                var selectedThana = $( this ).val();
-                                                  $.each(data, function(key, value) {
-                                                    if(key == "Districts"){
-                                                      if(data["Districts"].id == selected){
-                                                        subDistricts = data["Districts"].Subdistricts;
-                                                        for(i =0; i<subDistricts.length; i++){
-                                                          $.each(data, function(key, value) {
-                                                            if(key == "Subdistricts"){
-                                                              for(i =0; i< data["Subdistricts"].Postcodes.length; i++ ){
-                                                                  $('#select-post-code').append('<option value=' + i + '>' + data["Subdistricts"].Postcodes[i] + '</option>');
-                                                              }
-                                                   }
-                                                });
-                                              }
-                                            }
-                                          }
-                                        });
-                                              });
-
-                                        // var selected = document.getElementById("select-thana")
-                                        //
-                                        // var selectedThana = selected.options[selected.selectedIndex].value;
-
-
-                                      }
-                                    }
-                                  });
-                                }
-                              }
+                          // $("#select-district").change(function() {
+                          //     var selected = $( this ).val();
+                          //     $.each(data, function(key, value) {
+                          //       if(key == "Districts"){
+                          //         if(data["Districts"].id == selected){
+                          //           subDistricts = data["Districts"].Subdistricts;
+                          //           for(i =0; i<subDistricts.length; i++){
+                          //             $.each(data, function(key, value) {
+                          //                 if(key == "Subdistricts"){
+                          //                 if(data["Subdistricts"].id == subDistricts[i]){
+                          //                     $('#select-thana').append('<option value=' + data["Subdistricts"].id + '>' + data["Subdistricts"].name + '</option>');
+                          //                     $("#select-thana").change(function() {
+                          //                       var selectedThana = $( this ).val();
+                          //                         $.each(data, function(key, value) {
+                          //                           if(key == "Districts"){
+                          //                             if(data["Districts"].id == selected){
+                          //                               subDistricts = data["Districts"].Subdistricts;
+                          //                               for(i =0; i<subDistricts.length; i++){
+                          //                                 $.each(data, function(key, value) {
+                          //                                   if(key == "Subdistricts"){
+                          //                                     for(i =0; i< data["Subdistricts"].Postcodes.length; i++ ){
+                          //                                         $('#select-post-code').append('<option value=' + i + '>' + data["Subdistricts"].Postcodes[i] + '</option>');
+                          //                                     }
+                          //                          }
+                          //                       });
+                          //                     }
+                          //                   }
+                          //                 }
+                          //               });
+                          //                     });
+                          //
+                          //               // var selected = document.getElementById("select-thana")
+                          //               //
+                          //               // var selectedThana = selected.options[selected.selectedIndex].value;
+                          //
+                          //
+                          //             }
+                          //           }
+                          //         });
+                          //       }
+                          //     }
                             }
                         });
                           });
