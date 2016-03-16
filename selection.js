@@ -3,9 +3,14 @@
   var url = "dummy.json";
   $.getJSON(url)
     .done(function( data ) {
-      $.each( data, function( key, value ) {
-        console.log(data);
-        });
+      var countries = [];
+      var divisions = [];
+      var districts = [];
+      var subdistricts = [];
+      countries.push(data['Country']);
+      divisions.push(data['Divisions']);
+      districts.push(data['Districts']);
+      subdistricts.push(data['Subdistricts']);
       });
 })();
 
