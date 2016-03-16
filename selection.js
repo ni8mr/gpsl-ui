@@ -3,8 +3,9 @@
             $.getJSON("dummy.json").done(function( data ) {
                 var json = [];
                 for (var i in data){
-                    JSON.push(data[i]);
+                    json.push(data[i]);
                 }
+                console.log(json);
             });
         });
 
