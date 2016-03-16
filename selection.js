@@ -2,7 +2,9 @@
         (function() {
             $.getJSON("dummy.json").done(function( data ) {
                 var json = [];
-                console.log(json);
+                for (var i in data){
+                    JSON.push(data[i]);
+                }
             });
         });
 
