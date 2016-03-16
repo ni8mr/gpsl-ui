@@ -9,7 +9,7 @@
             }
             console.log(JSON);
         });
-    }
+    });
 
               //  $.getJSON(url)
               //  .done(function( data ) {
