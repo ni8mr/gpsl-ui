@@ -1,15 +1,11 @@
 
     (function() {
         var url = "dummy.json";
-        $.getJSON( url)
+        $.getJSON( url,
             .done(function( data ) {
-                console.log(data)
-                // $.each( data, function( key, value ) {
-                //     $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
-                //     }
-                });
-            });
-    })();
+                console.log(data);
+            })
+    });
 
               //  $.getJSON(url)
               //  .done(function( data ) {
