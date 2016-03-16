@@ -1,12 +1,12 @@
 
 (function() {
   var url = "dummy.json";
+    var countries = [];
+    var divisions = [];
+    var districts = [];
+    var subdistricts = [];
   $.getJSON(url)
     .done(function( data ) {
-      var countries = [];
-      var divisions = [];
-      var districts = [];
-      var subdistricts = [];
       countries.push(data['Country']);
       divisions.push(data['Divisions']);
       districts.push(data['Districts']);
