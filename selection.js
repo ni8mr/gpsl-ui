@@ -1,10 +1,10 @@
 
 (function() {
   var url = "dummy.json";
-    var countries = [];
-    var divisions = [];
-    var districts = [];
-    var subdistricts = [];
+    countries = [];
+    divisions = [];
+    districts = [];
+    subdistricts = [];
   $.getJSON(url)
     .done(function( data ) {
       countries.push(data['Country']);
