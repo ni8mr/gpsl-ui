@@ -1,6 +1,4 @@
 
-    (function() {
-        var url = "dummy.json";
         (function() {
             var url = "dummy.json";
             $.getJSON( url, function(){
@@ -11,7 +9,6 @@
                 console.log('something went wrong');
             });
         });
-    });
 
               //  $.getJSON(url)
               //  .done(function( data ) {
