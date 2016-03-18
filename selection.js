@@ -11,11 +11,9 @@
       divisions.push(data['Divisions']);
       districts.push(data['Districts']);
       subdistricts.push(data['Subdistricts']);
-        $.each(districts, function(){
-            console.log(districts);
-            console.log(districts[id]);
-            $('#select-district').append('<option value=' + value.id + '>' + value.name + '</option>');
-        });
+        for(i=0, i<districts.length; i++){
+            console.log(districts[i]);
+        };
         // $('#select-district').append('<option value=' + districts[id] + '>' + districts[name] + '</option>');
         // $('#select-district').change( function() {
         //     console.log( $(this).val() );
