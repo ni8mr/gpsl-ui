@@ -14,7 +14,8 @@
         console.log(districts);
         districts.forEach(function(elements){
             console.log(elements);
-            console.log(elements["id"]);
+            console.log(" ");
+            console.log(" done  ");
         });
         // $('#select-district').append('<option value=' + districts[id] + '>' + districts[name] + '</option>');
         // $('#select-district').change( function() {
