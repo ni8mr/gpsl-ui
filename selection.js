@@ -11,7 +11,7 @@
       divisions.push(data['Divisions']);
       districts.push(data['Districts']);
       subdistricts.push(data['Subdistricts']);
-        console.log("districts");
+        console.log(districts);
         for(i=0, i<districts.length, i++){
             console.log(districts[i]["id"]);
         };
