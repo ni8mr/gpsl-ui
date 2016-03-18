@@ -14,12 +14,9 @@
         console.log(districts);
         // console.log(districts[id]);
         // console.log(districts[name]);
-        $.each(districts, function(key, value){
+        $.each(districts, function(value){
             console.log(districts);
-            console.log(key);
-            console.log(value);
-            
-            $('#select-district').append('<option value=' + districts.id + '>' + districts.name + '</option>');
+            $('#select-district').append('<option value=' + value.id + '>' + value.name + '</option>');
         });
         // $('#select-district').append('<option value=' + districts[id] + '>' + districts[name] + '</option>');
         // $('#select-district').change( function() {
