@@ -15,7 +15,7 @@
             if(key == "Districts"){
                 $('#select-district').append('<option value=' + data["Districts"].id + '>' + data["Districts"].name + '</option>');
             }
-        })
+        });
       });
 })();
 
