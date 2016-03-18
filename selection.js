@@ -18,6 +18,7 @@
             console.log(districts);
             console.log(key);
             console.log(value);
+            
             $('#select-district').append('<option value=' + districts.id + '>' + districts.name + '</option>');
         });
         // $('#select-district').append('<option value=' + districts[id] + '>' + districts[name] + '</option>');
