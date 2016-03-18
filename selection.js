@@ -12,12 +12,15 @@
       districts.push(data['Districts']);
       subdistricts.push(data['Subdistricts']);
         console.log(districts);
-        console.log(districts[id]);
-        cosole.log(districts[name]);
-        $('#select-district').append('<option value=' + districts[id] + '>' + districts[name] + '</option>');
-        $('#select-district').change( function() {
-            console.log( $(this).val() );
+        // console.log(districts[id]);
+        // console.log(districts[name]);
+        $.each(districts, function(key, value){
+            $('#select-district').append('<option value=' + districts.id + '>' + districts.name + '</option>');
         });
+        // $('#select-district').append('<option value=' + districts[id] + '>' + districts[name] + '</option>');
+        // $('#select-district').change( function() {
+        //     console.log( $(this).val() );
+        // });
       });
 })();
 
