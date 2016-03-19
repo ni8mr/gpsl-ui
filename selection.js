@@ -12,10 +12,9 @@
       districts.push(data['Districts']);
       subdistricts.push(data['Subdistricts']);
         // console.log(districts);
-       $('#select-district').empty();
-        for(i=0; i<districts[0].length; i++){
-            // console.log(districts[0][i][id]);
-            $('#district').append('<option data-tokens=' + districts[0][i][name] +'value=' + districts[0][i][id] + '>' + districts[0][i][name] + '</option>');
+       $('#country').empty();
+        for(i=0; i<countries[0].length; i++){
+            $('#country').append('<option data-tokens=' + countries[0][i][name] +'value=' + countries[0][i][id] + '>' + countries[0][i][name] + '</option>');
         }
         // $('#select-district').append('<option value=' + districts[id] + '>' + districts[name] + '</option>');
         // $('#select-district').change( function() {
