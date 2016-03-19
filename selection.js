@@ -19,7 +19,9 @@
        $('#country').empty();
         for(var i=0; i<countries.length; i++){
             console.log(i);
-            $('#country').append('<option data-tokens=" ' + countries[0][i]["name"] +' " value=" ' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>');
+            console.log(countries[0][i]["name"]);
+            console.log(countries[0][i]["id"]);
+            $('#country').append('<option data-tokens="' + countries[0][i]["name"] +'" value="' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>');
         };
         $('#country').change(function(){
                 var selected = $( this ).val();
