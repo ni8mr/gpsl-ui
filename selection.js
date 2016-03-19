@@ -13,6 +13,7 @@
       subdistricts.push(data['Subdistricts']);
        $('#country').empty();
         for(i=0; i<countries[0].length; i++){
+            console.log(countries[0][i]["name"]);
             $('#country').append('<option data-tokens="' + countries[0][i].name +'" value="' + i + '">' + countries[0][i].name + '</option>');
         };
         $('#country').change(function(){
