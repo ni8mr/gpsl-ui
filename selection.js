@@ -14,6 +14,7 @@
        $('#country').empty();
         for(var i=0; i<countries[0].length; i++){
             // console.log(countries[0][i]["name"]);
+            console.log(i);
             // var cc = $('#country');
             $('#country').append('<option data-tokens="' + countries[0][i]["name"] +'" value="' + i + '">' + countries[0][i]["name"] + '</option>');
         };
