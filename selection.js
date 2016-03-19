@@ -12,7 +12,7 @@
       districts.push(data['Districts']);
       subdistricts.push(data['Subdistricts']);
        $('#country').empty();
-        for(i=0; i<countries[0].length; i++){
+        for(var i=0; i<countries[0].length; i++){
             // console.log(countries[0][i]["name"]);
             // var cc = $('#country');
             $('#country').append('<option data-tokens="' + countries[0][i]["name"] +'" value="' + i + '">' + countries[0][i]["name"] + '</option>');
