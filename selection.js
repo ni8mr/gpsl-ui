@@ -11,6 +11,9 @@
       divisions.push(data['Divisions']);
       districts.push(data['Districts']);
       subdistricts.push(data['Subdistricts']);
+        console.log(countries);
+        console.log(countries.length);
+        console.log(countries[0].length)
        $('#country').empty();
         for(var i=0; i<countries[0].length; i++){
             $('#country').append('<option data-tokens=" ' + countries[0][i]["name"] +' " value=" ' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>');
