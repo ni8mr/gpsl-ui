@@ -15,7 +15,11 @@
        $('#country').empty();
         for(i=0; i<countries[0].length; i++){
             $('#country').append('<option data-tokens=' + countries[0][i][name] +'value=' + countries[0][i][id] + '>' + countries[0][i][name] + '</option>');
-        }
+        };
+        $('#country').change(function(){
+                var selected = $( this ).val();
+                console.log(selected);
+            });
         // $('#select-district').append('<option value=' + districts[id] + '>' + districts[name] + '</option>');
         // $('#select-district').change( function() {
         //     console.log( $(this).val() );
