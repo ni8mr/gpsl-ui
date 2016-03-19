@@ -11,16 +11,8 @@
       divisions.push(data['Divisions']);
       districts.push(data['Districts']);
       subdistricts.push(data['Subdistricts']);
-        // console.log(countries);
-        // console.log(countries.length);
-        // console.log(countries[0].length);
-        // console.log(countries[0][0]["name"]);
-        // console.log(countries[0][1]["name"]);
        $('#country').empty();
         for(var i=0; i<countries[0].length; i++){
-            console.log(i);
-            console.log(countries[0][i]["name"]);
-            console.log(countries[0][i]["id"]);
             $('#country').append('<option data-tokens="' + countries[0][i]["name"] +'" value="' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>');
         };
         $('#country').change(function(){
