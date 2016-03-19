@@ -17,7 +17,7 @@
         // console.log(countries[0][0]["name"]);
         // console.log(countries[0][1]["name"]);
        $('#country').empty();
-        for(var i=0; i<countries.length; i++){
+        for(var i=0; i<countries[0].length; i++){
             console.log(i);
             console.log(countries[0][i]["name"]);
             console.log(countries[0][i]["id"]);
