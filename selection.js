@@ -13,7 +13,7 @@
       subdistricts.push(data['Subdistricts']);
         // console.log(districts);
         for(i=0; i<districts[0].length; i++){
-            //console.log(districts[0][i][id]);
+            // console.log(districts[0][i][id]);
             $('#select-district').append('<option data-tokens=' + districts[0][i][name] +'value=' + districts[0][i][id] + '>' + districts[0][i][name] + '</option>');
         }
         // $('#select-district').append('<option value=' + districts[id] + '>' + districts[name] + '</option>');
