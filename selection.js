@@ -28,7 +28,14 @@
             for(var i=0; i<countries[0].length; i++){
                 if(countries[0][i]["id"] == selected_country){
                   related_divisions = countries[0][i]["divisions"];
-                  
+                  for(var j=0; j<related_divisions.length; j++){
+                      for(var k=0; k<divisions[0].length; k++){
+                          if(related_divisions[j] == divisions[0][k]["id"]){
+                              console.log(divisions[0][k]["name"]);
+                          }
+                      }
+
+                  }
                 }
             }
 
@@ -37,7 +44,7 @@
                 console.log(selected_division);
             }).selectpicker('refresh');
 
-
+0
         }).selectpicker('refresh');
 
       });
