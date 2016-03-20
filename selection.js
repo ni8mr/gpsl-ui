@@ -13,7 +13,7 @@
       subdistricts.push(data['Subdistricts']);
        $('#country').empty();
         for(var i=0; i<countries[0].length; i++){
-            $('#country').append('<option data-tokens="' + countries[0][i]["name"] +'" value="' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>');
+            $('#country').append('<option data-tokens="' + countries[0][i]["name"].toLowerCase() +'" value="' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>');
         };
         $('#country').change(function(){
                 var selected = $( this ).val();
