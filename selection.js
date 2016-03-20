@@ -31,10 +31,9 @@
                   for(var j=0; j<related_divisions.length; j++){
                       for(var k=0; k<divisions[0].length; k++){
                           if(related_divisions[j] == divisions[0][k]["id"]){
-                              console.log(divisions[0][k]["name"]);
+                              division_option_string += '<option data-tokens="' + divisions[0][k]["name"].toLowerCase() +'" value="' + divisions[0][k]["id"] + '">' + divisions[0][k]["name"] + '</option>';
                           }
                       }
-
                   }
                 }
             }
@@ -44,7 +43,6 @@
                 console.log(selected_division);
             }).selectpicker('refresh');
 
-0
         }).selectpicker('refresh');
 
       });
