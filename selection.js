@@ -26,9 +26,9 @@
 
 
             for(var i=0; i<countries[0].length; i++){
+                console.log(countries);
+                console.log(countries[0][i]);
                 if(countries[0][i]["id"] == selected_country){
-                    console.log(countries);
-                    console.log(countries[0][i]);
                     console.log(countries[0][i]["id"]);
                     console.log(countries[0][i]["divisions"]);
                     console.log(countries[0][i]["divisions"].length);
