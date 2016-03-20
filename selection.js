@@ -5,6 +5,7 @@
     districts = [],
     subdistricts = [],
     input_country =$('#country');
+    input_division = $('#division');
   $.getJSON(url)
     .done(function( data ) {
         countries.push(data['Country']);
@@ -12,15 +13,32 @@
         districts.push(data['Districts']);
         subdistricts.push(data['Subdistricts']);
 
-        var option_string = '';
+        var country_option_string = '';
 
         for(var i=0; i<countries[0].length; i++){
-            option_string += '<option data-tokens="' + countries[0][i]["name"].toLowerCase() +'" value="' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>';
+            country_option_string += '<option data-tokens="' + countries[0][i]["name"].toLowerCase() +'" value="' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>';
         }
 
-        input_country.empty().append(option_string).change(function(){
-            var selected = $(this).val();
-            console.log(selected);
+        input_country.empty().append(country_option_string).change(function(){
+            var selected_country = $(this).val();
+
+            var division_option_string = '';
+
+
+            for(var i=0; i<countries[0].length; i++){
+                if(countries[0][i]["id"] == selected_country){
+                    for(var j=0; j<countries[0][i]["divisions"].length; j++){
+                        division_option_string += '<option data-tokens="' + countries[0][i]["divisions"][j]["name"].toLowerCase() +'" value="' + countries[0][i]["divisions"][j]["id"] + '">' + countries[0][i]["divisions"][j]["name"] + '</option>';
+                    }
+                }
+            }
+
+            input_division.empty().append(division_option_string).change(function () {
+                var selected_division = $(this).val();
+                console.log(selected_division);
+            }).selectpicker('refresh');
+
+
         }).selectpicker('refresh');
 
       });
