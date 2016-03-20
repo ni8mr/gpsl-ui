@@ -26,15 +26,9 @@
 
 
             for(var i=0; i<countries[0].length; i++){
-                console.log(countries);
-                console.log(countries[0][i]);
                 if(countries[0][i]["id"] == selected_country){
-                    console.log(countries[0][i]["id"]);
-                    console.log(countries[0][i]["divisions"]);
-                    console.log(countries[0][i]["divisions"].length);
-                    // for(var j=0; j<countries[0][i]["divisions"].length; j++){
-                    //     division_option_string += '<option data-tokens="' + countries[0][i]["divisions"][j]["name"].toLowerCase() +'" value="' + countries[0][i]["divisions"][j]["id"] + '">' + countries[0][i]["divisions"][j]["name"] + '</option>';
-                    // }
+                  related_divisions = countries[0][i]["divisions"];
+                  
                 }
             }
 
