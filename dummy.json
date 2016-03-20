@@ -17,7 +17,7 @@
     {
       "id": "03",
       "name": "Singapore",
-      "Capital": "Singapore City",
+      "capital": "Singapore City",
       "divisions": ["12","13","14","15","16"],
       "districts": ["32","33","34","35","36"]
     }
