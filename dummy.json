@@ -26,29 +26,17 @@
     {
       "id": "01",
       "name": "Shengdong",
-      "districts": [
-        [
-          ["01"]
-        ]
-      ]
+      "districts": ["01"]
     },
     {
       "id": "02",
       "name": "Anhui",
-      "districts": [
-        [
-          ["02"]
-        ]
-      ]
+      "districts": ["02"]
     },
     {
       "id": "03",
       "name": "Fujian",
-      "districts": [
-        [
-          ["03"]
-        ]
-      ]
+      "districts": ["03"]
     },
     {
       "id": "04",
@@ -73,94 +61,54 @@
     {
       "id": "08",
       "name": "Central Region",
-      "districts": [
-        [
-          ["15"]
-        ]
-      ]
+      "districts": ["15"]
     },
     {
       "id": "09",
       "name": "North Region",
-      "districts": [
-        [
-          ["16"]
-        ]
-      ]
+      "districts": ["16"]
     },
     {
       "id": "10",
       "name": "East Region",
-      "districts": [
-        [
-          ["17"]
-        ]
-      ]
+      "districts": ["17"]
     },
     {
       "id": "11",
       "name": "North-east Region",
-      "districts": [
-        [
-          ["18"]
-        ]
-      ]
+      "districts": ["18"]
     },
     {
       "id": "12",
       "name": "West Region",
-      "districts": [
-        [
-          ["19"]
-        ]
-      ]
+      "districts": ["19"]
     }
   ],
   "Districts": [
     {
       "id": "1",
       "name": "Dongcheng",
-      "subdistricts": [
-        [
-          ["1"]
-        ]
-      ]
+      "subdistricts": ["1"]
     },
     {
       "id": "2",
       "name": "Yaohai",
-      "subdistricts": [
-        [
-          ["2"]
-        ]
-      ]
+      "subdistricts": ["2"]
     },
     {
       "id": "3",
       "name": "Luyang",
-      "subdistricts": [
-        [
-          ["3"]
-        ]
-      ]
+      "subdistricts": ["3"]
     },
     {
       "id": "4",
       "name": "Barisal",
-      "subdistricts": [
-        [
-          ["4"]
-        ]
-      ]
+      "subdistricts": ["4"]
     },
     {
       "id": "5",
       "name": "Barguna",
-      "subdistricts": [
-        [
-          ["5"]
-        ]
-      ]
+      "subdistricts": ["5"]
     },
     {
       "id": "6",
@@ -175,110 +123,62 @@
     {
       "id": "8",
       "name": "Cox's Bazar",
-      "subdistricts": [
-        [
-          ["12"]
-        ]
-      ]
+      "subdistricts": ["12"]
     },
     {
       "id": "9",
       "name": "Comilla",
-      "subdistricts": [
-        [
-          ["13"]
-        ]
-      ]
+      "subdistricts": ["13"]
     },
     {
       "id": "10",
       "name": "Feni",
-      "subdistricts": [
-        [
-          ["14"]
-        ]
-      ]
+      "subdistricts": ["14"]
     },
     {
       "id": "11",
       "name": "Dhaka",
-      "subdistricts": [
-        [
-          ["15"]
-        ]
-      ]
+      "subdistricts": ["15"]
     },
     {
       "id": "12",
       "name": "Narayanganj",
-      "subdistricts": [
-        [
-          ["16"]
-        ]
-      ]
+      "subdistricts": ["16"]
     },
     {
       "id": "13",
       "name": "Khulna",
-      "subdistricts": [
-        [
-          ["17"]
-        ]
-      ]
+      "subdistricts": ["17"]
     },
     {
       "id": "14",
       "name": "Bagerhat",
-      "subdistricts": [
-        [
-          ["18"]
-        ]
-      ]
+      "subdistricts": ["18"]
     },
     {
       "id": "15",
       "name": "Radin Mas SMC",
-      "subdistricts": [
-        [
-          ["19"]
-        ]
-      ]
+      "subdistricts": ["19"]
     },
     {
       "id": "16",
       "name": "Jalan Besar GRC",
-      "subdistricts": [
-        [
-          ["20"]
-        ]
-      ]
+      "subdistricts": ["20"]
     },
     {
       "id": "17",
       "name": "Mount Batten GRC",
-      "subdistricts": [
-        [
-          ["21"]
-        ]
-      ]
+      "subdistricts": ["21"]
     },
     {
       "id": "18",
       "name": "Marine Parade GRC",
-      "subdistricts": [
-        [
-          ["22"]
-        ]
-      ]
+      "subdistricts": ["22"]
     },
     {
       "id": "19",
       "name": "West Coast GRC",
-      "subdistricts": [
-        [
-          ["23"]
-        ]
-      ]
+      "subdistricts": ["23"]
     }
   ],
   "Subdistricts": [
