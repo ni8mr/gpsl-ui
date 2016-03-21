@@ -51,6 +51,8 @@
                   if(divisions[0][i]["id"] == selected_division){
                     related_districts = divisions[0][i]["districts"];
 
+                    console.log(related_districts);
+
                     for(var j=0; j<related_districts.length; j++){
                       for(var k=0; k<districts[0].length; k++){
                           if(related_districts[j] == districts[0][k]["id"]){
@@ -61,11 +63,11 @@
                   }
                 }
 
-            input_district.empty().append(district_option_string).change(function(){
-                var selected_district = $(this).val();
+                input_district.empty().append(district_option_string).change(function(){
+                    var selected_district = $(this).val();
 
-                console.log(selected_district);
-            }).selectpicker('refresh');
+                    console.log(selected_district);
+                }).selectpicker('refresh');
 
 
 
