@@ -6,6 +6,7 @@
     subdistricts = [],
     input_country =$('#country');
     input_division = $('#division');
+    input_district = $('#district');
   $.getJSON(url)
     .done(function( data ) {
         countries.push(data['Country']);
@@ -40,7 +41,30 @@
 
             input_division.empty().append(division_option_string).change(function () {
                 var selected_division = $(this).val();
-                console.log(selected_division);
+
+                var district_option_string = '';
+
+                for(var i=0; i<divisions[0].length; i++){
+                if(divisions[0][i]["id"] == selected_division){
+                  related_districts = divisions[0][i]["districts"];
+                  for(var j=0; j<related_districts.length; j++){
+                      for(var k=0; k<districts[0].length; k++){
+                          if(related_districts[j] == districts[0][k]["id"]){
+                              district_option_string += '<option data-tokens="' + districts[0][k]["name"].toLowerCase() +'" value="' + districts[0][k]["id"] + '">' + districts[0][k]["name"] + '</option>';
+                          }
+                      }
+                  }
+                }
+            }
+
+            input_district.empty().append(district_option_string).change(function(){
+                var selected_district = $(this).val();
+
+                console.log(selected_district);
+            })
+
+
+
             }).selectpicker('refresh');
 
         }).selectpicker('refresh');
