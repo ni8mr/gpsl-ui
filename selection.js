@@ -8,6 +8,7 @@
     input_division = $('#division');
     input_district = $('#district');
     input_subdristrict = $('#subdistrict');
+    input_postcode = $('#post-code');
   $.getJSON(url)
     .done(function( data ) {
         countries.push(data['Country']);
@@ -94,8 +95,26 @@
                     input_subdristrict.empty().append(subdistrict_option_string).change(function(){
                         var selected_subdistrict = $(this).val();
 
+                        var post_codes_options_string = '';
 
-                        console.log(selected_subdistrict);
+                        for(var i=0; i<subdistricts[0].length; i++){
+                          if(selected_subdistrict == subdistricts[0][i]["id"]){
+                            related_postcodes = subdistricts[0][i]["postcodes"];
+
+                            for(var j=0; j<related_postcodes.length; j++){
+                              post_codes_options_string += '<option data-tokens="' + related_postcodes[j] +'" value="' + j + '">' + related_postcodes[j] + '</option>';
+                            }
+                          }
+                        }
+
+                        /* Post Code selection event */
+
+                        input_postcode.empty().append(post_codes_options_string).change(function(){
+                            // Catching selected post codes, if it is needed
+                            var selected_post_codes = $(this).val();
+
+                        }).selectpicker('referesh');
+
                     }).selectpicker('refresh');
 
                 }).selectpicker('refresh');
