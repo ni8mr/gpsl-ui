@@ -88,17 +88,17 @@
     {
       "id": "01",
       "name": "Dongcheng",
-      "subdistricts": ["01"]
+      "subdistricts": ["01","24"]
     },
     {
       "id": "02",
       "name": "Yaohai",
-      "subdistricts": ["02"]
+      "subdistricts": ["02","25"]
     },
     {
       "id": "03",
       "name": "Luyang",
-      "subdistricts": ["03"]
+      "subdistricts": ["03","26"]
     },
     {
       "id": "04",
@@ -296,6 +296,21 @@
       "id":"23",
       "name": "East Region",
       "postcodes": ["609098","567654","765432"]
+    },
+    {
+      "id":"24",
+      "name": "Nanchuan",
+      "postcodes": ["856200","404111","112357"]
+    },
+    {
+      "id":"25",
+      "name": "Yaohai subdistrict-01",
+      "postcodes": ["884050","905202","905155"]
+    },
+    {
+      "id":"26",
+      "name": "Sanpailou",
+      "postcodes": ["994333","909101","109050"]
     }
   ]
 }

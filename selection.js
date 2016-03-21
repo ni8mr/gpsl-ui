@@ -32,6 +32,7 @@
             for(var i=0; i<countries[0].length; i++){
                 if(countries[0][i]["id"] == selected_country){
                   related_divisions = countries[0][i]["divisions"];
+                    
 
                   for(var j=0; j<related_divisions.length; j++){
                       for(var k=0; k<divisions[0].length; k++){
@@ -75,7 +76,7 @@
                     for(var i=0; i<districts[0].length; i++){
                       if(districts[0][i]["id"] == selected_district){
                         related_subdistricts = districts[0][i]["subdistricts"];
-                          
+
                         for(var j=0; j<related_subdistricts.length; j++){
                           for(var k=0; k<subdistricts[0].length; k++){
                             if(related_subdistricts[j]== subdistricts[0][k]["id"]){
@@ -91,9 +92,10 @@
                     /* subDistrict selection event */
 
                     input_subdristrict.empty().append(subdistrict_option_string).change(function(){
-                        var selected_subDistrict = $(this).val();
+                        var selected_subdistrict = $(this).val();
 
-                        console.log(selected_subDistrict);
+
+                        console.log(selected_subdistrict);
                     }).selectpicker('refresh');
 
                 }).selectpicker('refresh');
