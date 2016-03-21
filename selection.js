@@ -75,8 +75,7 @@
                     for(var i=0; i<districts[0].length; i++){
                       if(districts[0][i]["id"] == selected_district){
                         related_subdistricts = districts[0][i]["subdistricts"];
-
-                        console.log(related_subdistricts);
+                          
                         for(var j=0; j<related_subdistricts.length; j++){
                           for(var k=0; k<subdistricts[0].length; k++){
                             if(related_subdistricts[j]== subdistricts[0][k]["id"]){
