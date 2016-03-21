@@ -29,6 +29,7 @@
             for(var i=0; i<countries[0].length; i++){
                 if(countries[0][i]["id"] == selected_country){
                   related_divisions = countries[0][i]["divisions"];
+
                   for(var j=0; j<related_divisions.length; j++){
                       for(var k=0; k<divisions[0].length; k++){
                           if(related_divisions[j] == divisions[0][k]["id"]){
@@ -49,6 +50,7 @@
                 for(var i=0; i<divisions[0].length; i++){
                   if(divisions[0][i]["id"] == selected_division){
                     related_districts = divisions[0][i]["districts"];
+
                     for(var j=0; j<related_districts.length; j++){
                       for(var k=0; k<districts[0].length; k++){
                           if(related_districts[j] == districts[0][k]["id"]){
@@ -63,7 +65,7 @@
                 var selected_district = $(this).val();
 
                 console.log(selected_district);
-            })
+            }).selectpicker('refresh');
 
 
 
