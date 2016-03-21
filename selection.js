@@ -20,6 +20,7 @@
             country_option_string += '<option data-tokens="' + countries[0][i]["name"].toLowerCase() +'" value="' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>';
         }
 
+        /* Country selection event */
         input_country.empty().append(country_option_string).change(function(){
             var selected_country = $(this).val();
 
@@ -40,6 +41,7 @@
                 }
             }
 
+            /* Division selection event */
             input_division.empty().append(division_option_string).change(function () {
                 var selected_division = $(this).val();
 
