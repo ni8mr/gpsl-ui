@@ -70,26 +70,28 @@
                 input_district.empty().append(district_option_string).change(function(){
                     var selected_district = $(this).val();
 
-                    var subDistrict_option_string = '';
-
+                    var subdistrict_option_string = '';
 
                     for(var i=0; i<districts[0].length; i++){
                       if(districts[0][i]["id"] == selected_district){
-                        related_subDistricts = districts[0][i]["subdistricts"];
+                        related_subdistricts = districts[0][i]["subdistricts"];
 
-                        for(var j=0; j<related_subDistricts.length; j++){
+                        console.log(related_subdistricts);
+                        for(var j=0; j<related_subdistricts.length; j++){
                           for(var k=0; k<subdistricts[0].length; k++){
-                            if(related_subDistricts[j]== subdistricts[0][k]["id"]){
-                              subDistrict_option_string += '<option data-tokens="' + subdistricts[0][k]["name"].toLowerCase() +'" value="' + subdistricts[0][k]["id"] + '">' + subdistricts[0][k]["name"] + '</option>';
+                            if(related_subdistricts[j]== subdistricts[0][k]["id"]){
+                              subdistrict_option_string += '<option data-tokens="' + subdistricts[0][k]["name"].toLowerCase() +'" value="' + subdistricts[0][k]["id"] + '">' + subdistricts[0][k]["name"] + '</option>';
                             }
                           }
                         }
                       }
                     }
 
+
+
                     /* subDistrict selection event */
 
-                    input_subdristrict.empty().append(subDistrict_option_string).change(function(){
+                    input_subdristrict.empty().append(subdistrict_option_string).change(function(){
                         var selected_subDistrict = $(this).val();
 
                         console.log(selected_subDistrict);
