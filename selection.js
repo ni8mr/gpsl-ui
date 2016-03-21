@@ -49,6 +49,13 @@
                   if(divisions[0][i]["id"] == selected_division){
                     related_districts = divisions[0][i]["districts"];
 
+                    for(var j=0; j<related_districts.length; j++){
+                      for(var k=0; k<districts[0].length; k++){
+                        if(related_districts[j]== districts[0][k]["id"]){
+                              district_option_string += '<option data-tokens="' + districts[0][k]["name"].toLowerCase() +'" value="' + districts[0][k]["id"] + '">' + districts[0][k]["name"] + '</option>';
+                          }
+                      }
+                    }
                   }
                 }
 
