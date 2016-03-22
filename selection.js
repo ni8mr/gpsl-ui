@@ -113,7 +113,7 @@
                             // Catching selected post codes, if it is needed
                             var selected_post_codes = $(this).val();
 
-                        }).selectpicker('referesh');
+                        }).selectpicker('refresh');
 
                     }).selectpicker('refresh');
 
