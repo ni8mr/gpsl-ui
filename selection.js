@@ -4,17 +4,17 @@
     divisions = [],
     districts = [],
     subdistricts = [],
-    input_country =$('#country');
-    input_division = $('#division');
-    input_district = $('#district');
-    input_subdristrict = $('#subdistrict');
-    input_postcode = $('#post-code');
+    input_country =$("#country");
+    input_division = $("#division");
+    input_district = $("#district");
+    input_subdristrict = $("#subdistrict");
+    input_postcode = $("#post-code");
   $.getJSON(url)
     .done(function( data ) {
-        countries.push(data['Country']);
-        divisions.push(data['Divisions']);
-        districts.push(data['Districts']);
-        subdistricts.push(data['Subdistricts']);
+        countries.push(data["Country"]);
+        divisions.push(data["Divisions"]);
+        districts.push(data["Districts"]);
+        subdistricts.push(data["Subdistricts"]);
 
         var country_option_string = '';
 
@@ -98,7 +98,7 @@
                         var post_codes_options_string = '';
 
                         for(var i=0; i<subdistricts[0].length; i++){
-                          if(selected_subdistrict == subdistricts[0][i]["id"]){
+                          if(subdistricts[0][i]["id"] == selected_subdistrict){
                             related_postcodes = subdistricts[0][i]["postcodes"];
 
                             for(var j=0; j<related_postcodes.length; j++){
@@ -113,7 +113,7 @@
                             // Catching selected post codes, if it is needed
                             var selected_post_codes = $(this).val();
 
-                        }).selectpicker('referesh');
+                        }).selectpicker('refresh');
 
                     }).selectpicker('refresh');
 
