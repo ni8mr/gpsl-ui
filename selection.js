@@ -102,7 +102,7 @@
                             related_postcodes = subdistricts[0][i]["postcodes"];
 
                             for(var j=0; j<related_postcodes.length; j++){
-                              post_codes_options_string += '<option data-tokens="' + related_postcodes[j] +'" value="' + j + '">' + related_postcodes[j] + '</option>';
+                              post_codes_options_string += '<option data-tokens="' + related_postcodes[j] + 'a' +'" value="' + j + '">' + related_postcodes[j] + '</option>';
                             }
                           }
                         }
