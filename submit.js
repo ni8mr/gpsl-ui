@@ -1,5 +1,7 @@
-
-var values = {};
-$.each($("#depot-submit-form").serializeArray(), function(i, field) {
-    values[field.name] = field.value;
+$(function() {
+    $("#depot-submit-form").on('submit', function(e) {
+        e.preventDefault();
+        var data = $("#depot-submit-form").serializeArray();
+        console.log(data);
+    });
 });
