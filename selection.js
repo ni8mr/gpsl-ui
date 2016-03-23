@@ -4,7 +4,7 @@
     divisions = [],
     districts = [],
     subdistricts = [],
-    input_country =$("#country");
+    input_country = $("#country");
     input_division = $("#division");
     input_district = $("#district");
     input_subdristrict = $("#subdistrict");
