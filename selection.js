@@ -24,8 +24,8 @@
 
         /* Country selection event */
 
-        input_country.empty().append(country_option_string).change(function(event){
-            event.preventDefault();
+        input_country.empty().append(country_option_string).change(function(e){
+            e.preventDefault();
             var selected_country = $(this).val();
 
             var division_option_string = '';
@@ -48,8 +48,8 @@
 
             /* Division selection event */
 
-            input_division.empty().append(division_option_string).change(function (event) {
-                event.preventDefault();
+            input_division.empty().append(division_option_string).change(function (e) {
+                e.preventDefault();
                 var selected_division = $(this).val();
 
                 var district_option_string = '';
@@ -71,7 +71,8 @@
 
                 /* District selection event */
 
-                input_district.empty().append(district_option_string).change(function(){
+                input_district.empty().append(district_option_string).change(function(e){
+                    e.preventDefault();
                     var selected_district = $(this).val();
 
                     var subdistrict_option_string = '';
@@ -94,7 +95,8 @@
 
                     /* subDistrict selection event */
 
-                    input_subdristrict.empty().append(subdistrict_option_string).change(function(){
+                    input_subdristrict.empty().append(subdistrict_option_string).change(function(e){
+                        e.preventDefault();
                         var selected_subdistrict = $(this).val();
 
                         var post_codes_options_string = '';
@@ -111,7 +113,8 @@
 
                         /* Post Code selection event */
 
-                        input_postcode.empty().append(post_codes_options_string).change(function(){
+                        input_postcode.empty().append(post_codes_options_string).change(function(e){
+                            e.preventDefault();
                             // Catching selected post codes, if it is needed
                             var selected_post_codes = $(this).val();
 
