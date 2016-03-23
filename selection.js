@@ -24,8 +24,8 @@
 
         /* Country selection event */
 
-        input_country.empty().append(country_option_string).change(function(){
-            //event.preventDefault();
+        input_country.empty().append(country_option_string).change(function(event){
+            event.preventDefault();
             var selected_country = $(this).val();
 
             var division_option_string = '';
@@ -48,7 +48,8 @@
 
             /* Division selection event */
 
-            input_division.empty().append(division_option_string).change(function () {
+            input_division.empty().append(division_option_string).change(function (event) {
+                event.preventDefault();
                 var selected_division = $(this).val();
 
                 var district_option_string = '';
