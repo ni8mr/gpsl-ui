@@ -25,6 +25,7 @@
         /* Country selection event */
 
         input_country.empty().append(country_option_string).change(function(){
+            //event.preventDefault();
             var selected_country = $(this).val();
 
             var division_option_string = '';
