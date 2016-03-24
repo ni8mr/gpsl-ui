@@ -5,7 +5,7 @@ $(function() {
         console.log(data);
         for(var i=0; i<data.length; i++){
             if(data[i].value.length == 0){
-                console.log(data[i].value);
+                console.log(data[i].name);
             }
         }
     });
