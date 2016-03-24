@@ -1,12 +1,8 @@
-$(function() {
-    $("#depot-submit-form").submit(function(e) {
-        e.preventDefault();
-        var data = $("#depot-submit-form").serializeArray();
-        console.log(data);
-        for(var i=0; i<data.length; i++){
-            if(data[i].value.length == 0){
-                console.log(data[i].name);
-            }
-        }
+ $(function() {
+  $("#depot-submit-form").submit(function(e) {
+    e.preventDefault();
+    $(this).find('.has-error').each(function(){
+         $(this).find('.col-md-10').append("<span>Field should not be empty!</span>");
     });
+  });
 });
