@@ -1,506 +1,916 @@
-  {
-    "Country": [
-    {
-      "id": "01",
-      "name": "China",
-      "capital": "Beijing",
-      "divisions": ["01", "02", "03"],
-      "districts": ["01", "02", "03"]
+{
+    "last_updated": {
+        "time_stamp": "2011-07-14 19:43:37 +0100"
     },
-    {
-      "id": "02",
-      "name": "Bangladesh",
-      "capital": "Dhaka",
-      "divisions": ["04", "05", "06", "07"],
-      "districts": ["04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
-    },
-    {
-      "id": "03",
-      "name": "Singapore",
-      "capital": "Singapore City",
-      "divisions": ["08","09","10","11","12","13","14","15","16"],
-      "districts": ["32","33","34","35","36"]
+    "Location": {
+        "Country": [
+            {
+                "id": "01",
+                "name": "China",
+                "capital": "Beijing",
+                "divisions": [
+                    "01",
+                    "02",
+                    "03"
+                ],
+                "districts": [
+                    "01",
+                    "02",
+                    "03"
+                ]
+            },
+            {
+                "id": "02",
+                "name": "Bangladesh",
+                "capital": "Dhaka",
+                "divisions": [
+                    "04",
+                    "05",
+                    "06",
+                    "07"
+                ],
+                "districts": [
+                    "04",
+                    "05",
+                    "06",
+                    "07",
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "20",
+                    "21",
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31"
+                ]
+            },
+            {
+                "id": "03",
+                "name": "Singapore",
+                "capital": "Singapore City",
+                "divisions": [
+                    "08",
+                    "09",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16"
+                ],
+                "districts": [
+                    "32",
+                    "33",
+                    "34",
+                    "35",
+                    "36"
+                ]
+            }
+        ],
+        "Divisions": [
+            {
+                "id": "01",
+                "name": "Shengdong",
+                "districts": [
+                    "01",
+                    "20"
+                ]
+            },
+            {
+                "id": "02",
+                "name": "Anhui",
+                "districts": [
+                    "02",
+                    "21"
+                ]
+            },
+            {
+                "id": "03",
+                "name": "Fujian",
+                "districts": [
+                    "03",
+                    "22"
+                ]
+            },
+            {
+                "id": "04",
+                "name": "Barisal",
+                "districts": [
+                    "04",
+                    "05",
+                    "06"
+                ]
+            },
+            {
+                "id": "05",
+                "name": "Chittagong",
+                "districts": [
+                    "07",
+                    "08",
+                    "09",
+                    "10"
+                ]
+            },
+            {
+                "id": "06",
+                "name": "Dhaka",
+                "districts": [
+                    "11",
+                    "12"
+                ]
+            },
+            {
+                "id": "07",
+                "name": "Khulna",
+                "districts": [
+                    "13",
+                    "14"
+                ]
+            },
+            {
+                "id": "08",
+                "name": "Central Region",
+                "districts": [
+                    "15",
+                    "22"
+                ]
+            },
+            {
+                "id": "09",
+                "name": "North Region",
+                "districts": [
+                    "16",
+                    "23"
+                ]
+            },
+            {
+                "id": "10",
+                "name": "East Region",
+                "districts": [
+                    "17",
+                    "24"
+                ]
+            },
+            {
+                "id": "11",
+                "name": "North-east Region",
+                "districts": [
+                    "18",
+                    "25"
+                ]
+            },
+            {
+                "id": "12",
+                "name": "West Region",
+                "districts": [
+                    "19",
+                    "26"
+                ]
+            }
+        ],
+        "Districts": [
+            {
+                "id": "01",
+                "name": "Dongcheng",
+                "subdistricts": [
+                    "01",
+                    "24"
+                ]
+            },
+            {
+                "id": "02",
+                "name": "Yaohai",
+                "subdistricts": [
+                    "02",
+                    "25"
+                ]
+            },
+            {
+                "id": "03",
+                "name": "Luoyuan",
+                "subdistricts": [
+                    "03",
+                    "31"
+                ]
+            },
+            {
+                "id": "04",
+                "name": "Barisal",
+                "subdistricts": [
+                    "04",
+                    "42"
+                ]
+            },
+            {
+                "id": "05",
+                "name": "Barguna",
+                "subdistricts": [
+                    "05",
+                    "43"
+                ]
+            },
+            {
+                "id": "06",
+                "name": "Bhola",
+                "subdistricts": [
+                    "06",
+                    "07"
+                ]
+            },
+            {
+                "id": "07",
+                "name": "Chittagong",
+                "subdistricts": [
+                    "08",
+                    "09",
+                    "10",
+                    "11"
+                ]
+            },
+            {
+                "id": "08",
+                "name": "Cox's Bazar",
+                "subdistricts": [
+                    "12",
+                    "44"
+                ]
+            },
+            {
+                "id": "09",
+                "name": "Comilla",
+                "subdistricts": [
+                    "13",
+                    "45"
+                ]
+            },
+            {
+                "id": "10",
+                "name": "Feni",
+                "subdistricts": [
+                    "14",
+                    "46"
+                ]
+            },
+            {
+                "id": "11",
+                "name": "Dhaka",
+                "subdistricts": [
+                    "15",
+                    "47"
+                ]
+            },
+            {
+                "id": "12",
+                "name": "Narayanganj",
+                "subdistricts": [
+                    "16",
+                    "48"
+                ]
+            },
+            {
+                "id": "13",
+                "name": "Khulna",
+                "subdistricts": [
+                    "17",
+                    "49"
+                ]
+            },
+            {
+                "id": "14",
+                "name": "Bagerhat",
+                "subdistricts": [
+                    "18",
+                    "50"
+                ]
+            },
+            {
+                "id": "15",
+                "name": "Radin Mas SMC",
+                "subdistricts": [
+                    "19",
+                    "51"
+                ]
+            },
+            {
+                "id": "16",
+                "name": "Jalan Besar GRC",
+                "subdistricts": [
+                    "20",
+                    "52"
+                ]
+            },
+            {
+                "id": "17",
+                "name": "Mount Batten GRC",
+                "subdistricts": [
+                    "21",
+                    "53"
+                ]
+            },
+            {
+                "id": "18",
+                "name": "Marine Parade GRC",
+                "subdistricts": [
+                    "22",
+                    "54"
+                ]
+            },
+            {
+                "id": "19",
+                "name": "West Coast GRC",
+                "subdistricts": [
+                    "23",
+                    "55"
+                ]
+            },
+            {
+                "id": "20",
+                "name": "Qingdao",
+                "subdistricts": [
+                    "27",
+                    "28"
+                ]
+            },
+            {
+                "id": "21",
+                "name": "Huainan",
+                "subdistricts": [
+                    "29",
+                    "30"
+                ]
+            },
+            {
+                "id": "22",
+                "name": "Tanglin",
+                "subdistricts": [
+                    "32",
+                    "33"
+                ]
+            },
+            {
+                "id": "23",
+                "name": "Simpang",
+                "subdistricts": [
+                    "34",
+                    "35"
+                ]
+            },
+            {
+                "id": "24",
+                "name": "Bedok",
+                "subdistricts": [
+                    "36",
+                    "37"
+                ]
+            },
+            {
+                "id": "25",
+                "name": "Ang Mo Kio",
+                "subdistricts": [
+                    "38",
+                    "39"
+                ]
+            },
+            {
+                "id": "26",
+                "name": "Bukit Batok",
+                "subdistricts": [
+                    "40",
+                    "41"
+                ]
+            }
+        ],
+        "Subdistricts": [
+            {
+                "id": "01",
+                "name": "Dailang",
+                "postcodes": [
+                    "736200",
+                    "404000",
+                    "100000"
+                ]
+            },
+            {
+                "id": "02",
+                "name": "Changchung",
+                "postcodes": [
+                    "864000",
+                    "504100",
+                    "905050"
+                ]
+            },
+            {
+                "id": "03",
+                "name": "Chengdu",
+                "postcodes": [
+                    "994000",
+                    "909100",
+                    "109050"
+                ]
+            },
+            {
+                "id": "04",
+                "name": "Agailjhara",
+                "postcodes": [
+                    "8240",
+                    "8241",
+                    "8242"
+                ]
+            },
+            {
+                "id": "05",
+                "name": "Amtali Upazella",
+                "postcodes": [
+                    "9940",
+                    "9941",
+                    "8878"
+                ]
+            },
+            {
+                "id": "06",
+                "name": "Bhola Sadar",
+                "postcodes": [
+                    "7230",
+                    "7741",
+                    "7752"
+                ]
+            },
+            {
+                "id": "07",
+                "name": "Daulatkhan",
+                "postcodes": [
+                    "8650",
+                    "8871",
+                    "8880"
+                ]
+            },
+            {
+                "id": "08",
+                "name": "Sitakund",
+                "postcodes": [
+                    "4320",
+                    "4321",
+                    "4325"
+                ]
+            },
+            {
+                "id": "09",
+                "name": "Satkania",
+                "postcodes": [
+                    "4460",
+                    "4461",
+                    "4458"
+                ]
+            },
+            {
+                "id": "10",
+                "name": "Port",
+                "postcodes": [
+                    "4530",
+                    "4555",
+                    "4532"
+                ]
+            },
+            {
+                "id": "11",
+                "name": "Dabal Muring",
+                "postcodes": [
+                    "4320",
+                    "4321",
+                    "4448"
+                ]
+            },
+            {
+                "id": "12",
+                "name": "Chokaria",
+                "postcodes": [
+                    "5320",
+                    "5321",
+                    "5432"
+                ]
+            },
+            {
+                "id": "13",
+                "name": "Daudkandi",
+                "postcodes": [
+                    "6432",
+                    "6433",
+                    "6555"
+                ]
+            },
+            {
+                "id": "14",
+                "name": "Feni sadar",
+                "postcodes": [
+                    "3240",
+                    "3241",
+                    "3378"
+                ]
+            },
+            {
+                "id": "15",
+                "name": "Dhanmondi",
+                "postcodes": [
+                    "2330",
+                    "2441",
+                    "2878"
+                ]
+            },
+            {
+                "id": "16",
+                "name": "Narayanganj Sadar",
+                "postcodes": [
+                    "6444",
+                    "6543",
+                    "6657"
+                ]
+            },
+            {
+                "id": "17",
+                "name": "Batiaghat",
+                "postcodes": [
+                    "7780",
+                    "7781",
+                    "7778"
+                ]
+            },
+            {
+                "id": "18",
+                "name": "Bagerhat Sadar",
+                "postcodes": [
+                    "7450",
+                    "7451",
+                    "7458"
+                ]
+            },
+            {
+                "id": "19",
+                "name": "Changi",
+                "postcodes": [
+                    "736200",
+                    "404000",
+                    "555776"
+                ]
+            },
+            {
+                "id": "20",
+                "name": "Quenstown",
+                "postcodes": [
+                    "787899",
+                    "878788",
+                    "987789"
+                ]
+            },
+            {
+                "id": "21",
+                "name": "Clementi",
+                "postcodes": [
+                    "989778",
+                    "976543",
+                    "975432"
+                ]
+            },
+            {
+                "id": "22",
+                "name": "Tuas",
+                "postcodes": [
+                    "109901",
+                    "110900",
+                    "121345"
+                ]
+            },
+            {
+                "id": "23",
+                "name": "East Region",
+                "postcodes": [
+                    "609098",
+                    "567654",
+                    "765432"
+                ]
+            },
+            {
+                "id": "24",
+                "name": "Nanchuan",
+                "postcodes": [
+                    "856200",
+                    "404111",
+                    "112357"
+                ]
+            },
+            {
+                "id": "25",
+                "name": "Yaohai subdistrict-01",
+                "postcodes": [
+                    "884050",
+                    "905202",
+                    "905155"
+                ]
+            },
+            {
+                "id": "26",
+                "name": "Sanpailou",
+                "postcodes": [
+                    "994333",
+                    "909101",
+                    "109050"
+                ]
+            },
+            {
+                "id": "27",
+                "name": "Qingdao-1",
+                "postcodes": [
+                    "444444",
+                    "909101",
+                    "109050"
+                ]
+            },
+            {
+                "id": "28",
+                "name": "Qingdao-2",
+                "postcodes": [
+                    "555555",
+                    "909101",
+                    "109050"
+                ]
+            },
+            {
+                "id": "29",
+                "name": "Fengtai",
+                "postcodes": [
+                    "230000",
+                    "230100",
+                    "230200"
+                ]
+            },
+            {
+                "id": "30",
+                "name": "Panji",
+                "postcodes": [
+                    "240000",
+                    "240100",
+                    "240200"
+                ]
+            },
+            {
+                "id": "31",
+                "name": "Luoyuan subdistrict-1",
+                "postcodes": [
+                    "777777",
+                    "240100",
+                    "240200"
+                ]
+            },
+            {
+                "id": "32",
+                "name": "Tangling subdistrict-1",
+                "postcodes": [
+                    "247964",
+                    "240100",
+                    "240200"
+                ]
+            },
+            {
+                "id": "33",
+                "name": "Tangling subdistrict-2",
+                "postcodes": [
+                    "777777",
+                    "247964",
+                    "240200"
+                ]
+            },
+            {
+                "id": "32",
+                "name": "Tangling subdistrict-1",
+                "postcodes": [
+                    "247964",
+                    "240100",
+                    "240200"
+                ]
+            },
+            {
+                "id": "33",
+                "name": "Tangling subdistrict-2",
+                "postcodes": [
+                    "777777",
+                    "247964",
+                    "240200"
+                ]
+            },
+            {
+                "id": "34",
+                "name": "Simpang subdistrict-1",
+                "postcodes": [
+                    "247964",
+                    "240100",
+                    "240200"
+                ]
+            },
+            {
+                "id": "35",
+                "name": "Simpang subdistrict-2",
+                "postcodes": [
+                    "777777",
+                    "247964",
+                    "240200"
+                ]
+            },
+            {
+                "id": "36",
+                "name": "Bedok subdistrict-1",
+                "postcodes": [
+                    "247964",
+                    "240100",
+                    "240200"
+                ]
+            },
+            {
+                "id": "37",
+                "name": "Bedok subdistrict-2",
+                "postcodes": [
+                    "777777",
+                    "247964",
+                    "240200"
+                ]
+            },
+            {
+                "id": "38",
+                "name": "Ang Mo Kio subdistrict-2",
+                "postcodes": [
+                    "777777",
+                    "247964",
+                    "240200"
+                ]
+            },
+            {
+                "id": "39",
+                "name": "Ang Mo Kio subdistrict-2",
+                "postcodes": [
+                    "777777",
+                    "247964",
+                    "240200"
+                ]
+            },
+            {
+                "id": "40",
+                "name": "Bukit Batok subdistrict-2",
+                "postcodes": [
+                    "777777",
+                    "247964",
+                    "240200"
+                ]
+            },
+            {
+                "id": "41",
+                "name": "Bukit Batok subdistrict-2",
+                "postcodes": [
+                    "256579",
+                    "247964",
+                    "240200"
+                ]
+            },
+            {
+                "id": "42",
+                "name": "Muladi",
+                "postcodes": [
+                    "8250",
+                    "8251",
+                    "8252"
+                ]
+            },
+            {
+                "id": "43",
+                "name": "Betagi",
+                "postcodes": [
+                    "8740",
+                    "8741",
+                    "8742"
+                ]
+            },
+            {
+                "id": "44",
+                "name": "Ramu",
+                "postcodes": [
+                    "4730",
+                    "4731",
+                    "4732"
+                ]
+            },
+            {
+                "id": "45",
+                "name": "Chouddagram",
+                "postcodes": [
+                    "3550",
+                    "3551",
+                    "3552"
+                ]
+            },
+            {
+                "id": "46",
+                "name": "Sonagazi",
+                "postcodes": [
+                    "3930",
+                    "3931",
+                    "3932"
+                ]
+            },
+            {
+                "id": "47",
+                "name": "Joypara",
+                "postcodes": [
+                    "1330",
+                    "1331",
+                    "1332"
+                ]
+            },
+            {
+                "id": "48",
+                "name": "Siddirganj",
+                "postcodes": [
+                    "1430",
+                    "1431",
+                    "1432"
+                ]
+            },
+            {
+                "id": "49",
+                "name": "Paikgacha",
+                "postcodes": [
+                    "9280",
+                    "9281",
+                    "9282"
+                ]
+            },
+            {
+                "id": "50",
+                "name": "Rampal",
+                "postcodes": [
+                    "9340",
+                    "9341",
+                    "9342"
+                ]
+            },
+            {
+                "id": "51",
+                "name": "Radin Mas SMC subdistrict-1",
+                "postcodes": [
+                    "934000",
+                    "934100",
+                    "934200"
+                ]
+            },
+            {
+                "id": "52",
+                "name": "Jalan Besar GRC subdistrict-1",
+                "postcodes": [
+                    "934000",
+                    "934100",
+                    "934200"
+                ]
+            },
+            {
+                "id": "53",
+                "name": "Mount Batten GRC subdistrict-1",
+                "postcodes": [
+                    "934000",
+                    "934100",
+                    "934200"
+                ]
+            },
+            {
+                "id": "54",
+                "name": "Marine Parade GRC subdistrict-1",
+                "postcodes": [
+                    "934000",
+                    "934100",
+                    "934200"
+                ]
+            },
+            {
+                "id": "55",
+                "name": "West Coast GRC subdistrict-1",
+                "postcodes": [
+                    "934000",
+                    "934100",
+                    "934200"
+                ]
+            }
+        ]
     }
-  ],
-  "Divisions": [
-    {
-      "id": "01",
-      "name": "Shengdong",
-      "districts": ["01","20"]
-    },
-    {
-      "id": "02",
-      "name": "Anhui",
-      "districts": ["02","21"]
-    },
-    {
-      "id": "03",
-      "name": "Fujian",
-      "districts": ["03","22"]
-    },
-    {
-      "id": "04",
-      "name": "Barisal",
-      "districts": ["04","05","06"]
-    },
-    {
-      "id": "05",
-      "name": "Chittagong",
-      "districts": ["07","08","09","10"]
-    },
-    {
-      "id": "06",
-      "name": "Dhaka",
-      "districts": ["11","12"]
-    },
-    {
-      "id": "07",
-      "name": "Khulna",
-      "districts": ["13","14"]
-    },
-    {
-      "id": "08",
-      "name": "Central Region",
-      "districts": ["15","22"]
-    },
-    {
-      "id": "09",
-      "name": "North Region",
-      "districts": ["16","23"]
-    },
-    {
-      "id": "10",
-      "name": "East Region",
-      "districts": ["17","24"]
-    },
-    {
-      "id": "11",
-      "name": "North-east Region",
-      "districts": ["18","25"]
-    },
-    {
-      "id": "12",
-      "name": "West Region",
-      "districts": ["19","26"]
-    }
-  ],
-  "Districts": [
-    {
-      "id": "01",
-      "name": "Dongcheng",
-      "subdistricts": ["01","24"]
-    },
-    {
-      "id": "02",
-      "name": "Yaohai",
-      "subdistricts": ["02","25"]
-    },
-    {
-      "id": "03",
-      "name": "Luoyuan",
-      "subdistricts": ["03","31"]
-    },
-    {
-      "id": "04",
-      "name": "Barisal",
-      "subdistricts": ["04","42"]
-    },
-    {
-      "id": "05",
-      "name": "Barguna",
-      "subdistricts": ["05","43"]
-    },
-    {
-      "id": "06",
-      "name": "Bhola",
-      "subdistricts": ["06","07"]
-    },
-    {
-      "id": "07",
-      "name": "Chittagong",
-      "subdistricts": ["08","09","10","11"]
-    },
-    {
-      "id": "08",
-      "name": "Cox's Bazar",
-      "subdistricts": ["12","44"]
-    },
-    {
-      "id": "09",
-      "name": "Comilla",
-      "subdistricts": ["13","45"]
-    },
-    {
-      "id": "10",
-      "name": "Feni",
-      "subdistricts": ["14","46"]
-    },
-    {
-      "id": "11",
-      "name": "Dhaka",
-      "subdistricts": ["15","47"]
-    },
-    {
-      "id": "12",
-      "name": "Narayanganj",
-      "subdistricts": ["16","48"]
-    },
-    {
-      "id": "13",
-      "name": "Khulna",
-      "subdistricts": ["17","49"]
-    },
-    {
-      "id": "14",
-      "name": "Bagerhat",
-      "subdistricts": ["18","50"]
-    },
-    {
-      "id": "15",
-      "name": "Radin Mas SMC",
-      "subdistricts": ["19","51"]
-    },
-    {
-      "id": "16",
-      "name": "Jalan Besar GRC",
-      "subdistricts": ["20","52"]
-    },
-    {
-      "id": "17",
-      "name": "Mount Batten GRC",
-      "subdistricts": ["21","53"]
-    },
-    {
-      "id": "18",
-      "name": "Marine Parade GRC",
-      "subdistricts": ["22","54"]
-    },
-    {
-      "id": "19",
-      "name": "West Coast GRC",
-      "subdistricts": ["23","55"]
-    },
-    {
-      "id": "20",
-      "name": "Qingdao",
-      "subdistricts": ["27", "28"]
-    },
-    {
-      "id": "21",
-      "name": "Huainan",
-      "subdistricts": ["29", "30"]
-    },
-    {
-      "id": "22",
-      "name": "Tanglin",
-      "subdistricts": ["32", "33"]
-    },
-    {
-      "id": "23",
-      "name": "Simpang",
-      "subdistricts": ["34", "35"]
-    },
-    {
-      "id": "24",
-      "name": "Bedok",
-      "subdistricts": ["36", "37"]
-    },
-    {
-      "id": "25",
-      "name": "Ang Mo Kio",
-      "subdistricts": ["38", "39"]
-    },
-    {
-      "id": "26",
-      "name": "Bukit Batok",
-      "subdistricts": ["40", "41"]
-    }
-  ],
-  "Subdistricts": [
-    {
-      "id": "01",
-      "name": "Dailang",
-      "postcodes": ["736200","404000","100000"]
-    },
-    {
-      "id": "02",
-      "name": "Changchung",
-      "postcodes": ["864000","504100","905050"]
-    },
-    {
-      "id": "03",
-      "name": "Chengdu",
-      "postcodes": ["994000","909100","109050"]
-    },
-    {
-      "id": "04",
-      "name": "Agailjhara",
-      "postcodes": ["8240","8241","8242"]
-    },
-    {
-      "id": "05",
-      "name": "Amtali Upazella",
-      "postcodes": ["9940","9941","8878"]
-    },
-    {
-      "id": "06",
-      "name": "Bhola Sadar",
-      "postcodes": ["7230","7741","7752"]
-    },
-    {
-      "id": "07",
-      "name": "Daulatkhan",
-      "postcodes": ["8650","8871","8880"]
-    },
-    {
-      "id": "08",
-      "name": "Sitakund",
-      "postcodes": ["4320","4321","4325"]
-    },
-    {
-      "id": "09",
-      "name": "Satkania",
-      "postcodes": ["4460","4461","4458"]
-    },
-    {
-      "id": "10",
-      "name": "Port",
-      "postcodes": ["4530","4555","4532"]
-    },
-    {
-      "id": "11",
-      "name": "Dabal Muring",
-      "postcodes": ["4320","4321","4448"]
-    },
-    {
-      "id": "12",
-      "name": "Chokaria",
-      "postcodes": ["5320","5321","5432"]
-    },
-    {
-      "id": "13",
-      "name": "Daudkandi",
-      "postcodes": ["6432","6433","6555"]
-    },
-    {
-      "id": "14",
-      "name": "Feni sadar",
-      "postcodes": ["3240","3241","3378"]
-    },
-    {
-      "id": "15",
-      "name": "Dhanmondi",
-      "postcodes": ["2330","2441","2878"]
-    },
-    {
-      "id": "16",
-      "name": "Narayanganj Sadar",
-      "postcodes": ["6444","6543","6657"]
-    },
-    {
-      "id": "17",
-      "name": "Batiaghat",
-      "postcodes": ["7780","7781","7778"]
-    },
-    {
-      "id": "18",
-      "name": "Bagerhat Sadar",
-      "postcodes": ["7450","7451","7458"]
-    },
-    {
-      "id": "19",
-      "name": "Changi",
-      "postcodes": ["736200","404000","555776"]
-    },
-    {
-      "id": "20",
-      "name": "Quenstown",
-      "postcodes": ["787899","878788","987789"]
-    },
-    {
-      "id": "21",
-      "name": "Clementi",
-      "postcodes": ["989778","976543","975432"]
-    },
-    {
-      "id": "22",
-      "name": "Tuas",
-      "postcodes": ["109901","110900","121345"]
-    },
-    {
-      "id":"23",
-      "name": "East Region",
-      "postcodes": ["609098","567654","765432"]
-    },
-    {
-      "id":"24",
-      "name": "Nanchuan",
-      "postcodes": ["856200","404111","112357"]
-    },
-    {
-      "id":"25",
-      "name": "Yaohai subdistrict-01",
-      "postcodes": ["884050","905202","905155"]
-    },
-    {
-      "id":"26",
-      "name": "Sanpailou",
-      "postcodes": ["994333","909101","109050"]
-    },
-    {
-      "id":"27",
-      "name": "Qingdao-1",
-      "postcodes": ["444444","909101","109050"]
-    },
-    {
-      "id":"28",
-      "name": "Qingdao-2",
-      "postcodes": ["555555","909101","109050"]
-    },
-    {
-      "id":"29",
-      "name": "Fengtai",
-      "postcodes": ["230000","230100","230200"]
-    },
-    {
-      "id":"30",
-      "name": "Panji",
-      "postcodes": ["240000","240100","240200"]
-    },
-    {
-      "id":"31",
-      "name": "Luoyuan subdistrict-1",
-      "postcodes": ["777777","240100","240200"]
-    },
-    {
-      "id":"32",
-      "name": "Tangling subdistrict-1",
-      "postcodes": ["247964","240100","240200"]
-    },
-    {
-      "id":"33",
-      "name": "Tangling subdistrict-2",
-      "postcodes": ["777777","247964","240200"]
-    },
-    {
-      "id":"32",
-      "name": "Tangling subdistrict-1",
-      "postcodes": ["247964","240100","240200"]
-    },
-    {
-      "id":"33",
-      "name": "Tangling subdistrict-2",
-      "postcodes": ["777777","247964","240200"]
-    },
-    {
-      "id":"34",
-      "name": "Simpang subdistrict-1",
-      "postcodes": ["247964","240100","240200"]
-    },
-    {
-      "id":"35",
-      "name": "Simpang subdistrict-2",
-      "postcodes": ["777777","247964","240200"]
-    },
-    {
-      "id":"36",
-      "name": "Bedok subdistrict-1",
-      "postcodes": ["247964","240100","240200"]
-    },
-    {
-      "id":"37",
-      "name": "Bedok subdistrict-2",
-      "postcodes": ["777777","247964","240200"]
-    },
-    {
-      "id":"38",
-      "name": "Ang Mo Kio subdistrict-2",
-      "postcodes": ["777777","247964","240200"]
-    },
-    {
-      "id":"39",
-      "name": "Ang Mo Kio subdistrict-2",
-      "postcodes": ["777777","247964","240200"]
-    },
-    {
-      "id":"40",
-      "name": "Bukit Batok subdistrict-2",
-      "postcodes": ["777777","247964","240200"]
-    },
-    {
-      "id":"41",
-      "name": "Bukit Batok subdistrict-2",
-      "postcodes": ["256579","247964","240200"]
-    },
-    {
-      "id":"42",
-      "name": "Muladi",
-      "postcodes": ["8250","8251","8252"]
-    },
-    {
-      "id":"43",
-      "name": "Betagi",
-      "postcodes": ["8740","8741","8742"]
-    },
-    {
-      "id":"44",
-      "name": "Ramu",
-      "postcodes": ["4730","4731","4732"]
-    },
-    {
-      "id":"45",
-      "name": "Chouddagram",
-      "postcodes": ["3550","3551","3552"]
-    },
-    {
-      "id":"46",
-      "name": "Sonagazi",
-      "postcodes": ["3930","3931","3932"]
-    },
-    {
-      "id":"47",
-      "name": "Joypara",
-      "postcodes": ["1330","1331","1332"]
-    },
-    {
-      "id":"48",
-      "name": "Siddirganj",
-      "postcodes": ["1430","1431","1432"]
-    },
-    {
-      "id":"49",
-      "name": "Paikgacha",
-      "postcodes": ["9280","9281","9282"]
-    },
-    {
-      "id":"50",
-      "name": "Rampal",
-      "postcodes": ["9340","9341","9342"]
-    },
-    {
-      "id":"51",
-      "name": "Radin Mas SMC subdistrict-1",
-      "postcodes": ["934000","934100","934200"]
-    },
-    {
-      "id":"52",
-      "name": "Jalan Besar GRC subdistrict-1",
-      "postcodes": ["934000","934100","934200"]
-    },
-    {
-      "id":"53",
-      "name": "Mount Batten GRC subdistrict-1",
-      "postcodes": ["934000","934100","934200"]
-    },
-    {
-      "id":"54",
-      "name": "Marine Parade GRC subdistrict-1",
-      "postcodes": ["934000","934100","934200"]
-    },
-    {
-      "id":"55",
-      "name": "West Coast GRC subdistrict-1",
-      "postcodes": ["934000","934100","934200"]
-    }
-  ]
 }
