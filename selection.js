@@ -11,10 +11,10 @@
     input_postcode = $("#post-code");
   $.getJSON(url)
     .done(function( data ) {
-        countries.push(data["Country"]);
-        divisions.push(data["Divisions"]);
-        districts.push(data["Districts"]);
-        subdistricts.push(data["Subdistricts"]);
+        countries.push(data["Location"]["Country"]);
+        divisions.push(data["Location"]["Divisions"]);
+        districts.push(data["Location"]["Districts"]);
+        subdistricts.push(data["Location"]["Subdistricts"]);
 
         var country_option_string = '';
 
