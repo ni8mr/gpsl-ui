@@ -37,56 +37,25 @@ function select_options_string(array, selected = 0){
         for(var i=0; i<countries[0].length; i++){
             option_string += '<option data-tokens="' + countries[0][i]["name"].toLowerCase() +'" value="' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>';
         }
-    }else if(array == 'divisions'){
-        for(var i=0; i<countries[0].length; i++){
-            if(countries[0][i][id] == selected){
-                var related_divisions = countries[0][i]["divisions"];
+    }else{
+        if(array == 'divisions'){
+            var parent_array = 'countries';
+        }else if(array == 'districts'){
+            var parent_array = 'divisions';
+        }else if(array == 'subdistricts'){
+            var parent_array = 'districts';
+        }
 
+        for(var i=0; i<parent_array[0].length; i++){
+            if(parent_array[0][i]["id"] == selected){
+                related = parent_array[0][i][array];
 
-                for(var j=0; j<related_divisions.length; j++){
-                    for(var k=0; k<divisions[0].length; k++){
-                        if(related_divisions[j] == divisions[0][k]["id"]){
-                            option_string += '<option data-tokens="' + divisions[0][k]["name"].toLowerCase() +'" value="' + divisions[0][k]["id"] + '">' + divisions[0][k]["name"] + '</option>';
+                for(var j=0; j<related.length; j++){
+                    for(var k=0; k<array[0].length; k++){
+                        if(related[j]== array[0][k]["id"]){
+                            option_string += '<option data-tokens="' + array[0][k]["name"].toLowerCase() +'" value="' + array[0][k]["id"] + '">' + array[0][k]["name"] + '</option>';
                         }
                     }
-                }
-            }
-        }
-    }else if(array == 'districts'){
-        for(var i=0; i<divisions[0].length; i++){
-            if(divisions[0][i]["id"] == selected){
-                related_districts = divisions[0][i]["districts"];
-
-                for(var j=0; j<related_districts.length; j++){
-                    for(var k=0; k<districts[0].length; k++){
-                        if(related_districts[j]== districts[0][k]["id"]){
-                              option_string += '<option data-tokens="' + districts[0][k]["name"].toLowerCase() +'" value="' + districts[0][k]["id"] + '">' + districts[0][k]["name"] + '</option>';
-                        }
-                    }
-                }
-            }
-        }
-    }else if(array == 'subdistricts'){
-        for(var i=0; i<districts[0].length; i++){
-            if(districts[0][i][id] == selected){
-                var related_subdistricts = districts[0][i]["subdistricts"];
-
-                for(var j=0; j<related_subdistricts.length; j++){
-                    for(var k=0; k<subdistricts[0].length; k++){
-                        if(related_subdistricts[j]== subdistricts[0][k]["id"]){
-                            option_string += '<option data-tokens="' + subdistricts[0][k]["name"].toLowerCase() +'" value="' + subdistricts[0][k]["id"] + '">' + subdistricts[0][k]["name"] + '</option>';
-                        }
-                    }
-                }
-            }
-        }
-    }else if(array == 'postcodes'){
-        for(var i=0; i<subdistricts[0].length; i++){
-            if(subdistricts[0][i]["id"] == selected){
-                var related_postcodes = subdistricts[0][i]["postcodes"];
-
-                for(var j=0; j<related_postcodes.length; j++){
-                    option_string += '<option data-tokens="' + related_postcodes[j] + 'a' +'" value="' + j + '">' + related_postcodes[j] + '</option>';
                 }
             }
         }
@@ -104,15 +73,6 @@ function on_selection(){
       e.preventDefault();
       var selected_country = $(this).val();
 
-      /* District selection event */
-
-      var district_option_string = select_options_string('districts', selected_country);
-
-      input_district.empty().append(district_option_string).change(function(e){
-        e.preventDefault();
-        var selected_district = $(this).val();
-
-
         /* Division selection event */
 
         var division_option_string = select_options_string('divisions', selected_district);
@@ -121,14 +81,23 @@ function on_selection(){
           e.preventDefault();
           var selected_division = $(this).val();
 
+          /* District selection event */
 
-          /* Sub-division selection event */
+          var district_option_string = select_options_string('districts', selected_country);
 
-          var subdivision_option_string = select_options_string('subdistricts', selected_division);
+          input_district.empty().append(district_option_string).change(function(e){
+            e.preventDefault();
+            var selected_district = $(this).val();
 
-          input_division.empty().append(subdivision_option_string).change(function(e){
+
+
+            /* Sub-division selection event */
+
+            var subdivision_option_string = select_options_string('subdistricts', selected_division);
+
+            input_division.empty().append(subdivision_option_string).change(function(e){
               e.preventDefault();
-              var selected_subdivision = $(this).val();
+                var selected_subdivision = $(this).val();
 
 
               /* PostCodes selection event */
