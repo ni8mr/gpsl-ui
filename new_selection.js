@@ -37,6 +37,16 @@ function select_options_string(array, selected = 0){
         for(var i=0; i<countries[0].length; i++){
             option_string += '<option data-tokens="' + countries[0][i]["name"].toLowerCase() +'" value="' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>';
         }
+    }else if(array == 'postcodes'){
+        for(var i=0; i<subdistricts[0].length; i++){
+            if(subdistricts[0][i]["id"] == selected_subdistrict){
+                var related_postcodes = subdistricts[0][i]["postcodes"];
+
+                for(var j=0; j<related_postcodes.length; j++){
+                    option_string += '<option data-tokens="' + related_postcodes[j] + 'a' +'" value="' + j + '">' + related_postcodes[j] + '</option>';
+                }
+            }
+        }
     }else{
         if(array == 'divisions'){
             var parent_array = 'countries';
@@ -48,7 +58,7 @@ function select_options_string(array, selected = 0){
 
         for(var i=0; i<parent_array[0].length; i++){
             if(parent_array[0][i]["id"] == selected){
-                related = parent_array[0][i][array];
+                var related = parent_array[0][i][array];
 
                 for(var j=0; j<related.length; j++){
                     for(var k=0; k<array[0].length; k++){
