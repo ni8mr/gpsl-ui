@@ -7,7 +7,7 @@ var location_url = "dummy.json",
     input_country = $("#country"),
     input_division = $("#division"),
     input_district = $("#district"),
-    input_subdristrict = $("#subdistrict"),
+    input_subdistrict = $("#sub-district"),
     input_postcode = $("#post-code");
 
 
@@ -101,18 +101,18 @@ function on_selection(){
 
 
 
-            /* Sub-division selection event */
+            /* Sub-district selection event */
 
-            var subdivision_option_string = select_options_string('subdistricts', selected_division);
+            var subdistrict_option_string = select_options_string('subdistricts', selected_division);
 
-            input_division.empty().append(subdivision_option_string).change(function(e){
+            input_subdistrict.empty().append(subdistrict_option_string).change(function(e){
               e.preventDefault();
                 var selected_subdivision = $(this).val();
 
 
               /* PostCodes selection event */
 
-              var post_codes_options_string = select_options_string('postcodes', selected_subdivision)
+              var post_codes_options_string = select_options_string('postcodes', selected_subdivision);
 
               input_postcode.empty().append(post_codes_options_string).change(function(e){
                   e.preventDefault();
