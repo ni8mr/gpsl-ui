@@ -11,6 +11,8 @@ var location_url = "dummy.json",
     input_postcode = $("#post-code");
 
 
+
+
 function json_load() {
         $.getJSON(location_url)
             .done(function (data) {
@@ -51,14 +53,14 @@ function select_options_string(array, selected = 0){
             }
         }
     }else if(array == 'districts'){
-        for(var i=0; i<districts[0].length; i++){
-            if(districts[0][i][id] == selected){
-                var related_subdistricts = districts[0][i]["subdistricts"];
+        for(var i=0; i<divisions[0].length; i++){
+            if(divisions[0][i]["id"] == selected){
+                related_districts = divisions[0][i]["districts"];
 
-                for(var j=0; j<related_subdistricts.length; j++){
-                    for(var k=0; k<subdistricts[0].length; k++){
-                        if(related_subdistricts[j]== subdistricts[0][k]["id"]){
-                            option_string += '<option data-tokens="' + subdistricts[0][k]["name"].toLowerCase() +'" value="' + subdistricts[0][k]["id"] + '">' + subdistricts[0][k]["name"] + '</option>';
+                for(var j=0; j<related_districts.length; j++){
+                    for(var k=0; k<districts[0].length; k++){
+                        if(related_districts[j]== districts[0][k]["id"]){
+                              option_string += '<option data-tokens="' + districts[0][k]["name"].toLowerCase() +'" value="' + districts[0][k]["id"] + '">' + districts[0][k]["name"] + '</option>';
                         }
                     }
                 }
@@ -81,10 +83,10 @@ function select_options_string(array, selected = 0){
     }else if(array == 'postcodes'){
         for(var i=0; i<subdistricts[0].length; i++){
             if(subdistricts[0][i]["id"] == selected){
-                related_postcodes = subdistricts[0][i]["postcodes"];
+                var related_postcodes = subdistricts[0][i]["postcodes"];
 
                 for(var j=0; j<related_postcodes.length; j++){
-                    post_codes_options_string += '<option data-tokens="' + related_postcodes[j] + 'a' +'" value="' + j + '">' + related_postcodes[j] + '</option>';
+                    option_string += '<option data-tokens="' + related_postcodes[j] + 'a' +'" value="' + j + '">' + related_postcodes[j] + '</option>';
                 }
             }
         }
@@ -95,30 +97,43 @@ function select_options_string(array, selected = 0){
 }
 
 function on_selection(){
-    country_option_string = select_options_string('countries');
+    /* Country selection event */
+    var country_option_string = select_options_string('countries');
+
     input_country.empty().append(country_option_string).change(function(e){
       e.preventDefault();
       var selected_country = $(this).val();
 
-      district_option_string = select_options_string('districts', selected_country);
+      /* District selection event */
+
+      var district_option_string = select_options_string('districts', selected_country);
 
       input_district.empty().append(district_option_string).change(function(e){
         e.preventDefault();
         var selected_district = $(this).val();
 
-        division_option_string = select_options_string('divisions', selected_district);
+
+        /* Division selection event */
+
+        var division_option_string = select_options_string('divisions', selected_district);
 
         input_division.empty().append(division_option_string).change(function(e){
           e.preventDefault();
           var selected_division = $(this).val();
 
-          subdivision_option_string = select_options_string('subdistricts', selected_division);
+
+          /* Sub-division selection event */
+
+          var subdivision_option_string = select_options_string('subdistricts', selected_division);
 
           input_division.empty().append(subdivision_option_string).change(function(e){
               e.preventDefault();
               var selected_subdivision = $(this).val();
 
-              post_codes_options_string = select_options_string('postcodes', selected_subdivision)
+
+              /* PostCodes selection event */
+
+              var post_codes_options_string = select_options_string('postcodes', selected_subdivision)
 
               input_postcode.empty().append(post_codes_options_string).change(function(e){
                   e.preventDefault();
@@ -138,14 +153,23 @@ function on_selection(){
 
 
 function validation(){
+
+        /* Submission event */
+
         $("#depot-submit-form").submit(function(e){
           e.preventDefault();
+
+          /* validating blank input fields */
+
           $(this).find('input').each(function(){
             if($(this).val().length == 0){
                 $("<span>Field should not be empty!</span>").insertAfter($(this));
                 $(this).closest(".form-group.row").addClass("has-error");
             }
           });
+
+          /* validating blank select fields */
+
           $(this).find('select').each(function(){
             if($(this).val().length == 0){
               $("<span>Field should not be empty!</span>").insertAfter($(this));
@@ -157,6 +181,8 @@ function validation(){
 
 
 function form_load(){
+
+    /* form onclick event */
     ('form').onclick(function(){
         on_selection();
         validation();
@@ -171,16 +197,18 @@ $(window).load(function() {
     if (ajax_load == true) {
         form_load();
     } else {
-        try{
-            countries.push(data["Location"]["Country"]);
-            divisions.push(data["Location"]["Divisions"]);
-            districts.push(data["Location"]["Districts"]);
-            subdistricts.push(data["Location"]["Subdistricts"]);
-            ajax_load = true;
-            form_load();
-        }catch(e){
-            console.log(e);
-        }
+        $.getJSON(location_url)
+            .done(function (data) {
+                try{
+                    countries.push(data["Location"]["Country"]);
+                    divisions.push(data["Location"]["Divisions"]);
+                    districts.push(data["Location"]["Districts"]);
+                    subdistricts.push(data["Location"]["Subdistricts"]);
+                    ajax_load = true;
+                }catch(e){
+                    console.log(e);
+                }
+            });
     }
 }
 
