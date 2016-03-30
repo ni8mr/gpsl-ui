@@ -31,15 +31,15 @@ function json_load() {
 
 
 function select_options_string(array, selected = 0){
-    var option_string = '';
+    var option_string = " ";
 
-    if(array == 'countries'){
+    if(array == "countries"){
         for(var i=0; i<countries[0].length; i++){
             option_string += '<option data-tokens="' + countries[0][i]["name"].toLowerCase() +'" value="' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>';
         }
-    }else if(array == 'postcodes'){
+    }else if(array == "postcodes"){
         for(var i=0; i<subdistricts[0].length; i++){
-            if(subdistricts[0][i]["id"] == selected_subdistrict){
+            if(subdistricts[0][i]["id"] == selected){
                 var related_postcodes = subdistricts[0][i]["postcodes"];
 
                 for(var j=0; j<related_postcodes.length; j++){
