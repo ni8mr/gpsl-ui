@@ -128,8 +128,8 @@ function on_selection(){
 
         input_district0.empty().append(district_option_string).change(function(e){
             e.preventDefault();
-        }).selectpicker('refresh');
 
+        }).selectpicker('refresh');
       }).selectpicker('refresh');
     }).selectpicker('refresh');
 }
