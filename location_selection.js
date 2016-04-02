@@ -191,24 +191,22 @@ function form_generation(){
 }
 
 $(window).load(function(){
-    $('form').click(function(){
         json_load();
         if(ajax_load == true){
             form_generation();
-        }else{
+        }else {
             $.getJSON(LOCATION_URL)
-            .done(function (data) {
-                try{
-                    countries.push(data["location"]["Country"]);
-                    divisions.push(data["location"]["Divisions"]);
-                    districts.push(data["location"]["Districts"]);
-                    form_generation();
-                }catch(e){
-                    console.log(e);
-                }
-            });
+                .done(function (data) {
+                    try {
+                        countries.push(data["location"]["Country"]);
+                        divisions.push(data["location"]["Divisions"]);
+                        districts.push(data["location"]["Districts"]);
+                        form_generation();
+                    } catch (e) {
+                        console.log(e);
+                    }
+                });
         }
-    });
 });
 
 
