@@ -14,6 +14,10 @@
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
+
+    <!--Grid form css-->
+    <link href="gridforms.css" type="text/css" rel="stylesheet">
+
     <!-- Bootstrap select CSS -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
@@ -87,117 +91,204 @@
                                     <h4 class="modal-title">Add new location</h4>
                                 </div>
                                 <div class="modal-body">
-                                    <form id="bl-submit-form">
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 form-control-label">Principal name</label>
-                                            <div class="col-sm-8">
-                                                <select class="form-control selectpicker show-tick"
-                                                        id="bl-principal-name"
-                                                        title="Select principal name related to the b/l...."
-                                                        data-live-search-placeholder="Search desired principal name here"
-                                                        data-live-search="true">
-                                                </select>
+                                    <form class="my-grid-form">
+                                        <fieldset>
+                                            <legend>Common information</legend>
+                                            <div data-row-span="2">
+                                                <div data-field-span="1">
+                                                    <label>Principal name</label>
+                                                    <select>
+                                                        <option>Select a principal name</option>
+                                                        <option>Sea Hawks</option>
+                                                    </select>
+                                                </div>
+                                                <div data-field-span="1">
+                                                    <label>Date of entry</label>
+                                                    <input type="date" id="bl-date-of-entry"
+                                                           placeholder="Enter the date of entry here">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 form-control-label">Date of entry</label>
-                                            <div class="col-sm-8">
-                                                <input type="date" id="bl-date-of-entry"
-                                                       class="form-control"
-                                                       placeholder="Enter the date of entry here">
+                                            <div data-row-span="1">
+                                                <div data-field-span="1">
+                                                    <label>B/L number and details</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 form-control-label">B/L number</label>
-                                            <div class="col-sm-8">
-                                                <input type="number" step="1" min="0"
-                                                       id="bl-number" class="form-control"
-                                                       placeholder="Enter B/L number here">
+                                            <div data-row-span="2">
+                                                <div data-field-span="1">
+                                                    <label>Summary</label>
+                                                </div>
+                                                <div data-field-span="1">
+                                                    <label>Details</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 form-control-label">Ocean freight payable</label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="bl-ocean-freight"
-                                                       class="form-control"
-                                                       placeholder="Enter ocean freight related info here">
+                                            <div data-row-span="2">
+                                                <div data-field-span="1">
+                                                    <div data-row-span="5">
+                                                        <div data-field-span="1">
+                                                            <label>B/L numbers</label>
+                                                            <input type="text">
+                                                        </div>
+                                                        <div data-field-span="1">
+                                                            <label>Ocean freight payable</label>
+                                                            <input type="text">
+                                                        </div>
+                                                        <div data-field-span="1">
+                                                            <label>Free period at POD</label>
+                                                            <input type="text">
+                                                        </div>
+                                                        <div data-field-span="1">
+                                                            <label>Free line detention combine demurrage at POD</label>
+                                                            <input type="text">
+                                                        </div>
+                                                        <div data-field-span="1">
+                                                            <label>Volume</label>
+                                                            <div data-row-span="2">
+                                                                <div data-field-span="1">
+                                                                    <label>Number</label>
+                                                                    <input type="text">
+                                                                </div>
+                                                                <div data-field-span="1">
+                                                                    <label>Type</label>
+                                                                    <input type="text">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-field-span="1">
+                                                    <div data-row-span="4">
+                                                        <div data-field-span="1">
+                                                            <label>Shipper</label>
+                                                            <input type="text">
+                                                        </div>
+                                                        <div data-field-span="1">
+                                                            <label>Consignee</label>
+                                                            <input type="text">
+                                                        </div>
+                                                        <div data-field-span="1">
+                                                            <label>Notify Party</label>
+                                                            <input type="text">
+                                                        </div>
+                                                        <div data-field-span="1">
+                                                            <label>Advise to sender</label>
+                                                            <input type="text">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 form-control-label">Free period at POD</label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="bl-free-period"
-                                                       class="form-control"
-                                                       placeholder="Enter ocean freight related info here">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-7">
-                                                Free line detention combine demurrage at POD
-                                            </label>
-                                            <div class="col-sm-5">
-                                                <input type="checkbox" id="bl-line-detention" checked>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 form-control-label">Volume</label>
-                                            <label class="col-sm-4 form-control-label">Number: </label>
-                                            <label class="col-sm-4 form-control-label">Type: </label>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 form-control-label"></label>
-                                            <div class="col-sm-4 form-control-label">
-                                                <input type="text" id="bl-volume-number"
-                                                       class="form-control"
-                                                       placeholder="">
-                                            </div>
-                                            <div class="col-sm-4 form-control-label">
-                                                <input type="text" id="bl-volume-type"
-                                                       class="form-control"
-                                                       placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 form-control-label">Shipper</label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="bl-shipper"
-                                                       class="form-control"
-                                                       placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 form-control-label">Consignee</label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="bl-consignee"
-                                                       class="form-control"
-                                                       placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 form-control-label">Notify party</label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="bl-notify-party"
-                                                       class="form-control"
-                                                       placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-sm-4 form-control-label">Advice to sender</label>
-                                            <div class="col-sm-8">
-                                                <input type="text" id="bl-advice"
-                                                       class="form-control"
-                                                       placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" name="add-more-bl" class="btn btn-primary pull-left">
-                                                Add more
-                                            </button>
-                                            <button type="submit" name="bl-submit" class="btn btn-custom pull-right">
-                                                Save
-                                            </button>
-                                        </div>
+                                        </fieldset>
                                     </form>
+                                    <!--<form id="bl-submit-form">-->
+                                    <!--<div class="form-group row">-->
+                                    <!--<label class="col-sm-4 form-control-label">Principal name</label>-->
+                                    <!--<div class="col-sm-8">-->
+                                    <!--<select class="form-control selectpicker show-tick"-->
+                                    <!--id="bl-principal-name"-->
+                                    <!--title="Select principal name related to the b/l...."-->
+                                    <!--data-live-search-placeholder="Search desired principal name here"-->
+                                    <!--data-live-search="true">-->
+                                    <!--</select>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group row">-->
+                                    <!--<label class="col-sm-4 form-control-label">Date of entry</label>-->
+                                    <!--<div class="col-sm-8">-->
+                                    <!--<input type="date" id="bl-date-of-entry"-->
+                                    <!--class="form-control"-->
+                                    <!--placeholder="Enter the date of entry here">-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group row">-->
+                                    <!--<label class="col-sm-4 form-control-label">B/L number</label>-->
+                                    <!--<div class="col-sm-8">-->
+                                    <!--<input type="number" step="1" min="0"-->
+                                    <!--id="bl-number" class="form-control"-->
+                                    <!--placeholder="Enter B/L number here">-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group row">-->
+                                    <!--<label class="col-sm-4 form-control-label">Ocean freight payable</label>-->
+                                    <!--<div class="col-sm-8">-->
+                                    <!--<input type="text" id="bl-ocean-freight"-->
+                                    <!--class="form-control"-->
+                                    <!--placeholder="Enter ocean freight related info here">-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group row">-->
+                                    <!--<label class="col-sm-4 form-control-label">Free period at POD</label>-->
+                                    <!--<div class="col-sm-8">-->
+                                    <!--<input type="text" id="bl-free-period"-->
+                                    <!--class="form-control"-->
+                                    <!--placeholder="Enter ocean freight related info here">-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group row">-->
+                                    <!--<label class="col-sm-7">-->
+                                    <!--Free line detention combine demurrage at POD-->
+                                    <!--</label>-->
+                                    <!--<div class="col-sm-5">-->
+                                    <!--<input type="checkbox" id="bl-line-detention" checked>-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group row">-->
+                                    <!--<label class="col-sm-4 form-control-label">Volume</label>-->
+                                    <!--<label class="col-sm-4 form-control-label">Number: </label>-->
+                                    <!--<label class="col-sm-4 form-control-label">Type: </label>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group row">-->
+                                    <!--<label class="col-sm-4 form-control-label"></label>-->
+                                    <!--<div class="col-sm-4 form-control-label">-->
+                                    <!--<input type="text" id="bl-volume-number"-->
+                                    <!--class="form-control"-->
+                                    <!--placeholder="">-->
+                                    <!--</div>-->
+                                    <!--<div class="col-sm-4 form-control-label">-->
+                                    <!--<input type="text" id="bl-volume-type"-->
+                                    <!--class="form-control"-->
+                                    <!--placeholder="">-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group row">-->
+                                    <!--<label class="col-sm-4 form-control-label">Shipper</label>-->
+                                    <!--<div class="col-sm-8">-->
+                                    <!--<input type="text" id="bl-shipper"-->
+                                    <!--class="form-control"-->
+                                    <!--placeholder="">-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group row">-->
+                                    <!--<label class="col-sm-4 form-control-label">Consignee</label>-->
+                                    <!--<div class="col-sm-8">-->
+                                    <!--<input type="text" id="bl-consignee"-->
+                                    <!--class="form-control"-->
+                                    <!--placeholder="">-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group row">-->
+                                    <!--<label class="col-sm-4 form-control-label">Notify party</label>-->
+                                    <!--<div class="col-sm-8">-->
+                                    <!--<input type="text" id="bl-notify-party"-->
+                                    <!--class="form-control"-->
+                                    <!--placeholder="">-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group row">-->
+                                    <!--<label class="col-sm-4 form-control-label">Advice to sender</label>-->
+                                    <!--<div class="col-sm-8">-->
+                                    <!--<input type="text" id="bl-advice"-->
+                                    <!--class="form-control"-->
+                                    <!--placeholder="">-->
+                                    <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="modal-footer">-->
+                                    <!--<button type="button" name="add-more-bl" class="btn btn-primary pull-left">-->
+                                    <!--Add more-->
+                                    <!--</button>-->
+                                    <!--<button type="submit" name="bl-submit" class="btn btn-custom pull-right">-->
+                                    <!--Save-->
+                                    <!--</button>-->
+                                    <!--</div>-->
+                                    <!--</form>-->
                                 </div><!--modal body -->
                             </div>
                         </div>
@@ -257,6 +348,9 @@
 
 <!-- Bootstrap select JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+<!--Grid form js-->
+<script type="text/javascript" src="gridforms.js"></script>
 
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
