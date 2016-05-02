@@ -33,4 +33,9 @@ $(document).ready(function () {
         dateFormat: 'yy-mm-dd'
     });
 
+    // Triggering jquery datepicker function for "ETA" field
+    $('input#bl-eta').datepicker({
+        dateFormat: 'yy-mm-dd'
+    });
+
 });
