@@ -26,7 +26,13 @@ $(document).ready(function () {
 
         });
 
+        //Loading dynamic fields/data for B/L list form
+        for(i=0; i<=10; i++){
+            $('div#bl-list-id').append('<br>').append('<input type="text">');
+        }
+
     });// Add new b/l button clicking events
+
 
     // Triggering jquery datepicker function for "Date of Entry" field
     $('input#bl-date-of-entry').datepicker({
