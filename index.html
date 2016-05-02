@@ -1,262 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-  <title>Locations</title>
+    <title>Locations</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap select CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    <!-- Bootstrap select CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
 
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="http://getbootstrap.com/examples/starter-template/starter-template.css" rel="stylesheet">
-  <link href="./css/st.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/starter-template/starter-template.css" rel="stylesheet">
+    <link href="./css/st.css" rel="stylesheet">
 
 
-  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-  <!--[if lt IE 9]><script src="http://getbootstrap.com/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-  <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="http://getbootstrap.com/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-
 
 
 <body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Project name</a>
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
     </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div>
 </nav>
 
 <div class="container">
 
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="box">
-        <!-- /.box-header -->
-        <div class="box-header">
-          <button type="button" class="btn btn-info btn-sm pull-right" data-toggle="modal" data-target="#myModal">Add new location</button>
-          <!-- Modal -->
-          <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <!-- /.box-header -->
+                <div class="box-header">
+                    <button type="button" class="btn btn-info btn-sm pull-right" data-toggle="modal"
+                            data-target="#myModal">Add new B/L
+                    </button>
+                    <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
 
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Add new location</h4>
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Add new location</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="bl-submit-form">
+                                        {% csrf_token %}
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">Principal name</label>
+                                            <div class="col-sm-8">
+                                                <select class="form-control selectpicker show-tick"
+                                                        id="bl-principal-name"
+                                                        title="Select principal name related to the b/l...."
+                                                        data-live-search-placeholder="Search desired principal name here"
+                                                        data-live-search="true">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">Date of entry</label>
+                                            <div class="col-sm-8">
+                                                <input type="date" id="bl-date-of-entry"
+                                                       class="form-control"
+                                                       placeholder="Enter the date of entry here">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">B/L number</label>
+                                            <div class="col-sm-8">
+                                                <input type="number" step="1" min="0"
+                                                       id="bl-number" class="form-control"
+                                                       placeholder="Enter B/L number here">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">Ocean freight payable</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="bl-ocean-freight"
+                                                       class="form-control"
+                                                       placeholder="Enter ocean freight related info here">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">Free period at POD</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="bl-free-period"
+                                                       class="form-control"
+                                                       placeholder="Enter ocean freight related info here">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-7">
+                                                Free line detention combine demurrage at POD
+                                            </label>
+                                            <div class="col-sm-5">
+                                                <input type="checkbox" id="bl-line-detention" checked>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">Volume</label>
+                                            <label class="col-sm-4 form-control-label">Number: </label>
+                                            <label class="col-sm-4 form-control-label">Type: </label>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label"></label>
+                                            <div class="col-sm-4 form-control-label">
+                                                <input type="text" id="bl-volume-number"
+                                                       class="form-control"
+                                                       placeholder="">
+                                            </div>
+                                            <div class="col-sm-4 form-control-label">
+                                                <input type="text" id="bl-volume-type"
+                                                       class="form-control"
+                                                       placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">Shipper</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="bl-shipper"
+                                                       class="form-control"
+                                                       placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">Consignee</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="bl-consignee"
+                                                       class="form-control"
+                                                       placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">Notify party</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="bl-notify-party"
+                                                       class="form-control"
+                                                       placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-4 form-control-label">Advice to sender</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="bl-advice"
+                                                       class="form-control"
+                                                       placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" name="add-more-bl" class="btn btn-primary pull-left">
+                                                Add more
+                                            </button>
+                                            <button type="submit" name="bl-submit" class="btn btn-custom pull-right">
+                                                Save
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div><!--modal body -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                  <form id="depot-submit-form">
-                          <div class="form-group row">
-                              <label class="col-sm-2 form-control-label">Location type</label>
-                              <div class="col-sm-10">
-                                <select class="form-control selectpicker show-tick" name="location" id="location" title="Select a location type..." data-live-search-placeholder="Search desired location types here" data-live-search="true">
-                                    <option value="country" data-tokens="country">Country</option>
-                                    <option value="division" data-tokens="division">Division</option>
-                                    <option value="district" data-tokens="district">District</option>
-                                    <option value="subdistrict" data-tokens="subdistrict">Sub-District</option>
-                                </select>
-                              </div>
-                          </div>
-                          <div class="form-group row country" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Name</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" placeholder="Enter the name of the country here">
-                            </div>
-                          </div>
-                          <div class="form-group row country" style="display:none;">
-                            <label class="col-sm-2 form-control-label">ISO Code</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" placeholder="Enter the iso code of the country here">
-                            </div>
-                          </div>
-                          <div class="form-group row country" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Phone code</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" placeholder="Enter the phone code of the country here">
-                            </div>
-                          </div>
-                          <div class="form-group row division" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Country</label>
-                            <div class="col-sm-10">
-                                <select class="form-control selectpicker show-tick" id="country0" title="Select country..." data-live-search-placeholder="Search desired country here" data-live-search="true">
-                                </select>
-                            </div>
-                          </div>
-                          <div class="form-group row division" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Name</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" id="country" placeholder="Enter the name of the division here">
-                            </div>
-                          </div>
-                          <div class="form-group row division" style="display:none;">
-                            <label class="col-sm-2 form-control-label">ISO code</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" placeholder="Enter the iso code of the division here">
-                            </div>
-                          </div>
-                          <div class="form-group row district" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Country</label>
-                            <div class="col-sm-10">
-                                <select class="form-control selectpicker show-tick" id="country1" title="Select country..." data-live-search-placeholder="Search desired country here" data-live-search="true">
-                                </select>
-                            </div>
-                          </div>
-                          <div class="form-group row district" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Division</label>
-                            <div class="col-sm-10">
-                                <select class="form-control selectpicker show-tick" id="division0" title="Select division..." data-live-search-placeholder="Search desired division here" data-live-search="true">
-                                </select>
-                            </div>
-                          </div>
-                          <div class="form-group row district" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Name</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" placeholder="Enter the name of the district here">
-                            </div>
-                          </div>
-                          <div class="form-group row district" style="display:none;">
-                            <label class="col-sm-2 form-control-label">ISO code</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" placeholder="Enter the iso code of the district here">
-                            </div>
-                          </div>
-                          <div class="form-group row district" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Phone code</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" placeholder="Enter the phone code of the district here">
-                            </div>
-                          </div>
-                          <div class="form-group row district" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Location</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" placeholder="Enter the location of the district here">
-                            </div>
-                          </div>
-                          <div class="form-group row subdistrict" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Country</label>
-                            <div class="col-sm-10">
-                                <select class="form-control selectpicker show-tick" id="country2" title="Select country..." data-live-search-placeholder="Search desired country here" data-live-search="true">
-                                </select>
-                            </div>
-                          </div>
-                          <div class="form-group row subdistrict" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Division</label>
-                            <div class="col-sm-10">
-                                <select class="form-control selectpicker show-tick" id="division1" title="Select division..." data-live-search-placeholder="Search desired division here" data-live-search="true">
-                                </select>
-                            </div>
-                          </div>
-                          <div class="form-group row subdistrict" style="display:none;">
-                            <label class="col-sm-2 form-control-label">District</label>
-                            <div class="col-sm-10">
-                               <select class="form-control selectpicker show-tick" id="district0" title="Select district..." data-live-search-placeholder="Search desired district here" data-live-search="true">
-                              </select>
-                            </div>
-                          </div>
-                          <div class="form-group row subdistrict" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Name</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" placeholder="Enter the name of the sub-district here">
-                            </div>
-                          </div>
-                          <div class="form-group row subdistrict" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Post code</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" placeholder="Enter the post-code of the sub-district here">
-                            </div>
-                          </div>
-                          <div class="form-group row subdistrict" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Phone code</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" placeholder="Enter the phone code of the sub-district here">
-                            </div>
-                          </div>
-                          <div class="form-group row subdistrict" style="display:none;">
-                            <label class="col-sm-2 form-control-label">Location</label>
-                            <div class="col-sm-10">
-                              <input class="form-control" placeholder="Enter the location of the sub-district here">
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="submit" class="btn btn-custom">Save</button>
-                         </div>
-                      </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="box-body">
-          <table id="example1" class="table table-bordered table-hover">
-            <thead>
-            <tr>
-              <th>SL.no.</th>
-              <th>Name</th>
-              <th>Address</th>
-              <th>District</th>
-              <th>Post Code</th>
-              <th>Thana</th>
-              <th>Contact Info</th>
-              <th>Code</th>
-              <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>
-                <button class="btn btn-primary">Containers</button>
-                <button class="btn btn-primary" disabled>Pricing</button>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-        </div><!-- /.box-body -->
-      </div><!-- /.box -->
-    </div><!-- /.col -->
-  </div><!-- /.row -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>SL.no.</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>District</th>
+                            <th>Post Code</th>
+                            <th>Thana</th>
+                            <th>Contact Info</th>
+                            <th>Code</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button class="btn btn-primary">Containers</button>
+                                <button class="btn btn-primary" disabled>Pricing</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
 
 </div><!-- /.container -->
 
@@ -267,15 +247,19 @@
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write("<script src="http://getbootstrap.com/assets/js/vendor/jquery.min.js"></script>")</script>-->
 
-<script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.2.min.js"
+        integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
 <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
 
- <!-- Bootstrap select JS -->
+<!-- Bootstrap select JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
 
-<script src="location_selection.js"></script>
+
+<script src="bl_list.js"></script>
+
+<!--<script src="location_selection.js"></script>-->
 <script src="submit.js"></script>
 <!--<script src="submit.js"></script>-->
 
