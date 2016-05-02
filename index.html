@@ -115,7 +115,12 @@
                                             <div data-row-span="12">
                                                 <div data-field-span="2">
                                                     <label>ID</label>
-                                                    <input type="text">
+                                                    <div data-row-span="1">
+                                                        <div data-field-span="1">
+                                                            <label></label>
+                                                            <input type="text">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div data-field-span="4">
                                                     <label>Volume</label>
@@ -132,18 +137,35 @@
                                                 </div>
                                                 <div data-field-span="1">
                                                     <label>Status</label>
-                                                    <input type="text">
+                                                    <div data-row-span="1">
+                                                        <div data-field-span="1">
+                                                            <label></label>
+                                                            <input type="text">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div data-field-span="1">
                                                     <label>Payable at</label>
-                                                    <input type="text">
+                                                    <div data-field-span="1">
+                                                        <label></label>
+                                                        <select>
+                                                            <option value="pod">POD</option>
+                                                            <option value="pol">POL</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                                 <div data-field-span="4">
                                                     <label>Line detention</label>
-                                                    <label>
-                                                        <input type="checkbox" checked> Free for
-                                                    </label>
-                                                    <input type="text"> days.
+                                                    <div data-row-span="4">
+                                                        <div data-field-span="1">
+                                                            <label></label>
+                                                            <input type="checkbox" checked>
+                                                        </div>
+                                                        <div data-field-span="2">
+                                                            <label>(In days) Free for </label>
+                                                            <input type="text">
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </fieldset>
