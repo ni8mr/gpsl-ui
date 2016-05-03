@@ -65,7 +65,9 @@ $(document).ready(function () {
             id_input_field.val(i);
 
             // Adding default data for status entry field
-            // var status_input_field = $("input#ui-id-" + i);
+            var incremented_id_for_status_entry = i + 10,
+                status_input_field = $("input#ui-id-" + incremented_id_for_status_entry);
+            status_input_field.val('original');
         }
 
 
