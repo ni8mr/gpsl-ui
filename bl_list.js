@@ -11,13 +11,13 @@ $(document).ready(function () {
         e.preventDefault();
 
         // Removing previously generated dynamic fields
-        $("div#bl-list-id").html().empty();
-        $("div#bl-volume-number").html().empty();
-        $("div#bl-volume-type").html().empty();
-        $("div#bl-status").html().empty();
-        $("div#bl-payable-at").html().empty();
-        $("div#bl-line-detention-checkbox").html().empty();
-        $("div#bl-line-detention-day-count").html().empty();
+        $("div#bl-list-id").empty();
+        $("div#bl-volume-number").empty();
+        $("div#bl-volume-type").empty();
+        $("div#bl-status").empty();
+        $("div#bl-payable-at").empty();
+        $("div#bl-line-detention-checkbox").empty();
+        $("div#bl-line-detention-day-count").empty();
 
         // var principal_name_url = location.origin + "/api/v1/principal/";
         // var principal_name = '';
