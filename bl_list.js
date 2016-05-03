@@ -10,21 +10,21 @@ $(document).ready(function () {
     $('#add-new-bl').click(function (e) {
         e.preventDefault();
 
-        var principal_name_url = location.origin + "/api/v1/principal/";
-        var principal_name = '';
-
-        // Collecting and populating all available principal names in the "Principal name" field
-        $.getJSON(principal_name_url).done(function (data) {
-            for (var i = 0; i < data.length; i++) {
-                principal_name += '<option data-tokens="' + data[i].name.toLowerCase() + '" value="' + i + '">' + data[i].name + '</option>';
-            }
-
-            // Populating "Principal name" field
-            $("select#bl-principal-name").empty().append(principal_name).change(function (e) {
-                e.preventDefault();
-            }).selectpicker('refresh');
-
-        });
+        // var principal_name_url = location.origin + "/api/v1/principal/";
+        // var principal_name = '';
+        //
+        // // Collecting and populating all available principal names in the "Principal name" field
+        // $.getJSON(principal_name_url).done(function (data) {
+        //     for (var i = 0; i < data.length; i++) {
+        //         principal_name += '<option data-tokens="' + data[i].name.toLowerCase() + '" value="' + i + '">' + data[i].name + '</option>';
+        //     }
+        //
+        //     // Populating "Principal name" field
+        //     $("select#bl-principal-name").empty().append(principal_name).change(function (e) {
+        //         e.preventDefault();
+        //     }).selectpicker('refresh');
+        //
+        // });
 
         var count = 0;
         //Loading dynamic fields/data for B/L list form
