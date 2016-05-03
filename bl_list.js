@@ -12,12 +12,13 @@ $(document).ready(function () {
 
         // Removing previously generated dynamic fields
         $("div#bl-list-id").empty();
-        $("div#bl-volume-number").empty();
-        $("div#bl-volume-type").empty();
+        $("div#bl-volume-number").empty().append("<label>Number</label>");
+        $("div#bl-volume-type").empty().append("<label>Type</label>");
         $("div#bl-status").empty();
         $("div#bl-payable-at").empty();
         $("div#bl-line-detention-checkbox").empty();
         $("div#bl-line-detention-day-count").empty();
+
 
         // var principal_name_url = location.origin + "/api/v1/principal/";
         // var principal_name = '';
