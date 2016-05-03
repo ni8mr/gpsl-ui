@@ -39,25 +39,25 @@ $(document).ready(function () {
         //Loading 10 dynamic rows initially for b/l list entry form
         for (i = 0; i < 10; i++) {
             // ID entry field generation
-            $("div#bl-list-id").append("<input type='text' name='bl-list-id'>");
+            $("div#bl-list-id").append("<input type='text' name='bl-list-id'>" + "<br>");
 
             // Volume-number entry field generation
-            $("div#bl-volume-number").append("<input type='text' name='bl-volume-number'>");
+            $("div#bl-volume-number").append("<input type='text' name='bl-volume-number'>" + "<br>");
 
             // Volume-type entry field generation
-            $("div#bl-volume-type").append("<input type='text' name='bl-volume-type'>");
+            $("div#bl-volume-type").append("<input type='text' name='bl-volume-type'>" + "<br>");
 
             // Status entry field generation
-            $("div#bl-status").append("<input type='text' name='bl-status'>");
+            $("div#bl-status").append("<input type='text' name='bl-status'>" + "<br>");
 
             // 'Payable at' selection field generation
             $("div#bl-payable-at").append("<select name='bl-payable-at'><option value='POD'>POD</option><option value='POL'>POL</option></select>");
 
             // Line detention checkbox generation
-            $("div#bl-line-detention-checkbox").append("<input type='checkbox' name='bl-line-detention-checkbox' checked>");
+            $("div#bl-line-detention-checkbox").append("<input type='checkbox' name='bl-line-detention-checkbox' checked>" + "<br>");
 
             // Line detention day-count entry field generation
-            $("div#bl-line-detention-day-count").append("<input type='number' name='bl-line-detention-day-count' placeholder='Free for (in days)'>");
+            $("div#bl-line-detention-day-count").append("<input type='number' name='bl-line-detention-day-count' placeholder='Free for (in days)'>" + "<br>");
         }
 
         /* Generating unique-id for different input fields */
