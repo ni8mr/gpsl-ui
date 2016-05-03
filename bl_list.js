@@ -56,7 +56,7 @@ $(document).ready(function () {
             $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' checked>");
 
             // Line detention day-count entry field generation
-            $("div#bl-line-detention-day-count").append("<label>Free for</label>" + "<input type='text' name='bl-line-detention-day-count'>");
+            $("div#bl-line-detention-day-count").append("<label>Free for</label>" + "<input type='number' name='bl-line-detention-day-count'>");
         }
 
         /* Generating unique-id for different input fields */
@@ -86,16 +86,16 @@ $(document).ready(function () {
 
         // Adding default data to the initially generated rows of the b/l list entry form
         for (i = 1; i < 11; i++) {
-            // Adding default data for ID entry field
+            // Adding default data at ID entry field
             var id_input_field = $("input#ui-id-" + i);
             id_input_field.val(i);
 
-            // Adding default data for status entry field
+            // Adding default data at status entry field
             var incremented_id_for_status_entry = i + 30,
                 status_input_field = $("input#ui-id-" + incremented_id_for_status_entry);
             status_input_field.val('original');
 
-            /* Adding defaut selection for 'Payable at' selection field */
+            /* Adding defaut selection at 'Payable at' selection field */
             // var incremented_id_for_payable_at_selection = i + 40,
             //     payable_at_selection_field = $("select#ui-id-" + incremented_id_for_payable_at_selection);
             //
@@ -111,6 +111,11 @@ $(document).ready(function () {
             // targeting_selected.prependTo(payable_at_selection_field);
 
             /* ------ */
+
+            // Adding default value at line detention day-count entry field
+            var incremented_id_for_line_detention_day_count = i + 60,
+                line_detention_day_count_input_field = $("input#ui-id-" + incremented_id_for_line_detention_day_count);
+            line_detention_day_count_input_field.val(14);
 
         }
 
