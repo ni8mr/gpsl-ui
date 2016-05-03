@@ -26,19 +26,41 @@ $(document).ready(function () {
         //
         // });
 
-        //Loading dynamic fields/data for B/L list form
+        //Loading 10 dynamic rows initially for b/l list entry form
         for(i=0; i<10; i++){
+            // ID entry field generation
             $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>");
+
+            // Volume-number entry field generation
             $("div#bl-volume-number").append("<input type='text'>" + "<br>");
+
+            // Volume-type entry field generation
             $("div#bl-volume-type").append("<input type='text'>" + "<br>");
+
+            // Status entry field generation
             $("div#bl-status").append("<input type='text'>" + "<br>");
+
+            // 'Payable at' entry field generation
             $("div#bl-payable-at").append("<select></select>");
+
+            // Line detention checkbox generation
             $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' checked>");
+
+            // Line detention day-count entry field generation
             $("div#bl-line-detention-day-count").append("<label>Free for</label>" + "<input type='text'>");
         }
 
         //Generating unique-id for different input fields
-        $("input[name='bl-list-id']").uniqueId(); 
+
+        // For ID entry field
+        $("input[name='bl-list-id']").uniqueId();
+
+        // Adding default data to the initially generated rows of the b/l list entry form
+        for(i=1; i<11; i++){
+            // Appending default data for ID entry field
+            var id_input_field = $("input#ui-id-" + i);
+            id_input_field.val(i);
+        }
 
 
     });// Add new b/l button clicking events
