@@ -165,6 +165,21 @@ $(document).ready(function () {
         $("div#bl-line-detention-day-count").append("<br>" + "<input type='number' name='bl-line-detention-day-count' placeholder='Free for (in days)' id='ui-id-" + line_detention_day_count + "'>" + "<br>");
 
         /*--------------*/
+        
+        
+        // Adding default data to the initially generated rows of the b/l list entry form
+       
+        // Adding default data at ID entry field
+        var id_input_field = $("input#ui-id-" + id);
+        id_input_field.val(i);
+
+        // Adding default data at status entry field
+         var status_input_field = $("input#ui-id-" + status);
+        status_input_field.val('original');
+
+        // Adding default value at line detention day-count entry field
+        var line_detention_day_count_input_field = $("input#ui-id-" + line_detention_day_count);
+        line_detention_day_count_input_field.val(14);
 
 
     });// "Add more' button clicking event
