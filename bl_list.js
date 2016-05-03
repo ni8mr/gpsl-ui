@@ -104,9 +104,8 @@ $(document).ready(function () {
             targeting_selected.removeAttr('selected');
 
             // Adding selected value at the field
-            payable_at_selection_field.filter(function () {
-                return $(this).text() === 'POD';
-            }).attr("selected", "selected");
+            var targeting_for_selection = $("select#ui-id-" + incremented_id_for_payable_at_selection + " option[value='POD']");
+            targeting_for_selection.attr("selected", "selected");
 
             // Showing selected value at the top
             targeting_selected.prependTo(payable_at_selection_field);
