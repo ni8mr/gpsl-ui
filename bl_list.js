@@ -39,25 +39,25 @@ $(document).ready(function () {
         //Loading 10 dynamic rows initially for b/l list entry form
         for (i = 0; i < 5; i++) {
             // ID entry field generation
-            $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>" + "<br>");
+            $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>" + "<br>" + "<br>");
 
             // Volume-number entry field generation
-            $("div#bl-volume-number").append("<br>" + "<input type='text' name='bl-volume-number'>" + "<br>");
+            $("div#bl-volume-number").append("<br>" + "<input type='text' name='bl-volume-number'>" + "<br>" + "<br>");
 
             // Volume-type entry field generation
-            $("div#bl-volume-type").append("<br>" + "<input type='text' name='bl-volume-type'>" + "<br>");
+            $("div#bl-volume-type").append("<br>" + "<input type='text' name='bl-volume-type'>" + "<br>" + "<br>");
 
             // Status entry field generation
-            $("div#bl-status").append("<br>" + "<input type='text' name='bl-status'>" + "<br>" );
+            $("div#bl-status").append("<br>" + "<input type='text' name='bl-status'>" + "<br>" + "<br>");
 
             // 'Payable at' selection field generation
             $("div#bl-payable-at").append("<br>" + "<select name='bl-payable-at'><option value='POD'>POD</option><option value='POL'>POL</option></select>" + "<br>");
 
             // Line detention checkbox generation
-            $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' checked>" + "<br>");
+            $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' checked>" + "<br>" + "<br>");
 
             // Line detention day-count entry field generation
-            $("div#bl-line-detention-day-count").append("<br>" + "<input type='number' name='bl-line-detention-day-count' placeholder='Free for (in days)'>" + "<br>");
+            $("div#bl-line-detention-day-count").append("<br>" + "<input type='number' name='bl-line-detention-day-count' placeholder='Free for (in days)'>" + "<br>" + "<br>");
         }
 
         /* Generating unique-id for different input fields */
