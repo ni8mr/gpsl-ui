@@ -11,13 +11,13 @@ $(document).ready(function () {
         e.preventDefault();
 
         // Removing previously generated dynamic fields
-        $("div#bl-list-id").empty();
+        $("div#bl-list-id").empty().append("<br>");
         $("div#bl-volume-number").empty().append("<label>Number</label>");
         $("div#bl-volume-type").empty().append("<label>Type</label>");
-        $("div#bl-status").empty();
+        $("div#bl-status").empty().append("<br>");
         $("div#bl-payable-at").empty().append("<br>");
-        $("div#bl-line-detention-checkbox").empty();
-        $("div#bl-line-detention-day-count").empty();
+        $("div#bl-line-detention-checkbox").empty().append("<br>");
+        $("div#bl-line-detention-day-count").empty().append("<br>");
 
 
         // var principal_name_url = location.origin + "/api/v1/principal/";
@@ -142,25 +142,25 @@ $(document).ready(function () {
             line_detention_day_count = last_id + 1;
 
         // ID entry field generation
-        $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id' id='" + id + "'>" + "<br>");
+        $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>" + "<br>");
 
         // Volume-number entry field generation
-        $("div#bl-volume-number").append("<br>" + "<input type='text' name='bl-volume-number' id='" + volume_number + "'>" + "<br>");
+        $("div#bl-volume-number").append("<br>" + "<input type='text' name='bl-volume-number'>" + "<br>");
 
         // Volume-type entry field generation
-        $("div#bl-volume-type").append("<br>" + "<input type='text' name='bl-volume-type' id='" + volume_type + "'>" + "<br>");
+        $("div#bl-volume-type").append("<br>" + "<input type='text' name='bl-volume-type'>" + "<br>");
 
         // Status entry field generation
-        $("div#bl-status").append("<br>" + "<input type='text' name='bl-status' id='" + status + "'>" + "<br>");
+        $("div#bl-status").append("<br>" + "<input type='text' name='bl-status'>" + "<br>");
 
         // 'Payable at' selection field generation
-        $("div#bl-payable-at").append("<select name='bl-payable-at' id='" + payable_at + "'><option value='POD'>POD</option><option value='POL'>POL</option></select>");
+        $("div#bl-payable-at").append("<br>" + "<select name='bl-payable-at'><option value='POD'>POD</option><option value='POL'>POL</option></select>" + "<br>");
 
         // Line detention checkbox generation
-        $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' id='" + line_detention_checkbox + "' checked>" + "<br>");
+        $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' checked>" + "<br>");
 
         // Line detention day-count entry field generation
-        $("div#bl-line-detention-day-count").append("<br>" + "<input type='number' name='bl-line-detention-day-count' placeholder='Free for (in days)' id='" + line_detention_day_count + "'>" + "<br>");
+        $("div#bl-line-detention-day-count").append("<br>" + "<input type='number' name='bl-line-detention-day-count' placeholder='Free for (in days)'>" + "<br>");
 
         /*--------------*/
 
