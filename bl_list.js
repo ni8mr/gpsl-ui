@@ -124,6 +124,60 @@ $(document).ready(function () {
     });// Add new b/l button clicking events
 
 
+    //Cross button clicking event of "Add new b/l" modal
+    $("#myModal").on('click', '#cross', function(e){
+        e.preventDefault();
+
+        // Removing previously generated dynamic fields
+        $("div#bl-list-id").empty();
+        $("div#bl-volume-number").empty().append("<label>Number</label>");
+        $("div#bl-volume-type").empty().append("<label>Type</label>");
+        $("div#bl-status").empty();
+        $("div#bl-payable-at").empty().append("<br>");
+        $("div#bl-line-detention-checkbox").empty();
+        $("div#bl-line-detention-day-count").empty();
+
+
+        // Adding default data to the initially generated rows of the b/l list entry form
+        for (i = 1; i < 11; i++) {
+            // Adding default data at ID entry field
+            var id_input_field = $("input#ui-id-" + i);
+            id_input_field.val(i);
+
+            // Adding default data at status entry field
+            var incremented_id_for_status_entry = i + 30,
+                status_input_field = $("input#ui-id-" + incremented_id_for_status_entry);
+            status_input_field.val('original');
+
+            /* Adding defaut selection at 'Payable at' selection field */
+            // var incremented_id_for_payable_at_selection = i + 40,
+            //     payable_at_selection_field = $("select#ui-id-" + incremented_id_for_payable_at_selection);
+            //
+            // // Clearing previous selection if exists
+            // var targeting_selected = $(payable_at_selection_field + ' option:selected');
+            // targeting_selected.removeAttr('selected');
+            //
+            // // Adding selected value at the field
+            // var targeting_for_selection = $("select#ui-id-" + incremented_id_for_payable_at_selection + " option[value='POD']");
+            // targeting_for_selection.attr("selected", "selected");
+            //
+            // // Showing selected value at the top
+            // targeting_selected.prependTo(payable_at_selection_field);
+
+            /* ------ */
+
+            // Adding default value at line detention day-count entry field
+            var incremented_id_for_line_detention_day_count = i + 60,
+                line_detention_day_count_input_field = $("input#ui-id-" + incremented_id_for_line_detention_day_count);
+            line_detention_day_count_input_field.val(14);
+
+        }
+
+
+
+    });//Cross button clicking event of "Add new b/l" modal
+
+
     // Triggering jquery datepicker function for "Date of Entry" field at "Add new B/L" modal
     $('input#bl-date-of-entry').datepicker({
         dateFormat: 'yy-mm-dd'
