@@ -57,7 +57,7 @@ $(document).ready(function () {
             $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' checked>" + "<br>");
 
             // Line detention day-count entry field generation
-            $("div#bl-line-detention-day-count").append("<br>" + "<label>Free for</label>" + "<input type='number' name='bl-line-detention-day-count'>");
+            $("div#bl-line-detention-day-count").append("<br>" + "<label>Free for</label>" + "<input type='number' name='bl-line-detention-day-count'>" + "<br>");
         }
 
         /* Generating unique-id for different input fields */
