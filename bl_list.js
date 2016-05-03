@@ -52,7 +52,7 @@ $(document).ready(function () {
 
             // 'Payable at' selection field generation
             $("div#bl-payable-at").append("<select name='bl-payable-at'><option value='POD'>POD</option><option value='POL'>POL</option></select>");
-            $("div#bl-payable-at").append("<br>");
+            $("div#bl-payable-at").append("<label></label>");
 
             // Line detention checkbox generation
             $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' checked>");
