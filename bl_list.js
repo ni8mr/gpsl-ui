@@ -26,20 +26,20 @@ $(document).ready(function () {
         //
         // });
 
-        var count = 0;
         //Loading dynamic fields/data for B/L list form
-        for(i=0; i<=10; i++){
-            $('div#bl-list-id').append("<br>" + "<input type='text'>");
-            $('div#bl-volume-number').append("<input type='text'>" + "<br>");
-            $('div#bl-volume-type').append("<input type='text'>" + "<br>");
-            $('div#bl-status').append("<input type='text'>" + "<br>");
-            $('div#bl-payable-at').append("<select></select>");
-            $('div#bl-line-detention-checkbox').append("<br>" + "<input type='checkbox' checked>");
-            $('div#bl-line-detention-day-count').append("<label>Free for</label>" + "<input type='text'>");
-            count += 1;
+        for(i=0; i<10; i++){
+            $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>");
+            $("div#bl-volume-number").append("<input type='text'>" + "<br>");
+            $("div#bl-volume-type").append("<input type='text'>" + "<br>");
+            $("div#bl-status").append("<input type='text'>" + "<br>");
+            $("div#bl-payable-at").append("<select></select>");
+            $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' checked>");
+            $("div#bl-line-detention-day-count").append("<label>Free for</label>" + "<input type='text'>");
         }
 
-        console.log(count);
+        //Generating unique-id for different input fields
+        $("input[name='bl-list-id']").uniqueId(); 
+
 
     });// Add new b/l button clicking events
 
