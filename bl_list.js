@@ -137,6 +137,30 @@ $(document).ready(function () {
         $("div#bl-line-detention-checkbox").empty();
         $("div#bl-line-detention-day-count").empty();
 
+        //Loading 10 dynamic rows initially for b/l list entry form
+        for (i = 0; i < 10; i++) {
+            // ID entry field generation
+            $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>" + "<br>");
+
+            // Volume-number entry field generation
+            $("div#bl-volume-number").append("<br>" + "<input type='text' name='bl-volume-number'>" + "<br>");
+
+            // Volume-type entry field generation
+            $("div#bl-volume-type").append("<br>" + "<input type='text' name='bl-volume-type'>" + "<br>");
+
+            // Status entry field generation
+            $("div#bl-status").append("<br>" + "<input type='text' name='bl-status'>" + "<br>");
+
+            // 'Payable at' selection field generation
+            $("div#bl-payable-at").append("<select name='bl-payable-at'><option value='POD'>POD</option><option value='POL'>POL</option></select>");
+
+            // Line detention checkbox generation
+            $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' checked>" + "<br>");
+
+            // Line detention day-count entry field generation
+            $("div#bl-line-detention-day-count").append("<br>" + "<input type='number' name='bl-line-detention-day-count' placeholder='Free for (in days)'>" + "<br>");
+        }
+
 
         /* Generating unique-id for different input fields */
 
