@@ -17,7 +17,7 @@ $(document).ready(function () {
         $("div#bl-status").empty();
         $("div#bl-payable-at").empty().append("<br>");
         $("div#bl-line-detention-checkbox").empty();
-        $("div#bl-line-detention-day-count").empty();
+        $("div#bl-line-detention-day-count").empty().append("<br>");
 
 
         // var principal_name_url = location.origin + "/api/v1/principal/";
@@ -57,7 +57,7 @@ $(document).ready(function () {
             $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' checked>" + "<br>");
 
             // Line detention day-count entry field generation
-            $("div#bl-line-detention-day-count").append("<br>" + "<label>Free for</label>" + "<input type='number' name='bl-line-detention-day-count'>");
+            $("div#bl-line-detention-day-count").append("<br>" + "<label>Free for</label>" + "<input type='number' name='bl-line-detention-day-count'>" + "<br>");
         }
 
         /* Generating unique-id for different input fields */
