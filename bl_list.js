@@ -10,6 +10,15 @@ $(document).ready(function () {
     $('#add-new-bl').click(function (e) {
         e.preventDefault();
 
+        // Removing previously generated dynamic fields
+        $("div#bl-list-id").html().empty();
+        $("div#bl-volume-number").html().empty();
+        $("div#bl-volume-type").html().empty();
+        $("div#bl-status").html().empty();
+        $("div#bl-payable-at").html().empty();
+        $("div#bl-line-detention-checkbox").html().empty();
+        $("div#bl-line-detention-day-count").html().empty();
+
         // var principal_name_url = location.origin + "/api/v1/principal/";
         // var principal_name = '';
         //
