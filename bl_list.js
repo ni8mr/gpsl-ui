@@ -123,32 +123,40 @@ $(document).ready(function () {
     });// Add new b/l button clicking events
 
 
+    // "Add more' button clicking event
     $("#myModal").on('click', "#add-more-bl", function (e) {
         e.preventDefault();
 
+        /* Generating fields with ids */
+
+        //Getting the latest unique id
+        var last_id = $("div#bl-line-detention-day-count input[name='bl-line-detention-day-count']").last().attr("id");
+
         // ID entry field generation
-        $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>" + "<br>");
+        $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id' id='" + last_id + 1 + "'>" + "<br>");
 
         // Volume-number entry field generation
-        $("div#bl-volume-number").append("<br>" + "<input type='text' name='bl-volume-number'>" + "<br>");
+        $("div#bl-volume-number").append("<br>" + "<input type='text' name='bl-volume-number' id='" + last_id + 2 + "'>" + "<br>");
 
         // Volume-type entry field generation
-        $("div#bl-volume-type").append("<br>" + "<input type='text' name='bl-volume-type'>" + "<br>");
+        $("div#bl-volume-type").append("<br>" + "<input type='text' name='bl-volume-type' id='" + last_id + 3 + "'>" + "<br>");
 
         // Status entry field generation
-        $("div#bl-status").append("<br>" + "<input type='text' name='bl-status'>" + "<br>");
+        $("div#bl-status").append("<br>" + "<input type='text' name='bl-status' id='" + last_id + 4 + "'>" + "<br>");
 
         // 'Payable at' selection field generation
-        $("div#bl-payable-at").append("<select name='bl-payable-at'><option value='POD'>POD</option><option value='POL'>POL</option></select>");
+        $("div#bl-payable-at").append("<select name='bl-payable-at' id='" + last_id + 5 + "'><option value='POD'>POD</option><option value='POL'>POL</option></select>");
 
         // Line detention checkbox generation
-        $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' checked>" + "<br>");
+        $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' id='" + last_id + 6 + "' checked>" + "<br>");
 
         // Line detention day-count entry field generation
-        $("div#bl-line-detention-day-count").append("<br>" + "<input type='number' name='bl-line-detention-day-count' placeholder='Free for (in days)'>" + "<br>");
+        $("div#bl-line-detention-day-count").append("<br>" + "<input type='number' name='bl-line-detention-day-count' placeholder='Free for (in days)' id='" + last_id + 1 + "'>" + "<br>");
+
+        /*--------------*/
 
 
-    });
+    });// "Add more' button clicking event
 
 
     // Triggering jquery datepicker function for "Date of Entry" field at "Add new B/L" modal
