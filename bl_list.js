@@ -96,19 +96,19 @@ $(document).ready(function () {
             status_input_field.val('original');
 
             /* Adding defaut selection for 'Payable at' selection field */
-            var incremented_id_for_payable_at_selection = i + 40,
-                payable_at_selection_field = $("select#ui-id-" + incremented_id_for_payable_at_selection);
-
-            // Clearing previous selection if exists
-            var targeting_selected = $(payable_at_selection_field + ' option:selected');
-            targeting_selected.removeAttr('selected');
-
-            // Adding selected value at the field
-            var targeting_for_selection = $("select#ui-id-" + incremented_id_for_payable_at_selection + " option[value='POD']");
-            targeting_for_selection.attr("selected", "selected");
-
-            // Showing selected value at the top
-            targeting_selected.prependTo(payable_at_selection_field);
+            // var incremented_id_for_payable_at_selection = i + 40,
+            //     payable_at_selection_field = $("select#ui-id-" + incremented_id_for_payable_at_selection);
+            //
+            // // Clearing previous selection if exists
+            // var targeting_selected = $(payable_at_selection_field + ' option:selected');
+            // targeting_selected.removeAttr('selected');
+            //
+            // // Adding selected value at the field
+            // var targeting_for_selection = $("select#ui-id-" + incremented_id_for_payable_at_selection + " option[value='POD']");
+            // targeting_for_selection.attr("selected", "selected");
+            //
+            // // Showing selected value at the top
+            // targeting_selected.prependTo(payable_at_selection_field);
 
             /* ------ */
 
