@@ -37,7 +37,7 @@ $(document).ready(function () {
         // });
 
         //Loading 10 dynamic rows initially for b/l list entry form
-        for (i = 0; i < 5; i++) {
+        for (i = 0; i < 6; i++) {
             // ID entry field generation
             $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>" + "<br>" + "<br>");
 
@@ -51,7 +51,7 @@ $(document).ready(function () {
             $("div#bl-status").append("<br>" + "<input type='text' name='bl-status'>" + "<br>" + "<br>");
 
             // 'Payable at' selection field generation
-            $("div#bl-payable-at").append("<br>" + "<select name='bl-payable-at'><option value='POD'>POD</option><option value='POL'>POL</option></select>" + "<br>");
+            $("div#bl-payable-at").append("<br>" + "<select name='bl-payable-at'><option value='POD'>POD</option><option value='POL'>POL</option></select>" + "<br>" + "<br>");
 
             // Line detention checkbox generation
             $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' checked>" + "<br>" + "<br>");
