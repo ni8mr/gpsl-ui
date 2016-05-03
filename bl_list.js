@@ -14,7 +14,7 @@ $(document).ready(function () {
         $("div#bl-list-id").empty();
         $("div#bl-volume-number").empty().append("<label>Number</label>");
         $("div#bl-volume-type").empty().append("<label>Type</label>");
-        $("div#bl-status").empty();
+        $("div#bl-status").empty().append("<br>");
         $("div#bl-payable-at").empty().append("<br>");
         $("div#bl-line-detention-checkbox").empty().append("<br>");
         $("div#bl-line-detention-day-count").empty().append("<br>");
@@ -48,7 +48,7 @@ $(document).ready(function () {
             $("div#bl-volume-type").append("<input type='text' name='bl-volume-type'>" + "<br>");
 
             // Status entry field generation
-            $("div#bl-status").append("<input type='text' name='bl-status'>" + "<br>");
+            $("div#bl-status").append("<br>" + "<input type='text' name='bl-status'>" + "<br>");
 
             // 'Payable at' selection field generation
             $("div#bl-payable-at").append("<br>" + "<select name='bl-payable-at'><option value='POD'>POD</option><option value='POL'>POL</option></select>" + "<br>");
