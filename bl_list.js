@@ -36,7 +36,7 @@ $(document).ready(function () {
         // });
 
         //Loading 10 dynamic rows initially for b/l list entry form
-        for(i=0; i<10; i++){
+        for (i = 0; i < 10; i++) {
             // ID entry field generation
             $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>");
 
@@ -49,8 +49,8 @@ $(document).ready(function () {
             // Status entry field generation
             $("div#bl-status").append("<input type='text' name='bl-status'>" + "<br>");
 
-            // 'Payable at' entry field generation
-            $("div#bl-payable-at").append("<select name='bl-payable-at'></select>");
+            // 'Payable at' selection field generation
+            $("div#bl-payable-at").append("<select name='bl-payable-at'><option value='POD'>POD</option><option value='POL'>POL</option></select>");
 
             // Line detention checkbox generation
             $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' checked>");
@@ -59,7 +59,7 @@ $(document).ready(function () {
             $("div#bl-line-detention-day-count").append("<label>Free for</label>" + "<input type='text' name='bl-line-detention-day-count'>");
         }
 
-        //Generating unique-id for different input fields
+        /* Generating unique-id for different input fields */
 
         // For ID entry field
         $("input[name='bl-list-id']").uniqueId();
@@ -73,7 +73,7 @@ $(document).ready(function () {
         // For status entry field
         $("input[name='bl-status']").uniqueId();
 
-        // For 'Payable at' entry field
+        // For 'Payable at' selection field
         $("select[name='bl-payable-at']").uniqueId();
 
         // For line detention checkbox
@@ -82,8 +82,10 @@ $(document).ready(function () {
         // For line detention day-count entry field
         $("input[name='bl-line-detention-day-count']").uniqueId();
 
+        /*-----*/
+
         // Adding default data to the initially generated rows of the b/l list entry form
-        for(i=1; i<11; i++){
+        for (i = 1; i < 11; i++) {
             // Adding default data for ID entry field
             var id_input_field = $("input#ui-id-" + i);
             id_input_field.val(i);
@@ -92,18 +94,37 @@ $(document).ready(function () {
             var incremented_id_for_status_entry = i + 30,
                 status_input_field = $("input#ui-id-" + incremented_id_for_status_entry);
             status_input_field.val('original');
+
+            /* Adding defaut selection for 'Payable at' selection field */
+            var incremented_id_for_payable_at_selection = i + 40,
+                payable_at_selection_field = $("select#ui-id-" + incremented_id_for_payable_at_selection);
+
+            // Clearing previous selection if exists
+            var targeting_selected = payable_at_selection_field + ' option:selected';
+            targeting_selected.removeAttr('selected');
+
+            // Adding selected value at the field
+            payable_at_selection_field.filter(function () {
+                return $(this).text() === 'POD';
+            }).attr("selected", "selected");
+
+            // Showing selected value at the top
+            targeting_selected.prependTo(payable_at_selection_field);
+
+            /* ------ */
+
         }
 
 
     });// Add new b/l button clicking events
 
 
-    // Triggering jquery datepicker function for "Date of Entry" field
+    // Triggering jquery datepicker function for "Date of Entry" field at "Add new B/L" modal
     $('input#bl-date-of-entry').datepicker({
         dateFormat: 'yy-mm-dd'
     });
 
-    // Triggering jquery datepicker function for "ETA" field
+    // Triggering jquery datepicker function for "ETA" field at "Add new B/L" modal
     $('input#bl-eta').datepicker({
         dateFormat: 'yy-mm-dd'
     });
