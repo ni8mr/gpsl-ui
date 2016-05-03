@@ -129,20 +129,22 @@ $(document).ready(function () {
 
         /* Generating fields with ids */
 
-        //Getting the latest unique id
-        var last_id = $("div#bl-line-detention-day-count input[name='bl-line-detention-day-count']").last().attr("id");
+        //Getting the digit part of the latest unique id
+        var last_id_digit_part_as_string = $("div#bl-line-detention-day-count input[name='bl-line-detention-day-count']").last().attr("id").split("-")[2],
+            //Converting it to a number
+            last_id_digit_part = parseInt(last_id_digit_part_as_string, "10");
         
         //Defining id-value for the fields
-        var id = (last_id-60) + 1,
-            volume_number = (last_id-50) + 1,
-            volume_type = (last_id-40) + 1,
-            status = (last_id-30) + 1,
-            payable_at = (last_id-20) + 1,
-            line_detention_checkbox = (last_id-10) + 1,
-            line_detention_day_count = last_id + 1;
+        var id = (last_id_digit_part-60) + 1,
+            volume_number = (last_id_digit_part-50) + 1,
+            volume_type = (last_id_digit_part-40) + 1,
+            status = (last_id_digit_part-30) + 1,
+            payable_at = (last_id_digit_part-20) + 1,
+            line_detention_checkbox = (last_id_digit_part-10) + 1,
+            line_detention_day_count = last_id_digit_part + 1;
 
         // ID entry field generation
-        $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>" + "<br>");
+        $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id' id='ui-id-" + id + "'>" + "<br>");
 
         // Volume-number entry field generation
         $("div#bl-volume-number").append("<br>" + "<input type='text' name='bl-volume-number'>" + "<br>");
