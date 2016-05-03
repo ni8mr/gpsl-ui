@@ -38,7 +38,7 @@ $(document).ready(function () {
             $("div#bl-volume-type").append("<input type='text'>" + "<br>");
 
             // Status entry field generation
-            $("div#bl-status").append("<input type='text'>" + "<br>");
+            $("div#bl-status").append("<input type='text' name='bl-status'>" + "<br>");
 
             // 'Payable at' entry field generation
             $("div#bl-payable-at").append("<select></select>");
@@ -55,11 +55,17 @@ $(document).ready(function () {
         // For ID entry field
         $("input[name='bl-list-id']").uniqueId();
 
+        // For status entry field
+        $("input[name='bl-status']").uniqueId();
+
         // Adding default data to the initially generated rows of the b/l list entry form
         for(i=1; i<11; i++){
-            // Appending default data for ID entry field
+            // Adding default data for ID entry field
             var id_input_field = $("input#ui-id-" + i);
             id_input_field.val(i);
+
+            // Adding default data for status entry field
+            // var status_input_field = $("input#ui-id-" + i);
         }
 
 
