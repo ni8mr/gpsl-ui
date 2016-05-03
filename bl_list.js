@@ -100,7 +100,7 @@ $(document).ready(function () {
                 payable_at_selection_field = $("select#ui-id-" + incremented_id_for_payable_at_selection);
 
             // Clearing previous selection if exists
-            var targeting_selected = payable_at_selection_field + ' option:selected';
+            var targeting_selected = $(payable_at_selection_field + ' option:selected');
             targeting_selected.removeAttr('selected');
 
             // Adding selected value at the field
