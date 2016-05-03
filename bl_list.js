@@ -138,6 +138,30 @@ $(document).ready(function () {
         $("div#bl-line-detention-day-count").empty();
 
 
+        /* Generating unique-id for different input fields */
+
+        // For ID entry field
+        $("input[name='bl-list-id']").uniqueId();
+
+        // For volume-number entry field
+        $("input[name='bl-volume-number']").uniqueId();
+
+        // For volume-type entry field
+        $("input[name='bl-volume-type']").uniqueId();
+
+        // For status entry field
+        $("input[name='bl-status']").uniqueId();
+
+        // For 'Payable at' selection field
+        $("select[name='bl-payable-at']").uniqueId();
+
+        // For line detention checkbox
+        $("input[name='bl-line-detention-checkbox']").uniqueId();
+
+        // For line detention day-count entry field
+        $("input[name='bl-line-detention-day-count']").uniqueId();
+
+
         // Adding default data to the initially generated rows of the b/l list entry form
         for (i = 1; i < 11; i++) {
             // Adding default data at ID entry field
