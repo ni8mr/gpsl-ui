@@ -32,22 +32,22 @@ $(document).ready(function () {
             $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>");
 
             // Volume-number entry field generation
-            $("div#bl-volume-number").append("<input type='text'>" + "<br>");
+            $("div#bl-volume-number").append("<input type='text' name='bl-volume-number'>" + "<br>");
 
             // Volume-type entry field generation
-            $("div#bl-volume-type").append("<input type='text'>" + "<br>");
+            $("div#bl-volume-type").append("<input type='text' name='bl-volume-type'>" + "<br>");
 
             // Status entry field generation
             $("div#bl-status").append("<input type='text' name='bl-status'>" + "<br>");
 
             // 'Payable at' entry field generation
-            $("div#bl-payable-at").append("<select></select>");
+            $("div#bl-payable-at").append("<select name='bl-payable-at'></select>");
 
             // Line detention checkbox generation
-            $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' checked>");
+            $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' checked>");
 
             // Line detention day-count entry field generation
-            $("div#bl-line-detention-day-count").append("<label>Free for</label>" + "<input type='text'>");
+            $("div#bl-line-detention-day-count").append("<label>Free for</label>" + "<input type='text' name='bl-line-detention-day-count'>");
         }
 
         //Generating unique-id for different input fields
@@ -55,8 +55,23 @@ $(document).ready(function () {
         // For ID entry field
         $("input[name='bl-list-id']").uniqueId();
 
+        // For volume-number entry field
+        $("input[name='bl-volume-number']").uniqueId();
+
+        // For volume-type entry field
+        $("input[name='bl-volume-type']").uniqueId();
+
         // For status entry field
         $("input[name='bl-status']").uniqueId();
+
+        // For 'Payable at' entry field
+        $("select[name='bl-payable-at']").uniqueId();
+
+        // For line detention checkbox
+        $("input[name='bl-line-detention-checkbox']").uniqueId();
+
+        // For line detention day-count entry field
+        $("input[name='bl-line-detention-day-count']").uniqueId();
 
         // Adding default data to the initially generated rows of the b/l list entry form
         for(i=1; i<11; i++){
@@ -65,7 +80,7 @@ $(document).ready(function () {
             id_input_field.val(i);
 
             // Adding default data for status entry field
-            var incremented_id_for_status_entry = i + 10,
+            var incremented_id_for_status_entry = i + 30,
                 status_input_field = $("input#ui-id-" + incremented_id_for_status_entry);
             status_input_field.val('original');
         }
