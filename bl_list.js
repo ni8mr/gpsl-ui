@@ -11,7 +11,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         // Removing previously generated dynamic fields
-        $("div#bl-list-id").empty();
+        $("div#bl-list-id").empty().append("<br>");
         $("div#bl-volume-number").empty().append("<label>Number</label>");
         $("div#bl-volume-type").empty().append("<label>Type</label>");
         $("div#bl-status").empty().append("<br>");
@@ -39,13 +39,13 @@ $(document).ready(function () {
         //Loading 10 dynamic rows initially for b/l list entry form
         for (i = 0; i < 2; i++) {
             // ID entry field generation
-            $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>");
+            $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>" + "<br>");
 
             // Volume-number entry field generation
-            $("div#bl-volume-number").append("<input type='text' name='bl-volume-number'>" + "<br>");
+            $("div#bl-volume-number").append("<br>" + "<input type='text' name='bl-volume-number'>" + "<br>");
 
             // Volume-type entry field generation
-            $("div#bl-volume-type").append("<input type='text' name='bl-volume-type'>" + "<br>");
+            $("div#bl-volume-type").append("<br>" + "<input type='text' name='bl-volume-type'>" + "<br>");
 
             // Status entry field generation
             $("div#bl-status").append("<br>" + "<input type='text' name='bl-status'>" + "<br>" );
