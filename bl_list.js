@@ -16,7 +16,7 @@ $(document).ready(function () {
         $("div#bl-volume-type").empty().append("<label>Type</label>");
         $("div#bl-status").empty();
         $("div#bl-payable-at").empty().append("<br>");
-        $("div#bl-line-detention-checkbox").empty();
+        $("div#bl-line-detention-checkbox").empty().append("<br>");
         $("div#bl-line-detention-day-count").empty().append("<br>");
 
 
@@ -37,7 +37,7 @@ $(document).ready(function () {
         // });
 
         //Loading 10 dynamic rows initially for b/l list entry form
-        for (i = 0; i < 10; i++) {
+        for (i = 0; i < 2; i++) {
             // ID entry field generation
             $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id'>");
 
@@ -86,7 +86,7 @@ $(document).ready(function () {
         /*-----*/
 
         // Adding default data to the initially generated rows of the b/l list entry form
-        for (i = 1; i < 11; i++) {
+        for (i = 1; i < 3; i++) {
             // Adding default data at ID entry field
             var id_input_field = $("input#ui-id-" + i);
             id_input_field.val(i);
