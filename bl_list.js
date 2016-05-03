@@ -114,7 +114,7 @@ $(document).ready(function () {
             /* ------ */
 
             // Adding default value at line detention day-count entry field
-            var incremented_id_for_line_detention_day_count = i + 50,
+            var incremented_id_for_line_detention_day_count = i + 60,
                 line_detention_day_count_input_field = $("input#ui-id-" + incremented_id_for_line_detention_day_count);
             line_detention_day_count_input_field.val(14);
 
