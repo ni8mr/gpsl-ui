@@ -171,7 +171,7 @@ $(document).ready(function () {
        
         // Adding default data at ID entry field
         var id_input_field = $("input#ui-id-" + id);
-        id_input_field.val(i);
+        id_input_field.val(id);
 
         // Adding default data at status entry field
          var status_input_field = $("input#ui-id-" + status);
