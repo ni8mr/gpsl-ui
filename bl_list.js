@@ -127,58 +127,78 @@ $(document).ready(function () {
     $("#myModal").on('click', "#add-more-bl", function (e) {
         e.preventDefault();
 
+        //Catching last generated value from the ID input field for later use
+        var id_input_field_value = parseInt($("div#bl-list-id input[name='bl-list-id']").last().val());
+
+
         /* Generating fields with ids */
 
-        //Getting the digit part of the latest unique id
-        var last_id_digit_part_as_string = $("div#bl-line-detention-day-count input[name='bl-line-detention-day-count']").last().attr("id").split("-")[2],
-            //Converting it to a number
-            last_id_digit_part = parseInt(last_id_digit_part_as_string, "10");
-        
+        //Getting the digit part of the latest unique id as string
+
+        // ID field latest id
+        var last_id_of_ID_field = $("div#bl-list-id input[name='bl-list-id']").last().attr("id"),
+            last_id_of_volume_number_field = $("div#bl-volume-number input[name='bl-volume-number']").last().attr("id"),
+            last_id_of_volume_type_field = $("div#bl-volume-type input[name='bl-volume-type']").last().attr("id"),
+            last_id_of_status_field = $("div#bl-status input[name='bl-status']").last().attr("id"),
+            last_id_of_payable_at_field = $("div#bl-payable-at input[name='bl-payable-at']").last().attr("id"),
+            last_id_of_line_detention_checkbox_field = $("div#bl-line-detention-checkbox input[name='bl-line-detention-checkbox']").last().attr("id"),
+            last_id_of_line_detention_day_count = $("div#bl-line-detention-day-count input[name='bl-line-detention-day-count']").last().attr("id");
+
+        // var last_id_digit_part_as_string = $("div#bl-line-detention-day-count input[name='bl-line-detention-day-count']").last().attr("id").split("-")[2],
+        // // //Converting it to a number
+        //     last_id_digit_part = parseInt(last_id_digit_part_as_string, "10");
+
         //Defining id-value for the fields
-        var id = (last_id_digit_part-60) + 1,
-            volume_number = (last_id_digit_part-50) + 1,
-            volume_type = (last_id_digit_part-40) + 1,
-            status = (last_id_digit_part-30) + 1,
-            payable_at = (last_id_digit_part-20) + 1,
-            line_detention_checkbox = (last_id_digit_part-10) + 1,
-            line_detention_day_count = last_id_digit_part + 1;
+        var id = last_id_of_ID_field + 1,
+            volume_number = last_id_of_volume_number_field + 1,
+            volume_type = last_id_of_volume_type_field + 1,
+            status = last_id_of_status_field + 1,
+            payable_at = last_id_of_payable_at_field + 1,
+            line_detention_checkbox = last_id_of_line_detention_checkbox_field + 1,
+            line_detention_day_count = last_id_of_line_detention_day_count + 1;
+
 
         // ID entry field generation
-        $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id' id='ui-id-" + id + "'>" + "<br>");
+        $("div#bl-list-id").append("<br>" + "<input type='text' name='bl-list-id' id='" + id + "'>" + "<br>");
 
         // Volume-number entry field generation
-        $("div#bl-volume-number").append("<br>" + "<input type='text' name='bl-volume-number' id='ui-id-" + volume_number + "'>"+ "<br>");
+        $("div#bl-volume-number").append("<br>" + "<input type='text' name='bl-volume-number' id='" + volume_number + "'>" + "<br>");
 
         // Volume-type entry field generation
-        $("div#bl-volume-type").append("<br>" + "<input type='text' name='bl-volume-type' id='ui-id-" + volume_type + "'>" + "<br>");
+        $("div#bl-volume-type").append("<br>" + "<input type='text' name='bl-volume-type' id='" + volume_type + "'>" + "<br>");
 
         // Status entry field generation
-        $("div#bl-status").append("<br>" + "<input type='text' name='bl-status' id='ui-id-" + status + "'>" + "<br>");
+        $("div#bl-status").append("<br>" + "<input type='text' name='bl-status' id='" + status + "'>" + "<br>");
 
         // 'Payable at' selection field generation
-        $("div#bl-payable-at").append("<br>" + "<select name='bl-payable-at' id='ui-id-" + payable_at + "'><option value='POD'>POD</option><option value='POL'>POL</option></select>" + "<br>");
+        $("div#bl-payable-at").append("<br>" + "<select name='bl-payable-at' id='" + payable_at + "'><option value='POD'>POD</option><option value='POL'>POL</option></select>" + "<br>");
 
         // Line detention checkbox generation
-        $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' id='ui-id-" + line_detention_checkbox + "' checked>" + "<br>");
+        $("div#bl-line-detention-checkbox").append("<br>" + "<input type='checkbox' name='bl-line-detention-checkbox' id='" + line_detention_checkbox + "' checked>" + "<br>");
 
         // Line detention day-count entry field generation
-        $("div#bl-line-detention-day-count").append("<br>" + "<input type='number' name='bl-line-detention-day-count' placeholder='Free for (in days)' id='ui-id-" + line_detention_day_count + "'>" + "<br>");
+        $("div#bl-line-detention-day-count").append("<br>" + "<input type='number' name='bl-line-detention-day-count' placeholder='Free for (in days)' id='" + line_detention_day_count + "'>" + "<br>");
 
         /*--------------*/
-        
-        
+
+
         // Adding default data to the initially generated rows of the b/l list entry form
-       
+
         // Adding default data at ID entry field
-        var id_input_field = $("input#ui-id-" + id);
-        id_input_field.val(id);
+
+        var last_id = $("div#bl-list-id input[name='bl-list-id']").last().attr("id"),
+            id_input_field = $("input#" + last_id);
+
+        id_input_field.val(id_input_field_value + 1);
 
         // Adding default data at status entry field
-         var status_input_field = $("input#ui-id-" + status);
+        var last_id = $("div#bl-status input[name='bl-status']").last().attr("id"),
+            status_input_field = $("input#" + last_id);
         status_input_field.val('original');
 
         // Adding default value at line detention day-count entry field
-        var line_detention_day_count_input_field = $("input#ui-id-" + line_detention_day_count);
+        var last_id = $("div#bl-line-detention-day-count input[name='bl-line-detention-day-count']").last().attr("id"),
+            line_detention_day_count_input_field = $("input#" + last_id);
         line_detention_day_count_input_field.val(14);
 
 
