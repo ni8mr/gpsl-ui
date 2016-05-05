@@ -35,22 +35,22 @@ $(document).ready(function () {
         $("div#bl-line-detention-checkbox").empty().append("<label>&nbsp</label>");
         $("div#bl-line-detention-day-count").empty().append("<label>Free for (in days)</label>");
 
-        // Populating Principal Name field
-        var principal_name_url = location.origin + "/api/v1/principal/";
-        var principal_name = '';
-
-        // Collecting and populating all available principal names in the "Principal name" field
-        $.getJSON(principal_name_url).done(function (data) {
-            for (var i = 0; i < data.length; i++) {
-                principal_name += '<option data-tokens="' + data[i].name.toLowerCase() + '" value="' + i + '">' + data[i].name + '</option>';
-            }
-
-            // Populating "Principal name" field
-            $("select#bl-principal-name").empty().append(principal_name).change(function (e) {
-                e.preventDefault();
-            }).selectpicker('refresh');
-
-        });// Collecting and populating all available principal names in the "Principal name" field
+        // // Populating Principal Name field
+        // var principal_name_url = location.origin + "/api/v1/principal/";
+        // var principal_name = '';
+        //
+        // // Collecting and populating all available principal names in the "Principal name" field
+        // $.getJSON(principal_name_url).done(function (data) {
+        //     for (var i = 0; i < data.length; i++) {
+        //         principal_name += '<option data-tokens="' + data[i].name.toLowerCase() + '" value="' + i + '">' + data[i].name + '</option>';
+        //     }
+        //
+        //     // Populating "Principal name" field
+        //     $("select#bl-principal-name").empty().append(principal_name).change(function (e) {
+        //         e.preventDefault();
+        //     }).selectpicker('refresh');
+        //
+        // });// Collecting and populating all available principal names in the "Principal name" field
 
         //Loading 10 dynamic rows initially for b/l list entry form
         for (i = 0; i < 10; i++) {
