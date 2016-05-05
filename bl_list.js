@@ -12,6 +12,9 @@ $(document).ready(function () {
 
         // For line detenton fields
         $("div#bl-list-entry").find("input[name='bl-line-detention-checkbox']").css("display", "block");
+        $("div#bl-list-entry").find("input[name='bl-line-detention-checkbox']").css("margin-top", "12px");
+        $("div#bl-list-entry").find("input[name='bl-line-detention-checkbox']").css("margin-bottom", "32px");
+
         $("div#bl-list-entry").find("input[name='bl-line-detention-day-count']").css("margin-bottom", "20px");
     }
 
