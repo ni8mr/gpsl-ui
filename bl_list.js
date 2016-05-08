@@ -335,6 +335,16 @@ $(document).ready(function () {
 
     });// "Cross" button clicking event
 
+
+    //"Save" button clicking events
+    $("#myModal").on('click', "#bl-submit", function(e){
+        e.preventDefault();
+
+        window.location.href= "container_entry.html";
+
+
+    });//"Save" button clicking events
+
     // Triggering jquery datepicker function for "Date of Entry" field
     $('input#bl-date-of-entry').datepicker({
         dateFormat: 'yy-mm-dd'
