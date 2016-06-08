@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Ports</title>
+
+    <!--Data-table CSS-->
+    <link herf="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+
+    <!--Data-table bootstrap css-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/css/dataTables.bootstrap.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap select CSS -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+    <!--Buttons CSS-->
+    <link rel="stylesheet"
+          href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.dataTables.min.css">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/starter-template/starter-template.css" rel="stylesheet">
+    <!--<link href="./css/st.css" rel="stylesheet">-->
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script src="http://getbootstrap.com/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="http://getbootstrap.com/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">GPSL UI</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#">Port</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <!-- /.box-header -->
+                <div class="box-header">
+                    <button type="button" id="add-new-bl" class="btn btn-info btn-sm pull-right" data-toggle="modal"
+                            data-target="#port_add">Add new port
+                    </button>
+                </div>
+                <div class="box-body">
+                    <table id="ports" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>Port Name</th>
+                            <th>Location</th>
+                            <th>Incoming Containers</th>
+                            <th>Containers in dock</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Chittagong Port<a href="#" class="port-details">(View Details)</a></td>
+                            <td>Chittagong, Bangladesh</td>
+                            <td><a href="#">0</a></td>
+                            <td><a href="#">0</a></td>
+                            <td><a href="#" class="edit">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Mongla Port<a href="#" class="port-details">(View Details)</a></td>
+                            <td>Khulna, Bangladesh</td>
+                            <td><a href="#">0</a></td>
+                            <td><a href="#">0</a></td>
+                            <td><a href="#" class="edit">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Port of Hong Kong<a href="#" class="port-details">(View Details)</a></td>
+                            <td>Hong kong district 1, Hong Kong</td>
+                            <td><a href="#">0</a></td>
+                            <td><a href="#">0</a></td>
+                            <td><a href="#" class="edit">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Port of Shenzen<a href="#" class="port-details">(View Details)</a></td>
+                            <td>Dongcheng, China</td>
+                            <td><a href="#">0</a></td>
+                            <td><a href="#">0</a></td>
+                            <td><a href="#" class="edit">Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>Port of Zhanjiang<a href="#" class="port-details">(View Details)</a></td>
+                            <td>Hong kong district 1, China</td>
+                            <td><a href="#">0</a></td>
+                            <td><a href="#">0</a></td>
+                            <td><a href="#" class="edit">Edit</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+
+</div><!-- /.container -->
+
+<!-- Modal -->
+<div id="port_add" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add new port</h4>
+            </div>
+            <div class="modal-body">
+                <!--Add new port form-->
+                <form id="port-add-form">
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Port Name</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="name" placeholder="Enter the name of the port here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">ISO code</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="isocode"
+                                   placeholder="Enter the ISO code of the port here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Country</label>
+                        <div class="col-sm-10">
+                            <select class="form-control selectpicker show-tick" name="country" id="country"
+                                    title="Select country..."
+                                    data-live-search-placeholder="Search desired country here"
+                                    data-live-search="true">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Division</label>
+                        <div class="col-sm-10">
+                            <select class="form-control selectpicker show-tick" name="division" id="division"
+                                    title="Select division..."
+                                    data-live-search-placeholder="Search desired division here"
+                                    data-live-search="true">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">District</label>
+                        <div class="col-sm-10">
+                            <select class="form-control selectpicker show-tick" name="district" id="district"
+                                    title="Select district..."
+                                    data-live-search-placeholder="Search desired district here"
+                                    data-live-search="true">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Phone</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="phone" placeholder="Enter the phone of the port here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="email" placeholder="Enter the email of the port here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Fax</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="fax" placeholder="Enter the fax of the port here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Address</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="address"
+                                   placeholder="Enter the address of the port here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Other information</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="otherinfo"
+                                   placeholder="Enter other information of the port here">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" name="depot-submit" class="btn btn-custom">Save</button>
+                    </div>
+                </form><!--Add new port form-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- View details Modal -->
+<div id="portdetailsmodal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="portdetailsheader"></h4>
+            </div>
+            <div class="modal-body">
+                <!--Port details table-->
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <td>Phone</td>
+                        <td><p id="portdetails-phone"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><p id="portdetails-email"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Fax</td>
+                        <td><p id="portdetails-fax"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><p id="portdetails-address"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Other information</td>
+                        <td><p id="portdetails-otherinfo"></p></td>
+                    </tr>
+                </table><!--Port details table-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-custom" data-dismiss="modal">Close</button>
+                </div>
+            </div><!--modal body -->
+        </div><!--modal content -->
+    </div><!--modal dialouge -->
+</div><!-- modal -->
+
+<!-- Edit modal -->
+<div id="editmodal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Edit port details</h4>
+            </div>
+
+            <div class="modal-body">
+                <!--Edit port details form-->
+                <form id="port-edit-form">
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Port Name</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="name" id="name_edit"
+                                   placeholder="Enter the name of the port here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Phone</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="phone" id="phone_edit"
+                                   placeholder="Enter the name of the port here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="email" id="email_edit"
+                                   placeholder="Enter the email of the port here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Fax</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="fax" id="fax_edit"
+                                   placeholder="Enter the fax of the port here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Address</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="address" id="address_edit"
+                                   placeholder="Enter the address of the port here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Other information</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="other_information" id="other_info_edit"
+                                   placeholder="Enter other information of the port here">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" name="edit-submit" class="btn btn-custom">Save</button>
+                    </div>
+                </form><!--Edit port details form-->
+            </div><!--modal body -->
+        </div><!--modal content -->
+    </div><!--modal dialouge -->
+</div><!-- modal -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src="http://getbootstrap.com/assets/js/vendor/jquery.min.js"></script>")</script>-->
+
+<script src="https://code.jquery.com/jquery-2.2.2.min.js"
+        integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<!--Data-table JS-->
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+<!--Data-table bootstrap js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/dataTables.bootstrap.min.js"></script>
+
+<!-- Bootstrap select JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+<!-- jQuery UI 1.11.4 -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+<!-- Bootstrap select JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+<!--Data-table buttons JS-->
+<script src="https://cdn.datatables.net/buttons/1.1.2/js/dataTables.buttons.min.js"></script>
+
+<!--JSzip-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+
+<!--Data-table print buttons-->
+<script src="https://cdn.datatables.net/buttons/1.1.2/js/buttons.print.min.js"></script>
+
+<!--HTML5 buttons-->
+<script src="https://cdn.datatables.net/buttons/1.1.2/js/buttons.html5.min.js"></script>
+
+<!--PDFmake for PDF button-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.20/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.20/vfs_fonts.js"></script>
+
+
+<script src="ports.js"></script>
+<script src="location_selection.js"></script>
+<script src="submit.js"></script>
+<!--<script src="submit.js"></script>-->
+
+</body>
+</html>
+
+
+
+

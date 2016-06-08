@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Chittagong Port",
+    "phone": "01817765432",
+    "email": "cpah@gov.bd",
+    "fax": "cpah@gov.bd",
+    "address": "Port, Chittagong - 4100",
+    "map_location": "12' N 14' W",
+    "other_information": "Largest port of Bangladesh."
+  },
+  {
+    "name": "Mongla Port",
+    "phone": "01676366475",
+    "email": "kpah@gov.bd",
+    "fax": "kpah@gov.bd",
+    "address": "Mongla, Khulna, Bangladesh",
+    "map_location": "12'North 27'East",
+    "other_information": "Second largest port of Bangladesh."
+  },
+  {
+    "name": "Port of Shenzen",
+    "phone": "01676366473",
+    "email": "shenzhen@yahoo.com",
+    "fax": "shenzhen@yahoo.com",
+    "address": "Shenzen, China",
+    "map_location": "",
+    "other_information": "",
+    "current_pricing": null
+  },
+  {
+    "name": "Port of Zhanjiang",
+    "phone": "018187573193",
+    "email": "zhanjiang@gmail.com",
+    "fax": "zhanjiang@gmail.com",
+    "address": "Zhangjiang, Hong Kong",
+    "map_location": "",
+    "other_information": "",
+    "current_pricing": null
+  },
+  {
+    "name": "Port of Hong Kong",
+    "phone": "018187573193",
+    "district_list_id": 19,
+    "email": "hong@gmail.com",
+    "fax": "hong@gmail.com",
+    "address": "Hong Kong, Hong Kong",
+    "map_location": "",
+    "other_information": "",
+    "current_pricing": null
+  }
+]
