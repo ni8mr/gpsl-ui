@@ -1,6 +1,7 @@
 [
   {
     "name": "Chittagong Port",
+    "short_name": "CTG",
     "phone": "01817765432",
     "email": "cpah@gov.bd",
     "fax": "cpah@gov.bd",
@@ -10,6 +11,7 @@
   },
   {
     "name": "Mongla Port",
+    "short_name": "MON",
     "phone": "01676366475",
     "email": "kpah@gov.bd",
     "fax": "kpah@gov.bd",
@@ -19,6 +21,7 @@
   },
   {
     "name": "Port of Shenzen",
+    "short_name": "SHN",
     "phone": "01676366473",
     "email": "shenzhen@yahoo.com",
     "fax": "shenzhen@yahoo.com",
@@ -29,6 +32,7 @@
   },
   {
     "name": "Port of Zhanjiang",
+    "short_name": "ZHN",
     "phone": "018187573193",
     "email": "zhanjiang@gmail.com",
     "fax": "zhanjiang@gmail.com",
@@ -39,6 +43,7 @@
   },
   {
     "name": "Port of Hong Kong",
+    "short_name": "HNK",
     "phone": "018187573193",
     "district_list_id": 19,
     "email": "hong@gmail.com",
