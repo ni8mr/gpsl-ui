@@ -101,41 +101,48 @@
                                 Details)</a>
                             </td>
                             <td>Singapore</td>
-                            <td><a href="#" class="country-of-operation" data-id="1">CTG</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="2">MON</a></td>
+                            <td><a href="#" class="country-of-operation" data-id="1">CTG</a>&nbsp;&nbsp;&nbsp;<a
+                                    href="#" class="country-of-operation" data-id="2">MON</a></td>
                             <td><a href="#">0</a></td>
                             <td><a href="#">0</a></td>
-                            <td><a href="#" class="edit">Edit</a>&nbsp;&nbsp;<a href="#" class="edit">Transaction</a>&nbsp;&nbsp;<a
-                                    href="#" class="edit">Suspend relation</a></td>
+                            <td><a href="#" class="edit" data-coverage="1,2">Edit</a>&nbsp;&nbsp;<a href="#">Transaction</a>&nbsp;&nbsp;<a
+                                    href="#">Suspend relation</a></td>
                         </tr>
                         <tr>
                             <td>Hanjin shipping limited<a href="#" class="principal-details">(View Details)</a></td>
                             <td>Singapore</td>
-                            <td><a href="#" class="country-of-operation" data-id="3">SHN</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="4">ZHN</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="1">CTG</a>
+                            <td><a href="#" class="country-of-operation" data-id="3">SHN</a>&nbsp;&nbsp;&nbsp;<a
+                                    href="#" class="country-of-operation" data-id="4">ZHN</a>&nbsp;&nbsp;&nbsp;<a
+                                    href="#" class="country-of-operation" data-id="1">CTG</a>
                             </td>
                             <td><a href="#">0</a></td>
                             <td><a href="#">0</a></td>
-                            <td><a href="#" class="edit">Edit</a>&nbsp;&nbsp;<a href="#" class="edit">Transaction</a>&nbsp;&nbsp;<a
-                                    href="#" class="edit">Suspend relation</a></td>
+                            <td><a href="#" class="edit" data-coverage="1,3,4">Edit</a>&nbsp;&nbsp;<a href="#">Transaction</a>&nbsp;&nbsp;<a
+                                    href="#">Suspend relation</a></td>
                         </tr>
                         <tr>
                             <td>Kuwang HG shipping limited<a href="#" class="principal-details">(View Details)</a></td>
                             <td>Hong Kong</td>
-                            <td><a href="#" class="country-of-operation" data-id="5">HNK</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="4">ZHN</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="1">CTG</a>
+                            <td><a href="#" class="country-of-operation" data-id="5">HNK</a>&nbsp;&nbsp;&nbsp;<a
+                                    href="#" class="country-of-operation" data-id="4">ZHN</a>&nbsp;&nbsp;&nbsp;<a
+                                    href="#" class="country-of-operation" data-id="1">CTG</a>
                             </td>
                             <td><a href="#">0</a></td>
                             <td><a href="#">0</a></td>
-                            <td><a href="#" class="edit">Edit</a>&nbsp;&nbsp;<a href="#" class="edit">Transaction</a>&nbsp;&nbsp;<a
-                                    href="#" class="edit">Suspend relation</a></td>
+                            <td><a href="#" class="edit" data-coverage="1,4,5">Edit</a>&nbsp;&nbsp;<a href="#">Transaction</a>&nbsp;&nbsp;<a
+                                    href="#">Suspend relation</a></td>
                         </tr>
                         <tr>
                             <td>Sea Hawk Global<a href="#" class="principal-details">(View Details)</a></td>
                             <td>India</td>
-                            <td><a href="#" class="country-of-operation" data-id="1">CTG</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="2">MON</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="3">SHN</a>
+                            <td><a href="#" class="country-of-operation" data-id="1">CTG</a>&nbsp;&nbsp;&nbsp;<a
+                                    href="#" class="country-of-operation" data-id="2">MON</a>&nbsp;&nbsp;&nbsp;<a
+                                    href="#" class="country-of-operation" data-id="3">SHN</a>
                             </td>
                             <td><a href="#">0</a></td>
                             <td><a href="#">0</a></td>
-                            <td><a href="#" class="edit">Edit</a>&nbsp;&nbsp;<a href="#" class="edit">Transaction</a>&nbsp;&nbsp;<a
-                                    href="#" class="edit">Suspend relation</a></td>
+                            <td><a href="#" class="edit" data-coverage="1,2,3">Edit</a>&nbsp;&nbsp;<a href="#">Transaction</a>&nbsp;&nbsp;<a
+                                    href="#">Suspend relation</a></td>
                         </tr>
                         </tbody>
                     </table>
@@ -145,7 +152,6 @@
     </div><!-- /.row -->
 
 </div><!-- /.container -->
-
 
 <!-- Add new principal Modal -->
 <div id="addprincipalmodal" class="modal fade" role="dialog">
@@ -344,6 +350,111 @@
         </div><!--modal content -->
     </div><!--modal dialouge -->
 </div><!-- modal -->
+
+<!--Edit principal modal-->
+<div id="edit-principal-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="edit-principal-details-header"></h4>
+            </div>
+            <div class="modal-body">
+                <form id="edit-principal">
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Principal Name</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="name"
+                                   id="principal-name-edit" placeholder="Enter the name of the principal here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Country of origin</label>
+                        <div class="col-sm-10">
+                            <select class="form-control selectpicker show-tick" name="country-of-origin"
+                                    id="country-of-origin-edit"
+                                    title="Edit the country of origin of the principal..."
+                                    data-live-search-placeholder="Search desired country here"
+                                    data-live-search="true">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Short Name</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="short-name" id="short-name-edit"
+                                   placeholder="Enter the short name of the principal here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Country of operation</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="country-of-operation-edit" multiple="multiple"
+                                    data-json="false" id="country-of-operation-edit">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Phone</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="phone-edit" id="phone-edit"
+                                   placeholder="Enter the phone no of the principal here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="email-edit" id="email-edit"
+                                   placeholder="Enter the email address of the principal here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Fax</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="fax-edit" id="fax-edit"
+                                   placeholder="Enter fax address of the principal here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Url</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="url-edit" id="url-edit"
+                                   placeholder="Enter the web address of the principal here">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            <label class="col-sm-4 form-control-label">Address</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" rows="5" name="address" id="address-edit"
+                                          placeholder="Enter the address of the principal here"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="col-sm-4 form-control-label">Contact details</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" rows="5" name="contact-details" id="contact-details-edit"
+                                          placeholder="Enter the contact details of the principal here"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 form-control-label">Account manager</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" name="account-manager" id="account-manager-edit"
+                                   placeholder="Enter the account manager of the principal here">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-custom">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div><!--modal fade-->
 
 
 <!-- Bootstrap core JavaScript

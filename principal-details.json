@@ -1,6 +1,8 @@
 [
   {
     "name": "Sea Hawk Global",
+    "short_name" : "SHG",
+    "country_of_origin" : "China",
     "email": "sea@gmail.com",
     "phone": "914439883900",
     "fax": "914425244642",
@@ -11,6 +13,8 @@
   },
   {
     "name": "Global shipping and delivery services",
+    "short_name" : "GSD",
+    "country_of_origin" : "Singapore",
     "email": "global@gmail.com",
     "phone": "018187573193",
     "fax": "global@yahoo.com",
@@ -21,6 +25,8 @@
   },
   {
     "name": "Hanjin shipping limited",
+    "short_name" : "HSL",
+    "country_of_origin" : "China",
     "email": "hanj@gmail.com",
     "phone": "01676366473",
     "fax": null,
@@ -31,6 +37,8 @@
   },
   {
     "name": "Kuwang HG shipping limited",
+    "country_of_origin" : "Singapore",
+    "short_name" : "KHL",
     "email": "kuwang@yahoo.com",
     "phone": "01676366473",
     "fax": "kuwang@yahoo.com",

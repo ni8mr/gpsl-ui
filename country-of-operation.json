@@ -10,17 +10,17 @@
     "port_iso": "Bangladesh-MP"
   },
   {
-    "id": 39,
+    "id": 3,
     "name": "Port of Shenzhen",
     "port_iso": "China-shen"
   },
   {
-    "id": 41,
+    "id": 4,
     "name": "Port of Zhanjiang",
     "port_iso": "China-zhan"
   },
   {
-    "id": 49,
+    "id": 5,
     "name": "Port of Hong Kong",
     "countryList_id": 11,
     "port_iso": "Hong Kong-phk"

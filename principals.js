@@ -115,8 +115,6 @@ $(document).ready(function () {
         // Declaring call_url based on the id of this principal
             call_url = 'principal-details.json';
 
-        console.log(principal_name);
-
         // Loading principal data for showing in the modal
         $.getJSON(call_url)
             .done(function (data) {
@@ -175,90 +173,77 @@ $(document).ready(function () {
     });// Loading country of operation modal based on port when clicked
 
     /* End of "country of operation modal" event */
-    //
-    // /* Edit principal details modal */
-    //
-    // // Showing edit principal details modal when clicked
-    // $("#principals").on('click', ".edit-principals", function (e) {
-    //     e.preventDefault();
-    //
-    //     // Declaring url to get the data related to the country of operations
-    //     var country_of_operation_json_url = location.origin + "/api/v1/portlist/",
-    //
-    //     // Catching the selected port-ids from country-of-operation field for this principal
-    //     // And saving them in an array
-    //         port_ids = $(this).data("coverage").split(',');
-    //
-    //
-    //     // Getting data related to the country of operations
-    //     $.getJSON(country_of_operation_json_url)
-    //         .done(function (data) {
-    //             var options = '';
-    //
-    //             for (var i = 0; i < data.length; i++) {
-    //                 var a = 1;
-    //                 for (var j = 0; j < port_ids.length; j++) {
-    //                     // Appending "selected" attribute to the values (port-ids) which are already selected
-    //                     if (port_ids[j] == data[i]["id"]) {
-    //                         options += '<option value="' + data[i]["id"] + '" selected="selected">' + data[i]["port_iso"] + '</option>';
-    //                         a = 0;
-    //                     }
-    //                 }
-    //                 if (a == 1) {
-    //                     options += '<option value="' + data[i]["id"] + '">' + data[i]["port_iso"] + '</option>';
-    //                 }
-    //             }
-    //
-    //             $("select#country-of-operation-edit").empty().append(options);
-    //
-    //             // Loading Country of operating dual-box field
-    //             $("#country-of-operation-edit").DualListBox();
-    //
-    //
-    //         });
-    //
-    //
-    //     // Loading the header of the modal
-    //
-    //     var edit_principal_head = 'Edit details of ' + $(this).data('principalname');
-    //     $('#edit-principal-details-header').empty().append(edit_principal_head);
-    //
-    //     // Saving this principal id in the hidden field
-    //     $("input#edit-principal-id").empty().val($(this).data("principalid"));
-    //
-    //
-    //     // Adding values at the fields for edit
-    //     $("input#principal-name-edit").empty().val($(this).data("principalname"));
-    //
-    //
-    //     /* Adding selected value at the country of operation field */
-    //     var country_of_origin = $(this).data("countryoforigin");
-    //
-    //     // Clearing previous selection if exists
-    //     $('select#country-of-origin-edit option:selected').removeAttr('selected');
-    //
-    //     // Adding selected value at the field
-    //     $('select#country-of-origin-edit option').filter(function () {
-    //         return $(this).text() === country_of_origin;
-    //     }).attr("selected", "selected");
-    //
-    //     // Showing selected value at the top
-    //     $("select#country-of-origin-edit option:selected").prependTo("select#country-of-origin-edit");
-    //
-    //
-    //     $("input#short-name-edit").empty().val($(this).data("shortname"));
-    //     $("input#phone-edit").empty().val($(this).data("phone"));
-    //     $("input#email-edit").empty().val($(this).data("email"));
-    //     $("textarea#address-edit").empty().val($(this).data("address"));
-    //     $("input#fax-edit").empty().val($(this).data("fax"));
-    //     $("input#url-edit").empty().val($(this).data("url"));
-    //     $("textarea#contact-details-edit").empty().val($(this).data("contactdetails"));
-    //     $("input#account-manager-edit").empty().val($(this).data("accountmanager"));
-    //
-    //
-    //     // Showing the edit-principal modal
-    //     $("#edit-principal-modal").modal("show");
-    //
-    // });  // End of the edit-principal modal loading code segment
+
+    /* Edit principal details modal */
+
+    // Showing edit principal details modal when clicked
+    $("#principals").on('click', ".edit", function (e) {
+        e.preventDefault();
+
+        var principal_name = $(this).closest('tr').find('td:nth-child(1)').text().split('(')[0],
+            port_ids = $(this).data("coverage").split(','),
+            call_url = 'principal-details.json';
+
+        $.getJSON(call_url)
+            .done(function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].name == principal_name) {
+                        $('#edit-principal-details-header').empty().append('Edit details of ' + principal_name);
+                        $("input#principal-name-edit").empty().val(principal_name);
+                        $("input#short-name-edit").empty().val(data[i]["short_name"]);
+
+                        //Country-of-origin
+                        json_load();
+                        var country_option_string = '',
+                            selected_val = data[i]["country_of_origin"];
+                        for (var i = 0; i < countries[0].length; i++) {
+                            country_option_string += '<option data-tokens="' + countries[0][i]["name"].toLowerCase() + '" value="' + countries[0][i]["id"] + '">' + countries[0][i]["name"] + '</option>';
+                        }
+                        input_country_of_origin_for_edit.append(country_option_string).change(function (e) {
+                            e.preventDefault();
+                        }).selectpicker('refresh');
+                        // input_country_of_origin_for_edit.selectpicker('val', selected_val);
+
+                        // Declaring url to get the data related to the country of operations
+                        var country_of_operation_json_url = "country-of-operation.json";
+
+                        // Getting data related to the country of operations
+                        $.getJSON(country_of_operation_json_url)
+                            .done(function (data) {
+                                var options = '';
+                                for (var i = 0; i < data.length; i++) {
+                                    var a = 1;
+                                    for (var j = 0; j < port_ids.length; j++) {
+                                        // Appending "selected" attribute to the values (port-ids) which are already selected
+                                        if (port_ids[j] == data[i]["id"]) {
+                                            console.log(port_ids[j]);
+                                            options += '<option value="' + data[i]["id"] + '" selected="selected">' + data[i]["port_iso"] + '</option>';
+                                            a = 0;
+                                        }
+                                    }
+                                    if (a == 1) {
+                                        options += '<option value="' + data[i]["id"] + '">' + data[i]["port_iso"] + '</option>';
+                                    }
+                                }
+                                $("select#country-of-operation-edit").empty().append(options);
+                                // Loading Country of operating dual-box field
+                                $("#country-of-operation-edit").DualListBox();
+                            });
+
+                        $("input#phone-edit").empty().val(data[i]["phone"]);
+                        $("input#email-edit").empty().val(data[i]["email"]);
+                        $("input#fax-edit").empty().val(data[i]["fax"]);
+                        $("input#url-edit").empty().val(data[i]["url"]);
+                        $("textarea#address-edit").empty().val(data[i]["address"]);
+                        $("textarea#contact-details-edit").empty().val(data[i]["contact_detail"]);
+                        $("input#account-manager-edit").empty().val(data[i]["account_manager"]);
+                    }
+                }
+            });
+
+        // Showing the edit-principal modal
+        $("#edit-principal-modal").modal("show");
+
+    });  // End of the edit-principal modal loading code segment
 
 });
