@@ -97,37 +97,45 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>Global shipping and delivery services<a href="#" class="port-details">(View Details)</a>
+                            <td>Global shipping and delivery services<a href="#" class="principal-details">(View
+                                Details)</a>
                             </td>
                             <td>Singapore</td>
-                            <td><a href="#">CTG</a>&nbsp;&nbsp;&nbsp;<a href="#">MON</a></td>
+                            <td><a href="#" class="country-of-operation" data-id="1">CTG</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="2">MON</a></td>
                             <td><a href="#">0</a></td>
                             <td><a href="#">0</a></td>
-                            <td><a href="#" class="edit">Edit</a>&nbsp;&nbsp;<a href="#" class="edit">Transaction</a>&nbsp;&nbsp;<a href="#" class="edit">Suspend relation</a></td>
+                            <td><a href="#" class="edit">Edit</a>&nbsp;&nbsp;<a href="#" class="edit">Transaction</a>&nbsp;&nbsp;<a
+                                    href="#" class="edit">Suspend relation</a></td>
                         </tr>
                         <tr>
-                            <td>Hanjin shipping limited<a href="#" class="port-details">(View Details)</a></td>
+                            <td>Hanjin shipping limited<a href="#" class="principal-details">(View Details)</a></td>
                             <td>Singapore</td>
-                            <td><a href="#">SHN</a>&nbsp;&nbsp;&nbsp;<a href="#">ZHN</a>&nbsp;&nbsp;&nbsp;<a href="#">CTG</a></td>
+                            <td><a href="#" class="country-of-operation" data-id="3">SHN</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="4">ZHN</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="1">CTG</a>
+                            </td>
                             <td><a href="#">0</a></td>
                             <td><a href="#">0</a></td>
-                            <td><a href="#" class="edit">Edit</a>&nbsp;&nbsp;<a href="#" class="edit">Transaction</a>&nbsp;&nbsp;<a href="#" class="edit">Suspend relation</a></td>
+                            <td><a href="#" class="edit">Edit</a>&nbsp;&nbsp;<a href="#" class="edit">Transaction</a>&nbsp;&nbsp;<a
+                                    href="#" class="edit">Suspend relation</a></td>
                         </tr>
                         <tr>
-                            <td>Kuwang HG shipping limited<a href="#" class="port-details">(View Details)</a></td>
+                            <td>Kuwang HG shipping limited<a href="#" class="principal-details">(View Details)</a></td>
                             <td>Hong Kong</td>
-                            <td><a href="#">HNK</a>&nbsp;&nbsp;&nbsp;<a href="#">ZHN</a>&nbsp;&nbsp;&nbsp;<a href="#">CTG</a></td>
+                            <td><a href="#" class="country-of-operation" data-id="5">HNK</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="4">ZHN</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="1">CTG</a>
+                            </td>
                             <td><a href="#">0</a></td>
                             <td><a href="#">0</a></td>
-                            <td><a href="#" class="edit">Edit</a>&nbsp;&nbsp;<a href="#" class="edit">Transaction</a>&nbsp;&nbsp;<a href="#" class="edit">Suspend relation</a></td>
+                            <td><a href="#" class="edit">Edit</a>&nbsp;&nbsp;<a href="#" class="edit">Transaction</a>&nbsp;&nbsp;<a
+                                    href="#" class="edit">Suspend relation</a></td>
                         </tr>
                         <tr>
-                            <td>Sea Hawk Global<a href="#" class="port-details">(View Details)</a></td>
+                            <td>Sea Hawk Global<a href="#" class="principal-details">(View Details)</a></td>
                             <td>India</td>
-                            <td><a href="#">CTG</a>&nbsp;&nbsp;&nbsp;<a href="#">MON</a>&nbsp;&nbsp;&nbsp;<a href="#">SHN</a></td>
+                            <td><a href="#" class="country-of-operation" data-id="1">CTG</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="2">MON</a>&nbsp;&nbsp;&nbsp;<a href="#" class="country-of-operation" data-id="3">SHN</a>
+                            </td>
                             <td><a href="#">0</a></td>
                             <td><a href="#">0</a></td>
-                            <td><a href="#" class="edit">Edit</a>&nbsp;&nbsp;<a href="#" class="edit">Transaction</a>&nbsp;&nbsp;<a href="#" class="edit">Suspend relation</a></td>
+                            <td><a href="#" class="edit">Edit</a>&nbsp;&nbsp;<a href="#" class="edit">Transaction</a>&nbsp;&nbsp;<a
+                                    href="#" class="edit">Suspend relation</a></td>
                         </tr>
                         </tbody>
                     </table>
@@ -246,6 +254,96 @@
         </div>
     </div>
 </div><!--modal fade-->
+
+<!-- Principal view details modal -->
+<div id="principal-details-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="principal-details-header"></h4>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <td>Email</td>
+                        <td><p id="principal-details-email"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td><p id="principal-details-phone"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Fax</td>
+                        <td><p id="principal-details-fax"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Url</td>
+                        <td><p id="principal-details-url"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><p id="principal-details-address"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Contact details</td>
+                        <td><p id="principal-details-contact-details"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Account manager</td>
+                        <td><p id="principal-details-account-manager"></p></td>
+                    </tr>
+                </table>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-custom" data-dismiss="modal">Close</button>
+                </div>
+            </div><!--modal body -->
+        </div><!--modal content -->
+    </div><!--modal dialouge -->
+</div><!-- modal -->
+
+<!-- Principal operating countries view modal -->
+<div id="operating-countries-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="operating-countries-header"></h4>
+            </div>
+            <div class="modal-body">
+                <table id="operating-countries" class="table table-bordered table-hover">
+                    <tr>
+                        <td>Phone</td>
+                        <td><p id="port-details-phone"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><p id="port-details-email"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Fax</td>
+                        <td><p id="port-details-fax"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><p id="port-details-address"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Other information</td>
+                        <td><p id="port-details-otherinfo"></p></td>
+                    </tr>
+                </table>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-custom" data-dismiss="modal">Close</button>
+                </div>
+            </div><!--modal body -->
+        </div><!--modal content -->
+    </div><!--modal dialouge -->
+</div><!-- modal -->
 
 
 <!-- Bootstrap core JavaScript

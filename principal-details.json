@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Sea Hawk Global",
+    "email": "sea@gmail.com",
+    "phone": "914439883900",
+    "fax": "914425244642",
+    "url": "http://seahawk.com",
+    "address": "hawk tawer, NO 123, linghi street",
+    "contact_detail": null,
+    "account_manager": null
+  },
+  {
+    "name": "Global shipping and delivery services",
+    "email": "global@gmail.com",
+    "phone": "018187573193",
+    "fax": "global@yahoo.com",
+    "url": "http://globalshipping.com",
+    "address": "Singapore, Singapore",
+    "contact_detail": "Singapore",
+    "account_manager": "GP Shipping"
+  },
+  {
+    "name": "Hanjin shipping limited",
+    "email": "hanj@gmail.com",
+    "phone": "01676366473",
+    "fax": null,
+    "url": null,
+    "address": "Shengdong, China",
+    "contact_detail": "hanj@gmail.com",
+    "account_manager": "hanjin account"
+  },
+  {
+    "name": "Kuwang HG shipping limited",
+    "email": "kuwang@yahoo.com",
+    "phone": "01676366473",
+    "fax": "kuwang@yahoo.com",
+    "url": "http://kuwang.gov.hk",
+    "address": "Kuwang City, Hong Kong",
+    "contact_detail": "Kuwang City, Hong Kong",
+    "account_manager": "kuwang accountants"
+  }
+]

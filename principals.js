@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     // Loading dual-select box field at "country-of-operation" field in add new principal modal
     $("#country-of-operation").DualListBox({
-        uri: location.origin + '/api/v1/portlist/'
+        uri: 'country-of-operation.json'
     });
 
 
@@ -99,81 +99,82 @@ $(document).ready(function () {
         }
     });
 
-    /*---------------------------------------------------*/
-    /* Loading data in the "Country of operation" fields */
-    //
-    // /*--------------------------------------*/
-    //
-    // /* Modal viewing events */
-    // /*----------------------*/
-    //
-    // /* Principal view details modal */
-    //
-    // // Loading principal view details modal when clicked
-    // $("#principals").on('click', ".principal-details", function (e) {
-    //     e.preventDefault();
-    //
-    //     var id = $(this).data('principalid'),
-    //         principal_name = 'Details of ' + $(this).data('principalname'),
-    //     // Declaring call_url based on the id of this principal
-    //         call_url = location.origin + '/api/v1/principal-details/' + id + '/';
-    //
-    //     // Loading principal data for showing in the modal
-    //     $.getJSON(call_url)
-    //         .done(function (data) {
-    //             // Loading the header of the modal
-    //             $('#principal-details-header').empty().append(principal_name);
-    //
-    //             // Loading other data
-    //             $("#principal-details-email").empty().append(data["email"]);
-    //             $("#principal-details-phone").empty().append(data["phone"]);
-    //             $("#principal-details-fax").empty().append(data["fax"]);
-    //             $("#principal-details-url").empty().append(data["url"]);
-    //             $("#principal-details-address").empty().append(data["address"]);
-    //             $("#principal-details-contact-details").empty().append(data["contact_detail"]);
-    //             $("#principal-details-account-manager").empty().append(data["account_manager"]);
-    //             // $("#principal-details-currentprice").empty().append(data["current_pricing"]);
-    //
-    //             // Showing the modal
-    //             $("#principal-details-modal").modal("show");
-    //         });// Loading principal data for showing in the modal
-    //
-    // });// Loading principal view details modal when clicked
-    //
-    // /* End of "Principal view details modal" event */
-    //
-    // /* View country-of-operations modal */
-    //
-    // // Loading country of operation modal based on port when clicked
-    // $("#principals").on('click', ".country-of-operation", function (e) {
-    //     e.preventDefault();
-    //
-    //     // Catching the port-id related to the port of the "Country of operation"
-    //     var id = $(this).data('portid'),
-    //
-    //     // Declaring the header for the modal
-    //         header = 'Details of ' + $(this).data('portname') + ' at ' + $(this).data('country'),
-    //
-    //     // Declaring the get request url based on the different port-id
-    //         call_url = location.origin + '/api/v1/portdetail/' + id + '/';
-    //
-    //     // Collecting and appending data to the table from the url
-    //     $.getJSON(call_url)
-    //         .done(function (data) {
-    //             $('#operating-countries-header').empty().append(header);
-    //             $("#port-details-email").empty().append(data["email"]);
-    //             $("#port-details-phone").empty().append(data["phone"]);
-    //             $("#port-details-fax").empty().append(data["fax"]);
-    //             $("#port-details-address").empty().append(data["address"]);
-    //             $("#port-details-otherinfo").empty().append(data["other_information"]);
-    //
-    //             // Showing the modal after appending data
-    //             $("#operating-countries-modal").modal("show");
-    //         });// Collecting and appending data to the table from the url
-    //
-    // });// Loading country of operation modal based on port when clicked
-    //
-    // /* End of "country of operation modal" event */
+
+    /* Modal viewing events */
+    /*----------------------*/
+
+    /* Principal view details modal */
+
+    // Loading principal view details modal when clicked
+    $("#principals").on('click', ".principal-details", function (e) {
+        e.preventDefault();
+        console.log("Caught!");
+
+        var principal_name = $(this).closest('td').text().split('(')[0],
+            principal_header = 'Details of ' + principal_name,
+        // Declaring call_url based on the id of this principal
+            call_url = 'principal-details.json';
+
+        console.log(principal_name);
+
+        // Loading principal data for showing in the modal
+        $.getJSON(call_url)
+            .done(function (data) {
+                // Loading the header of the modal
+                $('#principal-details-header').empty().append(principal_header);
+                for (var i = 0; i < data.length; i++) {
+                    if (data[i].name == principal_name) {
+                        // Loading other data
+                        $("#principal-details-email").empty().append(data[i]["email"]);
+                        $("#principal-details-phone").empty().append(data[i]["phone"]);
+                        $("#principal-details-fax").empty().append(data[i]["fax"]);
+                        $("#principal-details-url").empty().append(data[i]["url"]);
+                        $("#principal-details-address").empty().append(data[i]["address"]);
+                        $("#principal-details-contact-details").empty().append(data[i]["contact_detail"]);
+                        $("#principal-details-account-manager").empty().append(data[i]["account_manager"]);
+                    }
+                }
+                // Showing the modal
+                $("#principal-details-modal").modal("show");
+            });// Loading principal data for showing in the modal
+
+    });// Loading principal view details modal when clicked
+
+    /* End of "Principal view details modal" event */
+
+    /* View country-of-operations modal */
+
+    // Loading country of operation modal based on port when clicked
+    $("#principals").on('click', ".country-of-operation", function (e) {
+        e.preventDefault();
+
+        var port_id = $(this).data('id');
+
+        var call_url = 'port-details.json';
+
+
+        $.getJSON(call_url)
+            .done(function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    console.log(port_id);
+                    console.log(data[i].id);
+                    if (data[i].id == port_id) {
+                        $("#operating-countries-header").empty().append("Details of " + data[i]["name"]);
+                        $("#port-details-phone").empty().append(data[i]["phone"]);
+                        $("#port-details-email").empty().append(data[i]["email"]);
+                        $("#port-details-fax").empty().append(data[i]["fax"]);
+                        $("#port-details-address").empty().append(data[i]["address"]);
+                        $("#port-details-otherinfo").empty().append(data[i]["other_information"]);
+                    }
+                }
+
+                // Showing port details modal
+                $("#operating-countries-modal").modal("show");
+            });
+
+    });// Loading country of operation modal based on port when clicked
+
+    /* End of "country of operation modal" event */
     //
     // /* Edit principal details modal */
     //
