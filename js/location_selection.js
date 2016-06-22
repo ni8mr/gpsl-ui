@@ -10,7 +10,7 @@ var ajax_load = false,
     input_district0 = $("#district0");
 
 
-var LOCATION_URL = 'dummy.json';
+var LOCATION_URL = '../json/dummy.json';
 
 
 

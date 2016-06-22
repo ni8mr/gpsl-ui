@@ -35,13 +35,13 @@ $(document).ready(function () {
 
     // Loading dual-select box field at "country-of-operation" field in add new principal modal
     $("#country-of-operation").DualListBox({
-        uri: 'country-of-operation.json'
+        uri: '../json/country-of-operation.json'
     });
 
 
     /* Loading data in the "Country of operation" fields */
     /*---------------------------------------------------*/
-    var LOCATION_URL = 'dummy.json';
+    var LOCATION_URL = '../json/dummy.json';
 
     var ajax_load = false,
         countries = [],
@@ -113,7 +113,7 @@ $(document).ready(function () {
         var principal_name = $(this).closest('td').text().split('(')[0],
             principal_header = 'Details of ' + principal_name,
         // Declaring call_url based on the id of this principal
-            call_url = 'principal-details.json';
+            call_url = '../json/principal-details.json';
 
         // Loading principal data for showing in the modal
         $.getJSON(call_url)
@@ -148,7 +148,7 @@ $(document).ready(function () {
 
         var port_id = $(this).data('id');
 
-        var call_url = 'port-details.json';
+        var call_url = '../json/port-details.json';
 
 
         $.getJSON(call_url)
@@ -182,7 +182,7 @@ $(document).ready(function () {
 
         var principal_name = $(this).closest('tr').find('td:nth-child(1)').text().split('(')[0],
             port_ids = $(this).data("coverage").split(','),
-            call_url = 'principal-details.json';
+            call_url = '../json/principal-details.json';
 
         $.getJSON(call_url)
             .done(function (data) {
@@ -205,7 +205,7 @@ $(document).ready(function () {
                         // input_country_of_origin_for_edit.selectpicker('val', selected_val);
 
                         // Declaring url to get the data related to the country of operations
-                        var country_of_operation_json_url = "country-of-operation.json";
+                        var country_of_operation_json_url = "../json/country-of-operation.json";
 
                         // Getting data related to the country of operations
                         $.getJSON(country_of_operation_json_url)

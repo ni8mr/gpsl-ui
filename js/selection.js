@@ -1,5 +1,5 @@
 (function() {
-  var url = "dummy.json",
+  var url = "../json/dummy.json",
     countries = [],
     divisions = [],
     districts = [],
@@ -34,7 +34,7 @@
             for(var i=0; i<countries[0].length; i++){
                 if(countries[0][i]["id"] == selected_country){
                   related_divisions = countries[0][i]["divisions"];
-                    
+
 
                   for(var j=0; j<related_divisions.length; j++){
                       for(var k=0; k<divisions[0].length; k++){

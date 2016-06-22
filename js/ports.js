@@ -41,7 +41,7 @@ $(document).ready(function () {
         var port_name = $(this).closest('td').text().split('(')[0];
 
         var port_header = 'Details of ' + port_name + ' port',
-            call_url = 'port-details.json';
+            call_url = '../json/port-details.json';
 
 
         $.getJSON(call_url)
@@ -69,7 +69,7 @@ $(document).ready(function () {
 
         var port_name = $(this).closest('tr').find('td:nth-child(1)').text().split('(')[0];
 
-        var call_url = 'port-details.json';
+        var call_url = '../json/port-details.json';
 
 
         $.getJSON(call_url)
@@ -99,7 +99,7 @@ $(document).ready(function () {
         input_district = $("#district");
 
 
-    var LOCATION_URL = 'dummy.json';
+    var LOCATION_URL = '../json/dummy.json';
 
 
     /* Loading Json for forms */

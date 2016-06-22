@@ -1,4 +1,4 @@
-var location_url = "dummy.json",
+var location_url = "../json/dummy.json",
     ajax_load = false,
     countries = [],
     divisions = [],
@@ -189,7 +189,7 @@ $(window).load(function() {
                 }
             });
     }
-}
+});
 
 
         //Todo - declare a function which will take country/division/districts/sub...... and do the selection event
