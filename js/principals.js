@@ -35,13 +35,13 @@ $(document).ready(function () {
 
     // Loading dual-select box field at "country-of-operation" field in add new principal modal
     $("#country-of-operation").DualListBox({
-        uri: '../json/country-of-operation.json'
+        uri: COUNTRY_OF_OPERATION_JSON_URL
     });
 
 
     /* Loading data in the "Country of operation" fields */
     /*---------------------------------------------------*/
-    var LOCATION_URL = '../json/dummy.json';
+    var LOCATION_URL = DUMMY_JSON_URL;
 
     var ajax_load = false,
         countries = [],
@@ -113,7 +113,7 @@ $(document).ready(function () {
         var principal_name = $(this).closest('td').text().split('(')[0],
             principal_header = 'Details of ' + principal_name,
         // Declaring call_url based on the id of this principal
-            call_url = '../json/principal-details.json';
+            call_url = PRINCIPAL_DETAILS_JSON_URL;
 
         // Loading principal data for showing in the modal
         $.getJSON(call_url)
@@ -148,14 +148,12 @@ $(document).ready(function () {
 
         var port_id = $(this).data('id');
 
-        var call_url = '../json/port-details.json';
+        var call_url = PORT_DETAILS_JSON_URL;
 
 
         $.getJSON(call_url)
             .done(function (data) {
                 for (var i = 0; i < data.length; i++) {
-                    console.log(port_id);
-                    console.log(data[i].id);
                     if (data[i].id == port_id) {
                         $("#operating-countries-header").empty().append("Details of " + data[i]["name"]);
                         $("#port-details-phone").empty().append(data[i]["phone"]);
@@ -182,7 +180,7 @@ $(document).ready(function () {
 
         var principal_name = $(this).closest('tr').find('td:nth-child(1)').text().split('(')[0],
             port_ids = $(this).data("coverage").split(','),
-            call_url = '../json/principal-details.json';
+            call_url = PRINCIPAL_DETAILS_JSON_URL;
 
         $.getJSON(call_url)
             .done(function (data) {
@@ -205,7 +203,7 @@ $(document).ready(function () {
                         // input_country_of_origin_for_edit.selectpicker('val', selected_val);
 
                         // Declaring url to get the data related to the country of operations
-                        var country_of_operation_json_url = "../json/country-of-operation.json";
+                        var country_of_operation_json_url = COUNTRY_OF_OPERATION_JSON_URL;
 
                         // Getting data related to the country of operations
                         $.getJSON(country_of_operation_json_url)
@@ -216,7 +214,6 @@ $(document).ready(function () {
                                     for (var j = 0; j < port_ids.length; j++) {
                                         // Appending "selected" attribute to the values (port-ids) which are already selected
                                         if (port_ids[j] == data[i]["id"]) {
-                                            console.log(port_ids[j]);
                                             options += '<option value="' + data[i]["id"] + '" selected="selected">' + data[i]["port_iso"] + '</option>';
                                             a = 0;
                                         }

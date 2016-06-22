@@ -69,7 +69,7 @@ $(document).ready(function () {
 
         var port_name = $(this).closest('tr').find('td:nth-child(1)').text().split('(')[0];
 
-        var call_url = '../json/port-details.json';
+        var call_url = PORT_DETAILS_URL;
 
 
         $.getJSON(call_url)
@@ -99,7 +99,7 @@ $(document).ready(function () {
         input_district = $("#district");
 
 
-    var LOCATION_URL = '../json/dummy.json';
+    var LOCATION_URL = DUMMY_JSON_URL;
 
 
     /* Loading Json for forms */
