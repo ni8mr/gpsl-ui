@@ -41,7 +41,7 @@ $(document).ready(function () {
         var port_name = $(this).closest('td').text().split('(')[0];
 
         var port_header = 'Details of ' + port_name + ' port',
-            call_url = '../json/port-details.json';
+            call_url = 'json/port-details.json';
 
 
         $.getJSON(call_url)
