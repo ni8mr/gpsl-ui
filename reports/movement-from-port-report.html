@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-    <title>Consignee clearance reports</title>
+    <title>Movement from port reports</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -88,8 +88,8 @@
                         <li><a href="principal-reports.html">Principal wise report</a></li>
                         <li><a href="depot-reports.html">Depot wise report</a></li>
                         <li><a href="incoming-vessel-reports.html">Incoming vessel report</a></li>
-                        <li><a href="#">Consignee clearance report</a></li>
-                        <li><a href="movement-from-port-report.html">Movement from port report</a></li>
+                        <li><a href="consignee-clearance-report.html">Consignee clearance report</a></li>
+                        <li><a href="#">Movement from port report</a></li>
                     </ul>
                 </li>
             </ul>
@@ -100,14 +100,14 @@
 <div class="container">
 
     <div class="row" id="header">
-        <h1>CHITTAGONG SEA PORT</h1>
+        <h1>FROM CHITTAGONG SEA PORT</h1>
         <h3>Date: 23-06-2016</h3>
     </div><!-- /.row -->
     <div class="row">
-        <table class="table table-hover" id="consignee-cleared-containers">
+        <table class="table table-hover" id="laden-container-movement">
             <thead>
             <tr>
-                <th colspan="13">Containers cleared by consignee</th>
+                <th colspan="13">Laden container movement</th>
             </tr>
             <tr>
                 <th>SL.</th>
@@ -116,11 +116,10 @@
                 <th>Principal</th>
                 <th>Imp Vsl/Voy</th>
                 <th>Arrival Dt</th>
-                <th>Clearance date</th>
-                <th>Consignee</th>
-                <th>Days at port</th>
-                <th>Free line detention</th>
-                <th>Charge</th>
+                <th>Port release Dt</th>
+                <th>Destination</th>
+                <th>Reached Dt</th>
+                <th>Movement charge</th>
                 <th>Status</th>
                 <th>Remark</th>
             </tr>
@@ -134,10 +133,9 @@
                 <td>MV. HANJIN SURABAYA V-0098W/1530/12</td>
                 <td>04/27/2016</td>
                 <td>05/02/2016</td>
-                <td>SOCIAL ISLAMI BANK LIMITED, MOHAKHALI BRANCH, 99 MOHAKHALI C/A, DHAKA-1000.</td>
-                <td>5</td>
-                <td>14</td>
-                <td></td>
+                <td>BM CONTAINERS LIMITED.</td>
+                <td>05/05/2016</td>
+                <td>3000/-</td>
                 <td>FCL</td>
                 <td></td>
             </tr>
@@ -149,9 +147,8 @@
                 <td>MV. OEL LANKA V-1607N</td>
                 <td>04/14/2016</td>
                 <td>05/14/2016</td>
-                <td>SOCIAL ISLAMI BANK LIMITED, MOHAKHALI BRANCH, 99 MOHAKHALI C/A, DHAKA-1000.</td>
-                <td>30</td>
-                <td>14</td>
+                <td>ICD Dhaka</td>
+                <td>Not reached yet</td>
                 <td>12800/-</td>
                 <td>FCL</td>
                 <td></td>
@@ -164,10 +161,9 @@
                 <td>MV. TZINI V-007</td>
                 <td>06/13/2016</td>
                 <td>06/23/2016</td>
-                <td>SOCIAL ISLAMI BANK LIMITED, MOHAKHALI BRANCH, 99 MOHAKHALI C/A, DHAKA-1000.</td>
-                <td>10</td>
-                <td>14</td>
-                <td></td>
+                <td>SITAKUND PRIVATE DEPOT</td>
+                <td>06/23/2016</td>
+                <td>10000/-</td>
                 <td>FCL</td>
                 <td></td>
             </tr>
@@ -179,12 +175,49 @@
                 <td>MV. TZINI V-007</td>
                 <td>06/13/2016</td>
                 <td>06/23/2016</td>
-                <td>SOCIAL ISLAMI BANK LIMITED, MOHAKHALI BRANCH, 99 MOHAKHALI C/A, DHAKA-1000.</td>
-                <td>10</td>
-                <td>14</td>
-                <td></td>
+                <td>SITAKUND PRIVATE DEPOT</td>
+                <td>06/23/2016</td>
+                <td>10000/-</td>
                 <td>FCL</td>
                 <td>Handle with care</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-hover" id="empty-container-movement">
+            <thead>
+            <tr>
+                <th colspan="13">Empty container movement</th>
+            </tr>
+            <tr>
+                <th>SL.</th>
+                <th>Container</th>
+                <th>Size</th>
+                <th>Principal</th>
+                <th>Imp Vsl/Voy</th>
+                <th>Arrival Dt</th>
+                <th>Port release Dt</th>
+                <th>Destination</th>
+                <th>Reached Dt</th>
+                <th>Movement charge</th>
+                <th>Status</th>
+                <th>Remark</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             </tbody>
         </table>
@@ -212,23 +245,38 @@
         var header_width = $('header').width();
         // Styling header
         $('header').css('margin-left', (body_width - header_width) / 2);
-        $("table#consignee-cleared-containers thead tr").each(function () {
-            $(this).find($('th')).eq(5).css('background-color', 'yellow');
+        // Laden container movement table
+        $("table#laden-container-movement thead tr").each(function () {
             $(this).find($('th')).eq(6).css('background-color', 'yellow');
             $(this).find($('th')).eq(8).css('background-color', 'yellow');
             $(this).find($('th')).eq(9).css('background-color', 'yellow');
             $(this).find($('th')).eq(10).css('background-color', 'yellow');
             $(this).find($('th')).eq(11).css('background-color', 'yellow');
-            $(this).find($('th')).eq(12).css('background-color', 'yellow');
         });
-        $("table#consignee-cleared-containers tbody tr").each(function () {
-            if ($(this).find($('td')).eq(9).text()) {
-                $(this).find($('td')).eq(9).css('background-color', 'coral');
+        $("table#laden-container-movement tbody tr").each(function () {
+            if ($(this).find($('td')).eq(7).text() == 'Not reached yet') {
+                $(this).find($('td')).eq(7).css('background-color', 'coral');
             }
-            if ($(this).find($('td')).eq(11).text()) {
-                $(this).find($('td')).eq(11).css('background-color', 'coral');
+            if ($(this).find($('td')).eq(10).text()) {
+                $(this).find($('td')).eq(10).css('background-color', 'coral');
             }
+        });// Laden container movement table
+        // Empty container movement table
+        $("table#empty-container-movement thead tr").each(function () {
+            $(this).find($('th')).eq(6).css('background-color', 'yellow');
+            $(this).find($('th')).eq(8).css('background-color', 'yellow');
+            $(this).find($('th')).eq(9).css('background-color', 'yellow');
+            $(this).find($('th')).eq(10).css('background-color', 'yellow');
+            $(this).find($('th')).eq(11).css('background-color', 'yellow');
         });
+        $("table#empty-container-movement tbody tr").each(function () {
+            if ($(this).find($('td')).eq(7).text() == 'Not reached yet') {
+                $(this).find($('td')).eq(7).css('background-color', 'coral');
+            }
+            if ($(this).find($('td')).eq(10).text()) {
+                $(this).find($('td')).eq(10).css('background-color', 'coral');
+            }
+        });// Empty container movement table
     });
 </script>
 

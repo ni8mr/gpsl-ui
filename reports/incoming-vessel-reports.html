@@ -81,10 +81,17 @@
                 <li class="active"><a href="../index.html">Home</a></li>
                 <li><a href="../ports.html">Port</a></li>
                 <li><a href="../principals.html">Principal</a></li>
-                <li><a href="principal-reports.html">Principal wise report</a></li>
-                <li><a href="depot-reports.html">Depot wise report</a></li>
-                <li><a href="#">Incoming vessel report</a></li>
-                <li><a href="consignee-clearance-report.html">Consignee clearance report</a></li>
+                <li class="dropdown open">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Reports <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="principal-reports.html">Principal wise report</a></li>
+                        <li><a href="depot-reports.html">Depot wise report</a></li>
+                        <li><a href="#">Incoming vessel report</a></li>
+                        <li><a href="consignee-clearance-report.html">Consignee clearance report</a></li>
+                        <li><a href="movement-from-port-report.html">Movement from port report</a></li>
+                    </ul>
+                </li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -192,7 +199,6 @@
         var header_width = $('header').width();
         // Styling header
         $('header').css('margin-left', (body_width - header_width) / 2);
-        // Laden waiting for unstuff table
         $("table#on-route-containers thead tr").each(function () {
             $(this).find($('th')).eq(4).css('background-color', 'yellow');
             $(this).find($('th')).eq(5).css('background-color', 'yellow');
@@ -203,7 +209,7 @@
             if ($(this).find($('td')).eq(8).text()) {
                 $(this).find($('td')).eq(8).css('background-color', 'coral');
             }
-        });// Laden waiting for unstuff table
+        });
     });
 </script>
 

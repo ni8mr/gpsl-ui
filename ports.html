@@ -67,10 +67,17 @@
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="#">Port</a></li>
                 <li><a href="principals.html">Principal</a></li>
-                <li><a href="reports/principal-reports.html">Principal wise report</a></li>
-                <li><a href="reports/depot-reports.html">Depot wise report</a></li>
-                <li><a href="reports/incoming-vessel-reports.html">Incoming vessel report</a></li>
-                <li><a href="reports/consignee-clearance-report.html">Consignee clearance report</a></li>
+                <li class="dropdown open">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Reports <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="reports/principal-reports.html">Principal wise report</a></li>
+                        <li><a href="reports/depot-reports.html">Depot wise report</a></li>
+                        <li><a href="reports/incoming-vessel-reports.html">Incoming vessel report</a></li>
+                        <li><a href="reports/consignee-clearance-report.html">Consignee clearance report</a></li>
+                        <li><a href="reports/movement-from-port-report.html">Movement from port report</a></li>
+                    </ul>
+                </li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -400,7 +407,6 @@
 <script src="js/ports.js"></script>
 
 <script src="js/submit.js"></script>
-
 
 
 </body>
