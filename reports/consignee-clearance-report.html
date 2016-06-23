@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-    <title>Incoming vessel reports</title>
+    <title>Consignee clearance reports</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -83,8 +83,8 @@
                 <li><a href="../principals.html">Principal</a></li>
                 <li><a href="principal-reports.html">Principal wise report</a></li>
                 <li><a href="depot-reports.html">Depot wise report</a></li>
-                <li><a href="#">Incoming vessel report</a></li>
-                <li><a href="consignee-clearance-report.html">Consignee clearance report</a></li>
+                <li><a href="incoming-vessel-reports.html">Incoming vessel report</a></li>
+                <li><a href="#">Consignee clearance report</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
@@ -93,26 +93,27 @@
 <div class="container">
 
     <div class="row" id="header">
-        <h1>DOROTHY TRADER V.070QUR</h1>
-        <h3>Place of receipt: PORT KLANG,MALAYSIA.<br>Port of loading: PORT KLANG,MALAYSIA.<br>Port of discharge:
-            CHITTAGONG SEA PORT.<br>Place of delivery: CHITTAGONG SEA PORT.<br>ETA: 27-06-2016<br>On route container
-            status report</h3>
+        <h1>CHITTAGONG SEA PORT</h1>
+        <h3>Date: 23-06-2016</h3>
     </div><!-- /.row -->
     <div class="row">
-        <table class="table table-hover" id="on-route-containers">
+        <table class="table table-hover" id="consignee-cleared-containers">
             <thead>
             <tr>
-                <th colspan="10">CONTAINERS ON ROUTE</th>
+                <th colspan="13">Containers cleared by consignee</th>
             </tr>
             <tr>
                 <th>SL.</th>
                 <th>Container</th>
                 <th>Size</th>
                 <th>Principal</th>
+                <th>Imp Vsl/Voy</th>
+                <th>Arrival Dt</th>
+                <th>Clearance date</th>
                 <th>Consignee</th>
-                <th>Notify party</th>
-                <th>Commodity</th>
-                <th>Weight(kgs)</th>
+                <th>Days at port</th>
+                <th>Free line detention</th>
+                <th>Charge</th>
                 <th>Status</th>
                 <th>Remark</th>
             </tr>
@@ -123,10 +124,13 @@
                 <td>SHKU6280269</td>
                 <td>40-HC</td>
                 <td>Sea Hawk Lines</td>
+                <td>MV. HANJIN SURABAYA V-0098W/1530/12</td>
+                <td>04/27/2016</td>
+                <td>05/02/2016</td>
                 <td>SOCIAL ISLAMI BANK LIMITED, MOHAKHALI BRANCH, 99 MOHAKHALI C/A, DHAKA-1000.</td>
-                <td>SOCIAL ISLAMI BANK LIMITED, MOHAKHALI BRANCH, 99 MOHAKHALI C/A, DHAKA-1000.</td>
-                <td>General</td>
-                <td>20</td>
+                <td>5</td>
+                <td>14</td>
+                <td></td>
                 <td>FCL</td>
                 <td></td>
             </tr>
@@ -135,10 +139,13 @@
                 <td>CRXU3439973</td>
                 <td>20-GP</td>
                 <td>Kuwang HG Shipping</td>
+                <td>MV. OEL LANKA V-1607N</td>
+                <td>04/14/2016</td>
+                <td>05/14/2016</td>
                 <td>SOCIAL ISLAMI BANK LIMITED, MOHAKHALI BRANCH, 99 MOHAKHALI C/A, DHAKA-1000.</td>
-                <td>SOCIAL ISLAMI BANK LIMITED, MOHAKHALI BRANCH, 99 MOHAKHALI C/A, DHAKA-1000.</td>
-                <td>General</td>
-                <td>40</td>
+                <td>30</td>
+                <td>14</td>
+                <td>12800/-</td>
                 <td>FCL</td>
                 <td></td>
             </tr>
@@ -147,10 +154,13 @@
                 <td>RFCU2340263</td>
                 <td>20-GP</td>
                 <td>Sea Hawk Lines</td>
+                <td>MV. TZINI V-007</td>
+                <td>06/13/2016</td>
+                <td>06/23/2016</td>
                 <td>SOCIAL ISLAMI BANK LIMITED, MOHAKHALI BRANCH, 99 MOHAKHALI C/A, DHAKA-1000.</td>
-                <td>SOCIAL ISLAMI BANK LIMITED, MOHAKHALI BRANCH, 99 MOHAKHALI C/A, DHAKA-1000.</td>
-                <td>Pallet racking</td>
-                <td>100</td>
+                <td>10</td>
+                <td>14</td>
+                <td></td>
                 <td>FCL</td>
                 <td></td>
             </tr>
@@ -159,10 +169,13 @@
                 <td>RFCU2340263</td>
                 <td>20-GP</td>
                 <td>Sea Hawk Lines</td>
+                <td>MV. TZINI V-007</td>
+                <td>06/13/2016</td>
+                <td>06/23/2016</td>
                 <td>SOCIAL ISLAMI BANK LIMITED, MOHAKHALI BRANCH, 99 MOHAKHALI C/A, DHAKA-1000.</td>
-                <td>SOCIAL ISLAMI BANK LIMITED, MOHAKHALI BRANCH, 99 MOHAKHALI C/A, DHAKA-1000.</td>
-                <td>Computer accessories</td>
-                <td>500</td>
+                <td>10</td>
+                <td>14</td>
+                <td></td>
                 <td>FCL</td>
                 <td>Handle with care</td>
             </tr>
@@ -193,15 +206,21 @@
         // Styling header
         $('header').css('margin-left', (body_width - header_width) / 2);
         // Laden waiting for unstuff table
-        $("table#on-route-containers thead tr").each(function () {
-            $(this).find($('th')).eq(4).css('background-color', 'yellow');
+        $("table#consignee-cleared-containers thead tr").each(function () {
             $(this).find($('th')).eq(5).css('background-color', 'yellow');
+            $(this).find($('th')).eq(6).css('background-color', 'yellow');
             $(this).find($('th')).eq(8).css('background-color', 'yellow');
             $(this).find($('th')).eq(9).css('background-color', 'yellow');
+            $(this).find($('th')).eq(10).css('background-color', 'yellow');
+            $(this).find($('th')).eq(11).css('background-color', 'yellow');
+            $(this).find($('th')).eq(12).css('background-color', 'yellow');
         });
-        $("table#on-route-containers tbody tr").each(function () {
-            if ($(this).find($('td')).eq(8).text()) {
-                $(this).find($('td')).eq(8).css('background-color', 'coral');
+        $("table#consignee-cleared-containers tbody tr").each(function () {
+            if ($(this).find($('td')).eq(9).text()) {
+                $(this).find($('td')).eq(9).css('background-color', 'coral');
+            }
+            if ($(this).find($('td')).eq(11).text()) {
+                $(this).find($('td')).eq(11).css('background-color', 'coral');
             }
         });// Laden waiting for unstuff table
     });
