@@ -43,4 +43,61 @@ $(document).ready(function () {
             console.log(selected_type);
         }).selectpicker('refresh');
     });// Populating container type json
+
+    //Catching selection
+    $("#initial-select").change(function(e){
+        e.preventDefault();
+        
+        var selected_val = $(this).val();
+        if(selected_val == "Principal"){
+            //Hide
+            $("#depot-field").hide();
+            $("#status-field").hide();
+            $("#type-field").hide();
+
+            //show
+            $("#principal-field").show();
+            $("#from-date-field").show();
+            $("#to-date-field").show();
+            $("#button-field").show();
+
+        }else if(selected_val == "Depot"){
+            //Hide
+            $("#principal-field").hide();
+            $("#status-field").hide();
+            $("#type-field").hide();
+
+            //show
+            $("#depot-field").show();
+            $("#from-date-field").show();
+            $("#to-date-field").show();
+            $("#button-field").show();
+
+        }else if(selected_val == "Status"){
+            //Hide
+            $("#principal-field").hide();
+            $("#depot-field").hide();
+            $("#type-field").hide();
+
+            //show
+            $("#status-field").show();
+            $("#from-date-field").show();
+            $("#to-date-field").show();
+            $("#button-field").show();
+
+        }else if(selected_val == "Type"){
+            //Hide
+            $("#principal-field").hide();
+            $("#depot-field").hide();
+            $("#status-field").hide();
+
+            //show
+            $("#type-field").show();
+            $("#from-date-field").show();
+            $("#to-date-field").show();
+            $("#button-field").show();
+
+        }
+
+    });
 });
