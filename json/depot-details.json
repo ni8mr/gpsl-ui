@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Sitakund private depots limited",
+    "phone": "01818259791",
+    "fax": "sitakunda@gmail.com",
+    "web": "http://sitakunda.bd",
+    "email": "sitakunda@gmail.com",
+    "address": "Sitakunda, Chittagong",
+    "district_list_id": 3,
+    "postal_code_list_id": 9
+  },
+  {
+    "name": "Satkania",
+    "phone": "01818259791",
+    "fax": "satkania@gmail.com",
+    "web": "http://satkania.bd",
+    "email": "satkania@gmail.com",
+    "address": "Satkania, Chittagong",
+    "district_list_id": 3,
+    "postal_code_list_id": 10
+  },
+  {
+    "name": "Panchlaish Private Depots",
+    "phone": "01676366473",
+    "fax": "panchlaish@gmail.com",
+    "web": "http://panchlaish.gov.bd",
+    "email": "panchlaish@gmail.com",
+    "address": "Panchlaish, Chittagong",
+    "district_list_id": 3,
+    "postal_code_list_id": null
+  },
+  {
+    "name": "Double Mooring Depots Limited",
+    "phone": "01676366473",
+    "fax": "dmdl@gmail.com",
+    "web": "http://dmdl.gov.bd",
+    "email": "dmdl@gmail.com",
+    "address": "Double Mooring, Chittagong",
+    "district_list_id": 3,
+    "postal_code_list_id": null
+  },
+  {
+    "name": "CEPZ depots",
+    "phone": "01676366473",
+    "fax": "cepz@gmail.com",
+    "web": "http://cepz.gov.bd",
+    "email": "cepz@gmail.com",
+    "address": "Sitakunda, Chittagong",
+    "district_list_id": 3,
+    "postal_code_list_id": null
+  },
+  {
+    "name": "BM CONTAINER DEPOT LIMITED",
+    "phone": "880312780932",
+    "fax": "bm_container@gmail.com",
+    "web": "http://www.bmcdl.com/",
+    "email": "bm_container@gmail.com",
+    "address": "Keshabpur, Sitakunda, Chittagong.",
+    "district_list_id": 3,
+    "postal_code_list_id": null
+  },
+  {
+    "name": "KDS LOGISTICS LIMITED",
+    "phone": "031-2516281-3",
+    "fax": "031-2516280",
+    "web": "http://www.bmcdl.com/",
+    "email": "icd.ops@kdsgroup.net",
+    "address": "Sonaichari, Ghoramara, Sitakunda, Chittagong.",
+    "district_list_id": 3,
+    "postal_code_list_id": null
+  }
+]

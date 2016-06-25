@@ -108,7 +108,6 @@ $(document).ready(function () {
     // Loading principal view details modal when clicked
     $("#principals").on('click', ".principal-details", function (e) {
         e.preventDefault();
-        console.log("Caught!");
 
         var principal_name = $(this).closest('td').text().split('(')[0],
             principal_header = 'Details of ' + principal_name,

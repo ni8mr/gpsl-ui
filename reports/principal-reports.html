@@ -20,6 +20,13 @@
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/starter-template/starter-template.css" rel="stylesheet">
 
+    <!--BootStrap select CSS-->
+    <!--<link rel="stylesheet"-->
+    <!--href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">-->
+
+    <!--Jquery UI css-->
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]>
     <script src="http://getbootstrap.com/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -58,6 +65,18 @@
         h3 {
             text-align: center;
         }
+
+        .select.select-block .btn {
+            width: 125px;
+        }
+
+        /*input#datepicker1 {*/
+        /*width: 500px;*/
+        /*}*/
+
+        /*input#datepicker2 {*/
+        /*width: 500px;*/
+        /*}*/
     </style>
 </head>
 
@@ -100,12 +119,43 @@
 
 <div class="container">
 
+    <form>
+        <div class=" form-group row">
+            <label class="col-sm-4 form-control-label">List of principals</label>
+            <div class="col-sm-6">
+                <select class="form-control selectpicker show-tick" name="principal"
+                        id="principal"
+                        title="Select principal..."
+                        data-live-search-placeholder="Search desired principal here"
+                        data-live-search="true">
+                </select>
+            </div>
+        </div>
+        <div class=" form-group row">
+            <label class="col-sm-4 form-control-label">Report generation from</label>
+            <div class="col-sm-6">
+                <input type="text" id="datepicker1">
+            </div>
+        </div>
+        <div class=" form-group row">
+            <label class="col-sm-4 form-control-label">Report generation to</label>
+            <div class="col-sm-6">
+                <input type="text" id="datepicker2">
+            </div>
+        </div>
+        <div class=" form-group row">
+            <button class="btn btn-primary" id="generate">
+                Generate report within selected date
+            </button>
+        </div>
+    </form>
+
     <div class="row" id="header">
         <h1>A/C:-SEA HAWK LINES</h1>
         <h3>AGENTS:- GP Shipping Lines LTD<br>Chittagong, Bangladesh<br>Date:- 22-05-2016<br>Import Laden Container List
         </h3>
     </div><!-- /.row -->
-    <div class="row">
+    <div class="row" id="table">
         <table class="table table-hover" id="dhaka-icd-import">
             <thead>
             <tr>
@@ -557,9 +607,47 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
 
+<!--BootStrap select JS-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>-->
+
+<!--Jqury UI js-->
+<!--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
+
 <!-----Declaring a url for getting JSON (container_type.json)------>
 <script>
     $(document).ready(function () {
+        /* Functions */
+//        function json_load() {
+//            var option_string = '';
+//            $.getJSON('../json/principal-details.json').done(function (data) {
+//                for (var i = 0; i < data.length; i++) {
+//                    option_string += '<option data-tokens="' + data[i]["name"].toLowerCase() + '" value="' + data[i]["name"] + '"">' + data[i]["name"] + '</option>';
+//                }
+//                $('#principal').empty().append(option_string).change(function (e) {
+//                    e.preventDefault();
+//                    var selected_principal = $(this).val();
+//                    $('div#header').find('h1').text('AC:- ' + selected_principal);
+//                }).selectpicker('refresh');
+//            });
+//        }
+//
+//        function date_load() {
+//            // Date selecting events
+//            var h3_string = "AGENTS:- GP Shipping Lines LTD" + '<br>' + "Chittagong, Bangladesh" + '<br>' + "From Date:-" + $('input#datepicker1').val() + "  To Date:- " + $('input#datepicker2').val();
+//            $('div#header').find('h3').empty().append(h3_string);
+//        }
+
+        /* ----- */
+        // calculating body width for styling
+        var body_width = $("body").width();
+        var header_width = $('header').width();
+        var styling_width = $('form').width();
+        // Styling form
+        $('form').css('margin-left', (body_width - styling_width) / 2);
+        $('form').css('margin-top', '30px');
+        // Styling header
+        $('header').css('margin-left', (body_width - header_width) / 2);
+        $('header').css('margin-top', '20px');
         // Coloring some headings
         $("table#dhaka-icd-import thead tr").each(function () {
             $(this).find($('th')).eq(6).css('background-color', 'yellow');
@@ -594,6 +682,21 @@
                 $(this).find($('td')).eq(6).css('background-color', 'coral');
             }
         });
+//        $("#datepicker1").datepicker();
+//        $("#datepicker2").datepicker();
+//        // Populating Principal select tag
+//        json_load();
+//        date_load();
+//        // Generate Report button clicking event
+//        $('#generate').click(function (e) {
+//            e.preventDefault();
+//            if ($('#header').css('display') == 'none') {
+//                $('#header').show();
+//                $('#table').show();
+//            } else {
+//                date_load();
+//            }
+//        });
     });
 </script>
 
