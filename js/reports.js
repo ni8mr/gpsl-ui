@@ -98,6 +98,20 @@ $(document).ready(function () {
             $("#button-field").show();
 
         }
+    });
 
+    // Generate report button clicking events
+    $("#generate").click(function(e){
+        e.preventDefault();
+        var report_based_on = $("select#initial-select").val();
+        if(report_based_on == 'Principal'){
+
+        }else if(report_based_on == 'Depot'){
+
+        }else if(report_based_on == 'Status'){
+
+        }else if(report_based_on == 'Type'){
+
+        }
     });
 });

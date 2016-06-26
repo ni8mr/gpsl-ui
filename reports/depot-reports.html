@@ -85,38 +85,13 @@
                 <li class="active"><a href="../index.html">Home</a></li>
                 <li><a href="../ports.html">Port</a></li>
                 <li><a href="../principals.html">Principal</a></li>
-                <li class="dropdown open">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">Reports <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="principal-reports.html">Principal wise report</a></li>
-                        <li><a href="#">Depot wise report</a></li>
-                        <li><a href="incoming-vessel-reports.html">Incoming vessel report</a></li>
-                        <li><a href="consignee-clearance-report.html">Consignee clearance report</a></li>
-                        <li><a href="movement-from-port-report.html">Movement from port report</a></li>
-                        <li><a href="movement-from-depot-report.html">Movement from depot report</a></li>
-                    </ul>
-                </li>
+                <li><a href="../reports.html">Reports</a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </nav>
 
 <div class="container">
-
-    <!--<form>-->
-        <!--<div class=" form-group row">-->
-            <!--<label class="col-sm-4 form-control-label">List of depots</label>-->
-            <!--<div class="col-sm-6">-->
-                <!--<select class="form-control selectpicker show-tick" name="depot"-->
-                        <!--id="depot"-->
-                        <!--title="Select depot..."-->
-                        <!--data-live-search-placeholder="Search desired depot here"-->
-                        <!--data-live-search="true">-->
-                <!--</select>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</form>-->
 
     <div class="row" id="header">
         <h1></h1>
@@ -478,32 +453,32 @@
         });// Laden waiting for export table
 
         // Populating Principal select tag
-        var depot_data = [];
-        $.getJSON('../json/depot-details.json').done(function (data) {
-            for (var i = 0; i < data.length; i++) {
-                depot_data.push(data[i]);
-            }
-            var option_string = '';
-            for (var i = 0; i < depot_data.length; i++) {
-                option_string += '<option data-tokens="' + depot_data[i]["name"].toLowerCase() + '" value="' + depot_data[i]["name"] + '"">' + depot_data[i]["name"] + '</option>';
-            }
-            $('#depot').empty().append(option_string).change(function (e) {
-                e.preventDefault();
-                var selected_depot = $(this).val();
-                var details_string = '';
-                for(var i=0; i<depot_data.length; i++){
-                    if(depot_data[i]["name"]==selected_depot){
-                        details_string += depot_data[i]["address"] + '<br>' + "Phone- " + depot_data[i]["phone"] + '<br>' + "web: " + depot_data[i]["web"];
-                    }
-                }
-                $('div#header').find('h1').text(selected_depot);
-                if ($('#header').css('display') == 'none') {
-                    $('#header').show();
-                    $('#table').show();
-                }
-                $("div#header").find('h3').empty().append(details_string);
-            }).selectpicker('refresh');
-        });
+//        var depot_data = [];
+//        $.getJSON('../json/depot-details.json').done(function (data) {
+//            for (var i = 0; i < data.length; i++) {
+//                depot_data.push(data[i]);
+//            }
+//            var option_string = '';
+//            for (var i = 0; i < depot_data.length; i++) {
+//                option_string += '<option data-tokens="' + depot_data[i]["name"].toLowerCase() + '" value="' + depot_data[i]["name"] + '"">' + depot_data[i]["name"] + '</option>';
+//            }
+//            $('#depot').empty().append(option_string).change(function (e) {
+//                e.preventDefault();
+//                var selected_depot = $(this).val();
+//                var details_string = '';
+//                for(var i=0; i<depot_data.length; i++){
+//                    if(depot_data[i]["name"]==selected_depot){
+//                        details_string += depot_data[i]["address"] + '<br>' + "Phone- " + depot_data[i]["phone"] + '<br>' + "web: " + depot_data[i]["web"];
+//                    }
+//                }
+//                $('div#header').find('h1').text(selected_depot);
+//                if ($('#header').css('display') == 'none') {
+//                    $('#header').show();
+//                    $('#table').show();
+//                }
+//                $("div#header").find('h3').empty().append(details_string);
+//            }).selectpicker('refresh');
+//        });
     });
 </script>
 
