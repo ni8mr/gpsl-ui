@@ -95,8 +95,7 @@
 
     <div class="row" id="header">
         <h1></h1>
-        <h3>Keshabpur,Sitakunda,Chittagong.<br>Phone-+880312780932 Ext-108<br>web : www.bmcdl.com<br>Date:-
-            23-06-2016<br>Daily Container status report</h3>
+        <h3></h3>
     </div><!-- /.row -->
     <div class="row" id="table">
         <table class="table table-hover" id="laden-waiting-for-unstuff">
@@ -392,95 +391,7 @@
 <!--BootStrap select JS-->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>-->
 
-<!-----Declaring a url for getting JSON (container_type.json)------>
-<script>
-    $(document).ready(function () {
-        // calculating body width for styling
-        var body_width = $("body").width();
-        var header_width = $('header').width();
-        var styling_width = $('form').width();
-        // Styling form
-        $('form').css('margin-left', (body_width - styling_width) / 2);
-        $('form').css('margin-top', '30px');
-        // Styling header
-        $('header').css('margin-left', (body_width - header_width) / 2);
-        // Laden waiting for unstuff table
-        $("table#laden-waiting-for-unstuff thead tr").each(function () {
-            $(this).find($('th')).eq(7).css('background-color', 'yellow');
-            $(this).find($('th')).eq(12).css('background-color', 'yellow');
-            $(this).find($('th')).eq(13).css('background-color', 'yellow');
-        });
-        $("table#laden-waiting-for-unstuff tbody tr").each(function () {
-            if ($(this).find($('td')).eq(8).text()) {
-                $(this).find($('td')).eq(8).css('background-color', 'coral');
-                $(this).find($('td')).eq(9).css('background-color', 'coral');
-            }
-            if ($(this).find($('td')).eq(12).text()) {
-                $(this).find($('td')).eq(12).css('background-color', 'coral');
-            }
-        });// Laden waiting for unstuff table
-        // Empty waiting for unstuff table
-        $("table#empty-waiting-for-stuff thead tr").each(function () {
-            $(this).find($('th')).eq(5).css('background-color', 'yellow');
-            $(this).find($('th')).eq(7).css('background-color', 'yellow');
-            $(this).find($('th')).eq(12).css('background-color', 'yellow');
-            $(this).find($('th')).eq(13).css('background-color', 'yellow');
-        });
-        $("table#empty-waiting-for-stuff tbody tr").each(function () {
-            if ($(this).find($('td')).eq(8).text()) {
-                $(this).find($('td')).eq(8).css('background-color', 'coral');
-                $(this).find($('td')).eq(9).css('background-color', 'coral');
-            }
-            if ($(this).find($('td')).eq(12).text()) {
-                $(this).find($('td')).eq(12).css('background-color', 'coral');
-            }
-        });// Empty waiting for unstuff table
-        // Laden waiting for export table
-        $("table#laden-waiting-for-export thead tr").each(function () {
-            $(this).find($('th')).eq(5).css('background-color', 'yellow');
-            $(this).find($('th')).eq(8).css('background-color', 'yellow');
-            $(this).find($('th')).eq(13).css('background-color', 'yellow');
-            $(this).find($('th')).eq(14).css('background-color', 'yellow');
-        });
-        $("table#laden-waiting-for-export tbody tr").each(function () {
-            if ($(this).find($('td')).eq(9).text()) {
-                $(this).find($('td')).eq(9).css('background-color', 'coral');
-                $(this).find($('td')).eq(10).css('background-color', 'coral');
-            }
-            if ($(this).find($('td')).eq(13).text()) {
-                $(this).find($('td')).eq(13).css('background-color', 'coral');
-            }
-        });// Laden waiting for export table
-
-        // Populating Principal select tag
-//        var depot_data = [];
-//        $.getJSON('../json/depot-details.json').done(function (data) {
-//            for (var i = 0; i < data.length; i++) {
-//                depot_data.push(data[i]);
-//            }
-//            var option_string = '';
-//            for (var i = 0; i < depot_data.length; i++) {
-//                option_string += '<option data-tokens="' + depot_data[i]["name"].toLowerCase() + '" value="' + depot_data[i]["name"] + '"">' + depot_data[i]["name"] + '</option>';
-//            }
-//            $('#depot').empty().append(option_string).change(function (e) {
-//                e.preventDefault();
-//                var selected_depot = $(this).val();
-//                var details_string = '';
-//                for(var i=0; i<depot_data.length; i++){
-//                    if(depot_data[i]["name"]==selected_depot){
-//                        details_string += depot_data[i]["address"] + '<br>' + "Phone- " + depot_data[i]["phone"] + '<br>' + "web: " + depot_data[i]["web"];
-//                    }
-//                }
-//                $('div#header').find('h1').text(selected_depot);
-//                if ($('#header').css('display') == 'none') {
-//                    $('#header').show();
-//                    $('#table').show();
-//                }
-//                $("div#header").find('h3').empty().append(details_string);
-//            }).selectpicker('refresh');
-//        });
-    });
-</script>
+<script src="../js/depot-reports.js"></script>
 
 </body>
 </html>

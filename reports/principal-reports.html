@@ -70,13 +70,18 @@
             width: 125px;
         }
 
-        /*input#datepicker1 {*/
-        /*width: 500px;*/
-        /*}*/
+        input#datepicker1 {
+        width: 500px;
+        }
 
-        /*input#datepicker2 {*/
-        /*width: 500px;*/
-        /*}*/
+        input#datepicker2 {
+        width: 500px;
+        }
+
+        button#generate{
+            /*margin-left: 50px;*/
+
+        }
     </style>
 </head>
 
@@ -108,55 +113,24 @@
 
 <div class="container">
 
-    <form>
-        <div class=" form-group row">
-            <label class="col-sm-4 form-control-label">List of principals</label>
-            <div class="col-sm-6">
-                <select class="form-control selectpicker show-tick" name="principal"
-                        id="principal"
-                        title="Select principal..."
-                        data-live-search-placeholder="Search desired principal here"
-                        data-live-search="true">
-                </select>
-            </div>
-        </div>
-        <div class=" form-group row">
-            <label class="col-sm-4 form-control-label">Report generation from</label>
-            <div class="col-sm-6">
-                <input type="text" id="datepicker1">
-            </div>
-        </div>
-        <div class=" form-group row">
-            <label class="col-sm-4 form-control-label">Report generation to</label>
-            <div class="col-sm-6">
-                <input type="text" id="datepicker2">
-            </div>
-        </div>
-        <div class=" form-group row">
-            <button class="btn btn-primary" id="generate">
-                Generate report within selected date
-            </button>
-        </div>
-    </form>
-
     <div class="row" id="header">
-        <h1>A/C:-SEA HAWK LINES</h1>
-        <h3>AGENTS:- GP Shipping Lines LTD<br>Chittagong, Bangladesh<br>Date:- 22-05-2016<br>Import Laden Container List
-        </h3>
+        <h1></h1>
+        <h3></h3>
     </div><!-- /.row -->
     <div class="row" id="table">
         <table class="table table-hover" id="dhaka-icd-import">
             <thead>
             <tr>
-                <th colspan="8">DHAKA ICD IMPORT</th>
+                <th colspan="9">CONTAINERS UNDER THIS PRINCIPAL</th>
             </tr>
             <tr>
                 <th>SL. No.</th>
                 <th>Container No.</th>
-                <th>Size</th>
+                <th>ISO</th>
                 <th>Imp Vsl/Voy</th>
                 <th>Vsl arrived Dt</th>
-                <th>Arrived at Dhaka ICD</th>
+                <th>Location</th>
+                <th>Location name</th>
                 <th>Status</th>
                 <th>Remark</th>
             </tr>
@@ -165,421 +139,414 @@
             <tr>
                 <th>1</th>
                 <td>CRXU3439973</td>
-                <td>20-GP</td>
+                <td>4510</td>
                 <td>MV. HANJIN SURABAYA V-0098W/1530/12</td>
                 <td>08/27/2012</td>
-                <td>09/23/2012</td>
-                <td>FCL</td>
+                <td>Depot</td>
+                <td>BM CONTAINERS LIMITED</td>
+                <td>Full</td>
                 <td></td>
             </tr>
             <tr>
                 <th>2</th>
                 <td>SHKU6280269</td>
-                <td>40-HC</td>
+                <td>4210</td>
                 <td>MV. OEL LANKA V-1607N</td>
                 <td>04/14/2016</td>
-                <td>04/19/2016</td>
-                <td>FCL</td>
+                <td>Depot</td>
+                <td>CHITTAGONG CONTAINERS LIMITED</td>
+                <td></td>
                 <td></td>
             </tr>
             <tr>
                 <th>3</th>
                 <td>RFCU2340263</td>
-                <td>20-GP</td>
+                <td>2210</td>
                 <td>MV. TZINI V-007</td>
                 <td>05/13/2016</td>
-                <td>05/15/2016</td>
-                <td>FCL</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>4</th>
-                <td>RFCU2340263</td>
-                <td>20-GP</td>
-                <td>MV. TZINI V-007</td>
-                <td>05/13/2016</td>
-                <td>05/15/2016</td>
-                <td>FCL</td>
+                <td>Port</td>
+                <td>Port of Chittagong</td>
+                <td>Full</td>
                 <td></td>
             </tr>
             </tbody>
         </table>
 
-        <table class="table table-hover" id="dhaka-icd-empty">
-            <thead>
-            <tr>
-                <th colspan="9">DHAKA ICD EMPTY</th>
-            </tr>
-            <tr>
-                <th>SL. No.</th>
-                <th>Container No.</th>
-                <th>Size</th>
-                <th>Imp Vsl/Voy</th>
-                <th>Vsl arrived Dt</th>
-                <th>Arrived at Dhaka ICD</th>
-                <th>Empty Date</th>
-                <th>Location</th>
-                <th>Remark</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tbody>
-        </table>
+        <!--<table class="table table-hover" id="dhaka-icd-empty">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th colspan="9">DHAKA ICD EMPTY</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>SL. No.</th>-->
+                <!--<th>Container No.</th>-->
+                <!--<th>Size</th>-->
+                <!--<th>Imp Vsl/Voy</th>-->
+                <!--<th>Vsl arrived Dt</th>-->
+                <!--<th>Arrived at Dhaka ICD</th>-->
+                <!--<th>Empty Date</th>-->
+                <!--<th>Location</th>-->
+                <!--<th>Remark</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--<th></th>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
 
-        <table class="table table-hover" id="mongla-import">
-            <thead>
-            <tr>
-                <th colspan="9">MONGLA IMPORT</th>
-            </tr>
-            <tr>
-                <th>SL. No.</th>
-                <th>Container No.</th>
-                <th>Size</th>
-                <th>Imp Vsl/Voy</th>
-                <th>Vsl arrived at Chittagong</th>
-                <th>Arrived at MONGLA</th>
-                <th>Status</th>
-                <th>Remark</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tbody>
-        </table>
+        <!--<table class="table table-hover" id="mongla-import">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th colspan="9">MONGLA IMPORT</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>SL. No.</th>-->
+                <!--<th>Container No.</th>-->
+                <!--<th>Size</th>-->
+                <!--<th>Imp Vsl/Voy</th>-->
+                <!--<th>Vsl arrived at Chittagong</th>-->
+                <!--<th>Arrived at MONGLA</th>-->
+                <!--<th>Status</th>-->
+                <!--<th>Remark</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--<th></th>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
 
-        <table class="table table-hover" id="mongla-empty">
-            <thead>
-            <tr>
-                <th colspan="9">MONGLA EMPTY</th>
-            </tr>
-            <tr>
-                <th>SL. No.</th>
-                <th>Container No.</th>
-                <th>Size</th>
-                <th>Imp Vsl/Voy</th>
-                <th>Vsl arrived Dt</th>
-                <th>Empty Date</th>
-                <th>Location</th>
-                <th>Remark</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th></th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            </tbody>
-        </table>
+        <!--<table class="table table-hover" id="mongla-empty">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th colspan="9">MONGLA EMPTY</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>SL. No.</th>-->
+                <!--<th>Container No.</th>-->
+                <!--<th>Size</th>-->
+                <!--<th>Imp Vsl/Voy</th>-->
+                <!--<th>Vsl arrived Dt</th>-->
+                <!--<th>Empty Date</th>-->
+                <!--<th>Location</th>-->
+                <!--<th>Remark</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--<th></th>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
 
-        <table class="table table-hover" id="chittagong-import">
-            <thead>
-            <tr>
-                <th colspan="8">CHITTAGONG IMPORT</th>
-            </tr>
-            <tr>
-                <th>SL. No.</th>
-                <th>Container No.</th>
-                <th>Size</th>
-                <th>Imp Vsl/Voy</th>
-                <th>Vsl arrived Dt</th>
-                <th>Status</th>
-                <th>Remarks</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th>1</th>
-                <td>CRXU3439973</td>
-                <td>20-GP</td>
-                <td>MV. HANJIN SURABAYA V-0098W/1530/12</td>
-                <td>08/27/2012</td>
-                <td>FCL</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>2</th>
-                <td>SHKU6280269</td>
-                <td>40-HC</td>
-                <td>MV. OEL LANKA V-1607N</td>
-                <td>04/14/2016</td>
-                <td>FCL</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>3</th>
-                <td>RFCU2340263</td>
-                <td>20-GP</td>
-                <td>MV. TZINI V-007</td>
-                <td>05/13/2016</td>
-                <td>FCL</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>4</th>
-                <td>RFCU2340263</td>
-                <td>20-GP</td>
-                <td>MV. TZINI V-007</td>
-                <td>05/13/2016</td>
-                <td>LCL</td>
-                <td>Dispute for DG cargo</td>
-            </tr>
-            <tr>
-                <th>5</th>
-                <td>RFCU2340263</td>
-                <td>20-GP</td>
-                <td>MV. TZINI V-007</td>
-                <td>03/11/2016</td>
-                <td>LCL</td>
-                <td></td>
-            </tr>
-            </tbody>
-        </table>
+        <!--<table class="table table-hover" id="chittagong-import">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th colspan="8">CHITTAGONG IMPORT</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>SL. No.</th>-->
+                <!--<th>Container No.</th>-->
+                <!--<th>Size</th>-->
+                <!--<th>Imp Vsl/Voy</th>-->
+                <!--<th>Vsl arrived Dt</th>-->
+                <!--<th>Status</th>-->
+                <!--<th>Remarks</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--<th>1</th>-->
+                <!--<td>CRXU3439973</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. HANJIN SURABAYA V-0098W/1530/12</td>-->
+                <!--<td>08/27/2012</td>-->
+                <!--<td>FCL</td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>2</th>-->
+                <!--<td>SHKU6280269</td>-->
+                <!--<td>40-HC</td>-->
+                <!--<td>MV. OEL LANKA V-1607N</td>-->
+                <!--<td>04/14/2016</td>-->
+                <!--<td>FCL</td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>3</th>-->
+                <!--<td>RFCU2340263</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. TZINI V-007</td>-->
+                <!--<td>05/13/2016</td>-->
+                <!--<td>FCL</td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>4</th>-->
+                <!--<td>RFCU2340263</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. TZINI V-007</td>-->
+                <!--<td>05/13/2016</td>-->
+                <!--<td>LCL</td>-->
+                <!--<td>Dispute for DG cargo</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>5</th>-->
+                <!--<td>RFCU2340263</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. TZINI V-007</td>-->
+                <!--<td>03/11/2016</td>-->
+                <!--<td>LCL</td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
 
-        <table class="table table-hover" id="chittagong-empty">
-            <thead>
-            <tr>
-                <th colspan="8">CHITTAGONG EMPTY</th>
-            </tr>
-            <tr>
-                <th>SL. No.</th>
-                <th>Container No.</th>
-                <th>Size</th>
-                <th>Imp Vsl/Voy</th>
-                <th>Vsl arrived Dt</th>
-                <th>Empty Dt.</th>
-                <th>Location</th>
-                <th>Remarks</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th>1</th>
-                <td>RFCU2340406</td>
-                <td>20-GP</td>
-                <td>MV. KUO TAI V-04N</td>
-                <td>12/27/2015</td>
-                <td>03/09/2016</td>
-                <td>CCTCL DEPOT</td>
-                <td>ICD EXPORT DAMAGE UNIT</td>
-            </tr>
-            <tr>
-                <th>2</th>
-                <td>GESU5009005</td>
-                <td>40-HC</td>
-                <td>MV. ROBERT RICKMERS V-808</td>
-                <td>04/01/2016</td>
-                <td>04/18/2016</td>
-                <td>INCONTRADE DEPOT</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>3</th>
-                <td>CLHU3532837</td>
-                <td>20-GP</td>
-                <td>MV. X-PRESS LHOTSE V-003</td>
-                <td>04/09/2016</td>
-                <td>04/21/2016</td>
-                <td>NEMSAN DEPOT</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>4</th>
-                <td>FCIU2229779</td>
-                <td>20-GP</td>
-                <td>MV. X-PRESS NUPTSE V-016</td>
-                <td>04/16/2016</td>
-                <td>04/23/2016</td>
-                <td>EBIL DEPOT</td>
-                <td>Only export for NSA</td>
-            </tr>
-            <tr>
-                <th>5</th>
-                <td>TGHU3331904</td>
-                <td>20-GP</td>
-                <td>MV. LEOPARD V-037E</td>
-                <td>04/15/2016</td>
-                <td>04/28/2016</td>
-                <td>KDS DEPOT</td>
-                <td></td>
-            </tr>
-            </tbody>
-        </table>
+        <!--<table class="table table-hover" id="chittagong-empty">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th colspan="8">CHITTAGONG EMPTY</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>SL. No.</th>-->
+                <!--<th>Container No.</th>-->
+                <!--<th>Size</th>-->
+                <!--<th>Imp Vsl/Voy</th>-->
+                <!--<th>Vsl arrived Dt</th>-->
+                <!--<th>Empty Dt.</th>-->
+                <!--<th>Location</th>-->
+                <!--<th>Remarks</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--<th>1</th>-->
+                <!--<td>RFCU2340406</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. KUO TAI V-04N</td>-->
+                <!--<td>12/27/2015</td>-->
+                <!--<td>03/09/2016</td>-->
+                <!--<td>CCTCL DEPOT</td>-->
+                <!--<td>ICD EXPORT DAMAGE UNIT</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>2</th>-->
+                <!--<td>GESU5009005</td>-->
+                <!--<td>40-HC</td>-->
+                <!--<td>MV. ROBERT RICKMERS V-808</td>-->
+                <!--<td>04/01/2016</td>-->
+                <!--<td>04/18/2016</td>-->
+                <!--<td>INCONTRADE DEPOT</td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>3</th>-->
+                <!--<td>CLHU3532837</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. X-PRESS LHOTSE V-003</td>-->
+                <!--<td>04/09/2016</td>-->
+                <!--<td>04/21/2016</td>-->
+                <!--<td>NEMSAN DEPOT</td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>4</th>-->
+                <!--<td>FCIU2229779</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. X-PRESS NUPTSE V-016</td>-->
+                <!--<td>04/16/2016</td>-->
+                <!--<td>04/23/2016</td>-->
+                <!--<td>EBIL DEPOT</td>-->
+                <!--<td>Only export for NSA</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>5</th>-->
+                <!--<td>TGHU3331904</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. LEOPARD V-037E</td>-->
+                <!--<td>04/15/2016</td>-->
+                <!--<td>04/28/2016</td>-->
+                <!--<td>KDS DEPOT</td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
 
-        <table class="table table-hover" id="out-to-shipper-units">
-            <thead>
-            <tr>
-                <th colspan="11">OUT TO SHIPPER UNITS WITHOUT PLANNING VSL/VOY</th>
-            </tr>
-            <tr>
-                <th>SL. No.</th>
-                <th>Container No.</th>
-                <th>Size</th>
-                <th>Imp Vsl/Voy</th>
-                <th>Arrival Dt.</th>
-                <th>Mty In Dt.</th>
-                <th>OUT DATE</th>
-                <th>PLANNED VSL</th>
-                <th>ETD</th>
-                <th>POD</th>
-                <th>STATUS</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th>1</th>
-                <td>RFCU2340406</td>
-                <td>20-GP</td>
-                <td>MV. THORSWIND V-001N</td>
-                <td>05/02/2016</td>
-                <td>05/10/2016</td>
-                <td>14-05-2016(OTS DATE)</td>
-                <td>MV. HANSA CENTURION V-1604</td>
-                <td>TBA</td>
-                <td>PKL-N</td>
-                <td>LADEN</td>
-            </tr>
-            <tr>
-                <th>2</th>
-                <td>RFCU2340406</td>
-                <td>20-GP</td>
-                <td>MV. THORSWIND V-001N</td>
-                <td>05/02/2016</td>
-                <td>05/10/2016</td>
-                <td>14-05-2016(OTS DATE)</td>
-                <td>MV. HANSA CENTURION V-1604</td>
-                <td>TBA</td>
-                <td>PKL-N</td>
-                <td>LADEN</td>
-            </tr>
-            <tr>
-                <th>3</th>
-                <td>RFCU2340406</td>
-                <td>20-GP</td>
-                <td>MV. THORSWIND V-001N</td>
-                <td>05/02/2016</td>
-                <td>05/10/2016</td>
-                <td>14-05-2016(OTS DATE)</td>
-                <td>MV. HANSA CENTURION V-1604</td>
-                <td>TBA</td>
-                <td>PKL-N</td>
-                <td>LADEN</td>
-            </tr>
-            <tr>
-                <th>4</th>
-                <td>RFCU2340406</td>
-                <td>20-GP</td>
-                <td>MV. THORSWIND V-001N</td>
-                <td>05/02/2016</td>
-                <td>05/10/2016</td>
-                <td>14-05-2016(OTS DATE)</td>
-                <td>MV. HANSA CENTURION V-1604</td>
-                <td>TBA</td>
-                <td>PKL-N</td>
-                <td>LADEN</td>
-            </tr>
-            <tr>
-                <th>5</th>
-                <td>RFCU2340406</td>
-                <td>20-GP</td>
-                <td>MV. THORSWIND V-001N</td>
-                <td>05/02/2016</td>
-                <td>05/10/2016</td>
-                <td>14-05-2016(OTS DATE)</td>
-                <td>MV. HANSA CENTURION V-1604</td>
-                <td>TBA</td>
-                <td>PKL-N</td>
-                <td>LADEN</td>
-            </tr>
-            </tbody>
-        </table>
+        <!--<table class="table table-hover" id="out-to-shipper-units">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th colspan="11">OUT TO SHIPPER UNITS WITHOUT PLANNING VSL/VOY</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>SL. No.</th>-->
+                <!--<th>Container No.</th>-->
+                <!--<th>Size</th>-->
+                <!--<th>Imp Vsl/Voy</th>-->
+                <!--<th>Arrival Dt.</th>-->
+                <!--<th>Mty In Dt.</th>-->
+                <!--<th>OUT DATE</th>-->
+                <!--<th>PLANNED VSL</th>-->
+                <!--<th>ETD</th>-->
+                <!--<th>POD</th>-->
+                <!--<th>STATUS</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--<th>1</th>-->
+                <!--<td>RFCU2340406</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. THORSWIND V-001N</td>-->
+                <!--<td>05/02/2016</td>-->
+                <!--<td>05/10/2016</td>-->
+                <!--<td>14-05-2016(OTS DATE)</td>-->
+                <!--<td>MV. HANSA CENTURION V-1604</td>-->
+                <!--<td>TBA</td>-->
+                <!--<td>PKL-N</td>-->
+                <!--<td>LADEN</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>2</th>-->
+                <!--<td>RFCU2340406</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. THORSWIND V-001N</td>-->
+                <!--<td>05/02/2016</td>-->
+                <!--<td>05/10/2016</td>-->
+                <!--<td>14-05-2016(OTS DATE)</td>-->
+                <!--<td>MV. HANSA CENTURION V-1604</td>-->
+                <!--<td>TBA</td>-->
+                <!--<td>PKL-N</td>-->
+                <!--<td>LADEN</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>3</th>-->
+                <!--<td>RFCU2340406</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. THORSWIND V-001N</td>-->
+                <!--<td>05/02/2016</td>-->
+                <!--<td>05/10/2016</td>-->
+                <!--<td>14-05-2016(OTS DATE)</td>-->
+                <!--<td>MV. HANSA CENTURION V-1604</td>-->
+                <!--<td>TBA</td>-->
+                <!--<td>PKL-N</td>-->
+                <!--<td>LADEN</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>4</th>-->
+                <!--<td>RFCU2340406</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. THORSWIND V-001N</td>-->
+                <!--<td>05/02/2016</td>-->
+                <!--<td>05/10/2016</td>-->
+                <!--<td>14-05-2016(OTS DATE)</td>-->
+                <!--<td>MV. HANSA CENTURION V-1604</td>-->
+                <!--<td>TBA</td>-->
+                <!--<td>PKL-N</td>-->
+                <!--<td>LADEN</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>5</th>-->
+                <!--<td>RFCU2340406</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. THORSWIND V-001N</td>-->
+                <!--<td>05/02/2016</td>-->
+                <!--<td>05/10/2016</td>-->
+                <!--<td>14-05-2016(OTS DATE)</td>-->
+                <!--<td>MV. HANSA CENTURION V-1604</td>-->
+                <!--<td>TBA</td>-->
+                <!--<td>PKL-N</td>-->
+                <!--<td>LADEN</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
 
-        <table class="table table-hover" id="export-list">
-            <thead>
-            <tr>
-                <th colspan="11">EXPORT LIST</th>
-            </tr>
-            <tr>
-                <th>SL. No.</th>
-                <th>Container No.</th>
-                <th>Size</th>
-                <th>Imp Vsl/Voy</th>
-                <th>Arrival Dt.</th>
-                <th>Mty In Dt.</th>
-                <th>OUT DATE</th>
-                <th>PLANNED VSL</th>
-                <th>ETD</th>
-                <th>POD</th>
-                <th>STATUS</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th>1</th>
-                <td>SHKU6280269</td>
-                <td>40-HC</td>
-                <td>MV. GERMANS V-1219A IMPORT ROT: 0802/12</td>
-                <td>09-05-12</td>
-                <td>20-05-12</td>
-                <td>25-01-2016(OTS DATE)</td>
-                <td>MV. URSULA V-095</td>
-                <td>01/28/2016</td>
-                <td>SGSIN</td>
-                <td>LADEN</td>
-            </tr>
-            <tr>
-                <th>2</th>
-                <td>SHKU0020562</td>
-                <td>40-HC</td>
-                <td>MV. GERMANS V-1219A IMPORT ROT: 0802/12</td>
-                <td>09-05-12</td>
-                <td>22-05-12</td>
-                <td>25-01-2016(OTS DATE)</td>
-                <td>MV. URSULA V-095</td>
-                <td>01/30/2016</td>
-                <td>PKL-N</td>
-                <td>LADEN</td>
-            </tr>
-            <tr>
-                <th>3</th>
-                <td>RFCU2327512</td>
-                <td>20-GP</td>
-                <td>MV. HANSA NORDBURG V-001S</td>
-                <td>01/13/2016</td>
-                <td>01/18/2016</td>
-                <td>27-01-2016(OTS DATE)</td>
-                <td>MV. SFL EUROPA V-1027</td>
-                <td>02/01/2016</td>
-                <td>KOLKATA</td>
-                <td>LADEN</td>
-            </tr>
-            </tbody>
-        </table>
+        <!--<table class="table table-hover" id="export-list">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th colspan="11">EXPORT LIST</th>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>SL. No.</th>-->
+                <!--<th>Container No.</th>-->
+                <!--<th>Size</th>-->
+                <!--<th>Imp Vsl/Voy</th>-->
+                <!--<th>Arrival Dt.</th>-->
+                <!--<th>Mty In Dt.</th>-->
+                <!--<th>OUT DATE</th>-->
+                <!--<th>PLANNED VSL</th>-->
+                <!--<th>ETD</th>-->
+                <!--<th>POD</th>-->
+                <!--<th>STATUS</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr>-->
+                <!--<th>1</th>-->
+                <!--<td>SHKU6280269</td>-->
+                <!--<td>40-HC</td>-->
+                <!--<td>MV. GERMANS V-1219A IMPORT ROT: 0802/12</td>-->
+                <!--<td>09-05-12</td>-->
+                <!--<td>20-05-12</td>-->
+                <!--<td>25-01-2016(OTS DATE)</td>-->
+                <!--<td>MV. URSULA V-095</td>-->
+                <!--<td>01/28/2016</td>-->
+                <!--<td>SGSIN</td>-->
+                <!--<td>LADEN</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>2</th>-->
+                <!--<td>SHKU0020562</td>-->
+                <!--<td>40-HC</td>-->
+                <!--<td>MV. GERMANS V-1219A IMPORT ROT: 0802/12</td>-->
+                <!--<td>09-05-12</td>-->
+                <!--<td>22-05-12</td>-->
+                <!--<td>25-01-2016(OTS DATE)</td>-->
+                <!--<td>MV. URSULA V-095</td>-->
+                <!--<td>01/30/2016</td>-->
+                <!--<td>PKL-N</td>-->
+                <!--<td>LADEN</td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<th>3</th>-->
+                <!--<td>RFCU2327512</td>-->
+                <!--<td>20-GP</td>-->
+                <!--<td>MV. HANSA NORDBURG V-001S</td>-->
+                <!--<td>01/13/2016</td>-->
+                <!--<td>01/18/2016</td>-->
+                <!--<td>27-01-2016(OTS DATE)</td>-->
+                <!--<td>MV. SFL EUROPA V-1027</td>-->
+                <!--<td>02/01/2016</td>-->
+                <!--<td>KOLKATA</td>-->
+                <!--<td>LADEN</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
     </div>
 </div><!-- /.container -->
 
@@ -602,92 +569,7 @@
 <!--Jqury UI js-->
 <!--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
 
-<!-----Declaring a url for getting JSON (container_type.json)------>
-<script>
-    $(document).ready(function () {
-        /* Functions */
-//        function json_load() {
-//            var option_string = '';
-//            $.getJSON('../json/principal-details.json').done(function (data) {
-//                for (var i = 0; i < data.length; i++) {
-//                    option_string += '<option data-tokens="' + data[i]["name"].toLowerCase() + '" value="' + data[i]["name"] + '"">' + data[i]["name"] + '</option>';
-//                }
-//                $('#principal').empty().append(option_string).change(function (e) {
-//                    e.preventDefault();
-//                    var selected_principal = $(this).val();
-//                    $('div#header').find('h1').text('AC:- ' + selected_principal);
-//                }).selectpicker('refresh');
-//            });
-//        }
-//
-//        function date_load() {
-//            // Date selecting events
-//            var h3_string = "AGENTS:- GP Shipping Lines LTD" + '<br>' + "Chittagong, Bangladesh" + '<br>' + "From Date:-" + $('input#datepicker1').val() + "  To Date:- " + $('input#datepicker2').val();
-//            $('div#header').find('h3').empty().append(h3_string);
-//        }
-
-        /* ----- */
-        // calculating body width for styling
-        var body_width = $("body").width();
-        var header_width = $('header').width();
-        var styling_width = $('form').width();
-        // Styling form
-        $('form').css('margin-left', (body_width - styling_width) / 2);
-        $('form').css('margin-top', '30px');
-        // Styling header
-        $('header').css('margin-left', (body_width - header_width) / 2);
-        $('header').css('margin-top', '20px');
-        // Coloring some headings
-        $("table#dhaka-icd-import thead tr").each(function () {
-            $(this).find($('th')).eq(6).css('background-color', 'yellow');
-            $(this).find($('th')).eq(7).css('background-color', 'yellow');
-        });
-        $("table#dhaka-icd-empty thead tr").each(function () {
-            $(this).find($('th')).eq(6).css('background-color', 'yellow');
-            $(this).find($('th')).eq(7).css('background-color', 'yellow');
-            $(this).find($('th')).eq(8).css('background-color', 'yellow');
-        });
-        $("table#mongla-import thead tr").each(function () {
-            $(this).find($('th')).eq(6).css('background-color', 'yellow');
-            $(this).find($('th')).eq(7).css('background-color', 'yellow');
-        });
-        $("table#mongla-empty thead tr").each(function () {
-            $(this).find($('th')).eq(5).css('background-color', 'yellow');
-            $(this).find($('th')).eq(6).css('background-color', 'yellow');
-            $(this).find($('th')).eq(7).css('background-color', 'yellow');
-        });
-        $("table#chittagong-import thead tr").each(function () {
-            $(this).find($('th')).eq(5).css('background-color', 'yellow');
-            $(this).find($('th')).eq(6).css('background-color', 'yellow');
-        });
-        // Coloring remarks field which has some texts
-        $("table#chittagong-import tbody tr").each(function () {
-            if ($(this).find($('td')).eq(5).text()) {
-                $(this).find($('td')).eq(5).css('background-color', 'coral');
-            }
-        });
-        $("table#chittagong-empty tbody tr").each(function () {
-            if ($(this).find($('td')).eq(6).text()) {
-                $(this).find($('td')).eq(6).css('background-color', 'coral');
-            }
-        });
-//        $("#datepicker1").datepicker();
-//        $("#datepicker2").datepicker();
-//        // Populating Principal select tag
-//        json_load();
-//        date_load();
-//        // Generate Report button clicking event
-//        $('#generate').click(function (e) {
-//            e.preventDefault();
-//            if ($('#header').css('display') == 'none') {
-//                $('#header').show();
-//                $('#table').show();
-//            } else {
-//                date_load();
-//            }
-//        });
-    });
-</script>
+<script src="../js/principal-reports.js"></script>
 
 </body>
 </html>
