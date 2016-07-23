@@ -46,6 +46,9 @@
         input#datepicker2 {
             width: 570px;
         }
+        div#next-selection{
+            margin-top: 25px;
+        }
     </style>
 </head>
 
@@ -79,26 +82,25 @@
 
     <div class="row" id="initial-selection">
         <form>
-            <div class=" form-group row">
-                <label class="col-sm-4 form-control-label">Reports based on:</label>
+            <div class="form-group row" id="initial-selection-field">
+                <label class="col-sm-4 form-control-label">Report on:</label>
                 <div class="col-sm-6">
-                    <select class="form-control" name="initial-select" id="initial-select">
-                        <option selected disabled>Select...</option>
-                        <option value="Principal">Principal</option>
-                        <option value="Depot">Depot</option>
-                        <option value="Port">Port</option>
-                        <option value="Status">Status</option>
-                        <option value="Type">Type</option>
+                    <select class="form-control" name="principal" id="initial-selection-for-report-generation">
+                        <option selected disbaled> Select option on which you want to generate report..</option>
+                        <option value="container-age">Container age</option>
+                        <option value="depot-transaction">Depot transaction</option>
+                        <option value="depot-container">Depot container</option>
+                        <option value="container-movement-report">Container movement</option>
                     </select>
                 </div>
             </div>
         </form>
-    </div><!-- /.row -->
+    </div>
 
     <div class="row" id="next-selection">
         <form>
-            <div class="form-group row" style="display: none" id="principal-field">
-                <label class="col-sm-4 form-control-label">Select principal:</label>
+            <div class="form-group row" style="display: none;" id="principal-field">
+                <label class="col-sm-4 form-control-label">Principal</label>
                 <div class="col-sm-6">
                     <select class="form-control selectpicker show-tick" name="principal"
                             id="principal"
@@ -108,8 +110,18 @@
                     </select>
                 </div>
             </div>
-            <div class=" form-group row" style="display: none" id="depot-field">
-                <label class="col-sm-4 form-control-label">Select depot:</label>
+            <div class="form-group row" style="display: none;" id="location-field">
+                <label class="col-sm-4 form-control-label">Location</label>
+                <div class="col-sm-6">
+                    <select class="form-control" name="location" id="location">
+                        <option selected disbaled>Select location..</option>
+                        <option value="port">Port</option>
+                        <option value="depot">Depot</option>
+                    </select>
+                </div>
+            </div>
+            <div class=" form-group row" style="display: none;" id="depot-field">
+                <label class="col-sm-4 form-control-label">Depot</label>
                 <div class="col-sm-6">
                     <select class="form-control selectpicker show-tick" name="depot"
                             id="depot"
@@ -119,8 +131,8 @@
                     </select>
                 </div>
             </div>
-            <div class=" form-group row" style="display: none" id="port-field">
-                <label class="col-sm-4 form-control-label">Select port:</label>
+            <div class=" form-group row" style="display: none;" id="port-field">
+                <label class="col-sm-4 form-control-label">Port</label>
                 <div class="col-sm-6">
                     <select class="form-control selectpicker show-tick" name="port"
                             id="port"
@@ -130,33 +142,63 @@
                     </select>
                 </div>
             </div>
-            <div class=" form-group row" style="display: none" id="status-field">
-                <label class="col-sm-4 form-control-label">Select status:</label>
+            <div class=" form-group row" style="display: none;" id="status-field">
+                <label class="col-sm-4 form-control-label">Container status</label>
                 <div class="col-sm-6">
                     <select class="form-control" id="status">
+                        <option selected disbaled>Select status..</option>
                         <option>Laden</option>
                         <option>Empty</option>
                     </select>
                 </div>
             </div>
-            <div class=" form-group row" style="display: none" id="type-field">
-                <label class="col-sm-4 form-control-label">Select type:</label>
+            <div class=" form-group row" style="display: none;" id="report-type-field">
+                <label class="col-sm-4 form-control-label">Report Type:</label>
                 <div class="col-sm-6">
-                    <select class="form-control selectpicker show-tick" name="type"
-                            id="type"
+                    <select class="form-control" id="report-type">
+                        <option selected disbaled>Select report type..</option>
+                        <option>Monthly Summary</option>
+                        <option>Weekly Summary</option>
+                        <option>Daily Summary</option>
+                        <option>Details</option>
+                    </select>
+                </div>
+            </div>
+            <div class=" form-group row" style="display: none;" id="container-type-field">
+                <label class="col-sm-4 form-control-label">Container Type:</label>
+                <div class="col-sm-6">
+                    <select class="form-control selectpicker show-tick" name="container-type"
+                            id="container-type"
                             title="Select container type..."
                             data-live-search-placeholder="Search desired container type here"
                             data-live-search="true">
                     </select>
                 </div>
             </div>
-            <div class=" form-group row" style="display: none" id="from-date-field">
-                <label class="col-sm-4 form-control-label">Date</label>
+            <div class=" form-group row" style="display: none;" id="movement-type-field">
+                <label class="col-sm-4 form-control-label">Movement Type:</label>
+                <div class="col-sm-6">
+                    <select class="form-control selectpicker show-tick" name="movement-type"
+                            id="movement-type"
+                            title="Select movement type..."
+                            data-live-search-placeholder="Search desired movement type here"
+                            data-live-search="true">
+                    </select>
+                </div>
+            </div>
+            <div class=" form-group row" style="display: none;" id="from-date-field">
+                <label class="col-sm-4 form-control-label">From date</label>
                 <div class="col-sm-6">
                     <input type="text" id="datepicker1">
                 </div>
             </div>
-            <div class=" form-group row" style="display: none" id="button-field">
+            <div class=" form-group row" style="display: none;" id="to-date-field">
+                <label class="col-sm-4 form-control-label">To date</label>
+                <div class="col-sm-6">
+                    <input type="text" id="datepicker2">
+                </div>
+            </div>
+            <div class=" form-group row" style="display: none;" id="report-generate-button-field">
                 <label class="col-sm-4 form-control-label"></label>
                 <div class="col-sm-6">
                     <button class="btn btn-primary" id="generate">
@@ -166,6 +208,7 @@
             </div>
         </form>
     </div><!-- /.row -->
+
 
 </div><!-- /.container -->
 
